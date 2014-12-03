@@ -1,0 +1,124 @@
+/*
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+≡≡≡≡≡≡                                                                                                      ≡≡≡≡≡≡≡≡≡≡≡≡
+≡≡≡≡≡≡   TYPOGRAPHY                                                                                        ≡≡≡≡≡≡≡≡≡≡≡≡
+≡≡≡≡≡≡                                                                                                    ≡≡≡≡≡≡≡≡≡≡≡≡
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+*/
+
+/*
+≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈
+≡≡≡≡≡≡   FONT FACE                                                              ≡≡≡≡≡≡≡≡≡≡≡≡
+≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈
+*/
+
+/*************************************************************************/
+/*****   META HEADLINE WEB CONDENSED BOLD                    ************/
+/***********************************************************************/
+
+@font-face {
+    font-family: MetaHeadlineWeb-CondBold;
+    src: url('/assets/fonts/MetaHeadlineWeb-CondBold.eot');
+    src: url('/assets/fonts/MetaHeadlineWeb-CondBold.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/MetaHeadlineWeb-CondBold.woff') format('woff'),
+         url('/assets/fonts/MetaHeadlineWeb-CondBold.otf') format('opentype');
+}
+
+
+
+/*************************************************************************/
+/*****   META WEB PRO THIN                                   ************/
+/***********************************************************************/
+
+@font-face {
+    font-family: MetaWebPro-Thin;
+    src: url('/assets/fonts/MetaWebPro-Thin.eot');
+    src: url('/assets/fonts/MetaWebPro-Thin.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/MetaWebPro-Thin.woff') format('woff'),
+         url('/assets/fonts/MetaWebPro-Thin.ttf') format('truetype');
+}
+
+
+
+/*************************************************************************/
+/*****   META WEB PRO BOLD                                   ************/
+/***********************************************************************/
+
+@font-face {
+    font-family: MetaWebPro-Bold;
+    src: url('/assets/fonts/MetaWebPro-Bold.eot');
+    src: url('/assets/fonts/MetaWebPro-Bold.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/MetaWebPro-Bold.woff') format('woff'),
+         url('/assets/fonts/MetaWebPro-Bold.ttf') format('truetype');
+}
+
+
+
+/*************************************************************************/
+/*****   META SC WEB PRO BOLD                                ************/
+/***********************************************************************/
+
+@font-face {
+    font-family: MetaScWebPro-Bold;
+    src: url('/assets/fonts/MetaScWebPro-Bold.eot');
+    src: url('/assets/fonts/MetaScWebPro-Bold.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/MetaScWebPro-Bold.woff') format('woff'),
+         url('/assets/fonts/MetaScWebPro-Bold.ttf') format('truetype');
+}
+
+
+
+/*************************************************************************/
+/*****   META WEB PRO BOLD CONDENSED                         ************/
+/***********************************************************************/
+
+@font-face {
+    font-family: MetaWebPro-CondXbold;
+    src: url('/assets/fonts/MetaWebPro-CondXbold.eot');
+    src: url('/assets/fonts/MetaWebPro-CondXbold.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/MetaWebPro-CondXbold.woff') format('woff'),
+         url('/assets/fonts/MetaHeadOT-ConBold.otf') format('opentype');
+}
+
+
+
+/*************************************************************************/
+/*****   META WEB PRO LIGHT                                  ************/
+/***********************************************************************/
+
+@font-face {
+    font-family: MetaWebPro-Light;
+    src: url('/assets/fonts/MetaWebPro-Light.eot');
+    src: url('/assets/fonts/MetaWebPro-Light.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/MetaWebPro-Light.woff') format('woff'),
+         url('/assets/fonts/MetaWebPro-Light.ttf') format('truetype');
+}
+
+
+
+/*************************************************************************/
+/*****   META WEB PRO NORMAL                                 ************/
+/***********************************************************************/
+
+@font-face {
+    font-family: MetaWebPro-Normal;
+    src: url('/assets/fonts/MetaWebPro-Normal.eot');
+    src: url('/assets/fonts/MetaWebPro-Normal.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/MetaWebPro-Normal.woff') format('woff'),
+         url('/assets/fonts/MetaWebPro-Normal.ttf') format('truetype'),
+         url('/assets/fonts/MetaWebPro-Normal.otf') format('opentype');
+}
+
+
+
+/*************************************************************************/
+/*****   META SC WEB PRO NORMAL                              ************/
+/***********************************************************************/
+
+@font-face {
+    font-family: MetaScWebPro-Normal;
+    src: url('/assets/fonts/MetaScWebPro-Normal.eot');
+    src: url('/assets/fonts/MetaScWebPro-Normal.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/MetaScWebPro-Normal.woff') format('woff'),
+         url('/assets/fonts/MetaScWebPro-Normal.ttf') format('truetype');
+}

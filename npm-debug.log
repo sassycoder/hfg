@@ -1,0 +1,150 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'applause', '-g' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose cache add [ 'applause', null ]
+5 verbose cache add name=undefined spec="applause" args=["applause",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'applause',
+6 verbose parsed url   path: 'applause',
+6 verbose parsed url   href: 'applause' }
+7 silly lockFile 301e2d5a-applause applause
+8 verbose lock applause /Users/Ben/.npm/301e2d5a-applause.lock
+9 silly lockFile 301e2d5a-applause applause
+10 silly lockFile 301e2d5a-applause applause
+11 verbose addNamed [ 'applause', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile f2b75f80-applause applause@
+14 verbose lock applause@ /Users/Ben/.npm/f2b75f80-applause.lock
+15 silly addNameRange { name: 'applause', range: '*', hasData: false }
+16 verbose request where is /applause
+17 verbose request registry https://registry.npmjs.org/
+18 verbose request id e8f32ec871dc414f
+19 verbose url raw /applause
+20 verbose url resolving [ 'https://registry.npmjs.org/', './applause' ]
+21 verbose url resolved https://registry.npmjs.org/applause
+22 verbose request where is https://registry.npmjs.org/applause
+23 info trying registry request attempt 1 at 12:18:51
+24 verbose etag "568OTMOIYFHSTZZ21HHSQWBNU"
+25 http GET https://registry.npmjs.org/applause
+26 http 304 https://registry.npmjs.org/applause
+27 silly registry.get cb [ 304,
+27 silly registry.get   { date: 'Fri, 10 Oct 2014 11:18:52 GMT',
+27 silly registry.get     server: 'Apache',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     'last-modified': 'Fri, 10 Oct 2014 11:18:52 GMT',
+27 silly registry.get     'cache-control': 'max-age=60',
+27 silly registry.get     etag: '"568OTMOIYFHSTZZ21HHSQWBNU"',
+27 silly registry.get     'x-served-by': 'cache-lcy1130-LCY',
+27 silly registry.get     'x-cache': 'HIT',
+27 silly registry.get     'x-cache-hits': '1',
+27 silly registry.get     'x-timer': 'S1412939932.235129,VS0,VE150',
+27 silly registry.get     vary: 'Accept',
+27 silly registry.get     'content-length': '0',
+27 silly registry.get     'keep-alive': 'timeout=10, max=50',
+27 silly registry.get     connection: 'Keep-Alive' } ]
+28 verbose etag https://registry.npmjs.org/applause from cache
+29 silly addNameRange number 2 { name: 'applause', range: '*', hasData: true }
+30 silly addNameRange versions [ 'applause', [ '0.2.0', '0.3.0', '0.3.1', '0.3.2', '0.3.3' ] ]
+31 verbose addNamed [ 'applause', '0.3.3' ]
+32 verbose addNamed [ '0.3.3', '0.3.3' ]
+33 silly lockFile 53b058ce-applause-0-3-3 applause@0.3.3
+34 verbose lock applause@0.3.3 /Users/Ben/.npm/53b058ce-applause-0-3-3.lock
+35 silly lockFile 53b058ce-applause-0-3-3 applause@0.3.3
+36 silly lockFile 53b058ce-applause-0-3-3 applause@0.3.3
+37 silly lockFile f2b75f80-applause applause@
+38 silly lockFile f2b75f80-applause applause@
+39 silly resolved [ { name: 'applause',
+39 silly resolved     description: 'Replace text patterns with a given replacement.',
+39 silly resolved     version: '0.3.3',
+39 silly resolved     homepage: 'https://github.com/outaTiME/applause',
+39 silly resolved     author:
+39 silly resolved      { name: 'outaTiME',
+39 silly resolved        email: 'afalduto@gmail.com',
+39 silly resolved        url: 'http://outa.im/' },
+39 silly resolved     repository: { type: 'git', url: 'git://github.com/outaTiME/applause' },
+39 silly resolved     bugs: { url: 'https://github.com/outaTiME/applause/issues' },
+39 silly resolved     licenses: [ [Object] ],
+39 silly resolved     engines: { node: '>= 0.10.0' },
+39 silly resolved     scripts: { release: 'scripts/release.sh', test: 'grunt test' },
+39 silly resolved     dependencies: { lodash: '^2.4.0', 'js-yaml': '^3.0.0', cson: '^1.6.0' },
+39 silly resolved     devDependencies:
+39 silly resolved      { grunt: '^0.4.0',
+39 silly resolved        'grunt-contrib-jshint': '^0.10.0',
+39 silly resolved        'grunt-contrib-watch': '^0.6.0',
+39 silly resolved        'grunt-mocha-test': '^0.11.0' },
+39 silly resolved     keywords:
+39 silly resolved      [ 'replace',
+39 silly resolved        'replacement',
+39 silly resolved        'pattern',
+39 silly resolved        'patterns',
+39 silly resolved        'match',
+39 silly resolved        'text',
+39 silly resolved        'string',
+39 silly resolved        'regex',
+39 silly resolved        'regexp',
+39 silly resolved        'json',
+39 silly resolved        'yaml',
+39 silly resolved        'cson',
+39 silly resolved        'flatten' ],
+39 silly resolved     main: 'src/applause.js',
+39 silly resolved     files: [ 'src', 'LICENSE-MIT' ],
+39 silly resolved     gitHead: '99a1d31d245171df5bfd52fab915b31a674ec749',
+39 silly resolved     _id: 'applause@0.3.3',
+39 silly resolved     _shasum: 'de22ae66d7e327563e4ab89d96a58f6b33ea64f4',
+39 silly resolved     _from: 'applause@',
+39 silly resolved     _npmVersion: '1.4.14',
+39 silly resolved     _npmUser: { name: 'outatime', email: 'afalduto@gmail.com' },
+39 silly resolved     maintainers: [ [Object] ],
+39 silly resolved     dist:
+39 silly resolved      { shasum: 'de22ae66d7e327563e4ab89d96a58f6b33ea64f4',
+39 silly resolved        tarball: 'http://registry.npmjs.org/applause/-/applause-0.3.3.tgz' },
+39 silly resolved     directories: {},
+39 silly resolved     _resolved: 'https://registry.npmjs.org/applause/-/applause-0.3.3.tgz',
+39 silly resolved     readme: 'ERROR: No README data found!' } ]
+40 info install applause@0.3.3 into /usr/local/lib
+41 info installOne applause@0.3.3
+42 verbose lib/node_modules/applause unbuild
+43 verbose tar unpack /Users/Ben/.npm/applause/0.3.3/package.tgz
+44 silly lockFile bca310d1--local-lib-node-modules-applause tar:///usr/local/lib/node_modules/applause
+45 verbose lock tar:///usr/local/lib/node_modules/applause /Users/Ben/.npm/bca310d1--local-lib-node-modules-applause.lock
+46 silly lockFile 494f87f3-n-npm-applause-0-3-3-package-tgz tar:///Users/Ben/.npm/applause/0.3.3/package.tgz
+47 verbose lock tar:///Users/Ben/.npm/applause/0.3.3/package.tgz /Users/Ben/.npm/494f87f3-n-npm-applause-0-3-3-package-tgz.lock
+48 silly gunzTarPerm modes [ '755', '644' ]
+49 error Error: EACCES, mkdir '/usr/local/lib/node_modules/applause'
+49 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/applause']
+49 error   errno: 3,
+49 error   code: 'EACCES',
+49 error   path: '/usr/local/lib/node_modules/applause',
+49 error   fstream_type: 'Directory',
+49 error   fstream_path: '/usr/local/lib/node_modules/applause',
+49 error   fstream_class: 'DirWriter',
+49 error   fstream_stack:
+49 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+49 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+49 error      'Object.oncomplete (fs.js:107:15)' ] }
+50 error Please try running this command again as root/Administrator.
+51 error System Darwin 13.4.0
+52 error command "node" "/usr/local/bin/npm" "install" "applause" "-g"
+53 error cwd /Users/Ben/Documents/ui_framework
+54 error node -v v0.10.32
+55 error npm -v 1.4.28
+56 error path /usr/local/lib/node_modules/applause
+57 error fstream_path /usr/local/lib/node_modules/applause
+58 error fstream_type Directory
+59 error fstream_class DirWriter
+60 error code EACCES
+61 error errno 3
+62 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/applause'
+63 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+63 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+63 error fstream_stack Object.oncomplete (fs.js:107:15)
+64 verbose exit [ 3, true ]
