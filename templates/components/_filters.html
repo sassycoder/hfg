@@ -1,0 +1,61 @@
+<div class="component filters cf">
+	<div class="row">
+		<div class="pane base4 ml12 mp12">
+			<div class="top-btns">
+				<a href="#" class="toggle bttn secondary end active">Price</a>
+				<a href="#" class="toggle bttn secondary start">Name</a>
+				<a href="#" class="bttn secondary filters" data-target-element=".facets">Filters (2)</a>
+			</div>
+		</div>
+		<div class="pane base8 ml12 mp12">
+			<div class="view-toggles">
+				<a href="#" class="toggle bttn secondary start icon_grid-2x2 view-grid active">&nbsp;</a>
+				<a href="#" class="toggle bttn secondary end icon_grid-3x3 view-list">&nbsp;</a>
+			</div>
+		</div>
+	</div>
+	<div class="facets cf">
+		<div class="row">
+			<div class="pane base6 ml12 mp12">
+				<h3>
+					<a href="" class="panel-header"><span>Type</span></a>
+				</h3>
+				<div class="panel type cf">
+						<a href="#" class="toggle bttn secondary start">All</a>
+						<a href="#" class="toggle bttn secondary">Lifestyle</a>
+						<a href="#" class="toggle bttn secondary end active">Products</a>
+				</div>
+				<h3>
+					<a href="" class="panel-header"><span>Price</span></a>
+				</h3>
+				<div class="panel price cf">
+					<div id="rangeSlider"></div>
+					<input type="hidden" id="rangeSliderFrom" name="rangeSliderFrom" value="" />
+					<input type="hidden" id="rangeSliderTo" name="rangeSliderTo" value="" />
+				</div>
+			</div>
+			<div class="pane base6 ml12 mp12">
+				<h3>
+					<a href="" class="panel-header"><span>Themes</span></a>
+				</h3>
+				<div class="panel themes cf">
+					<div class="row">
+						<a href="#" class="bttn theme">For Her</a>
+						<a href="#" class="bttn theme">For Him</a>
+						<a href="#" class="bttn theme">For Kids</a>
+						<a href="#" class="bttn theme">Kitchen</a>
+						<a href="#" class="bttn theme">Sweets</a>
+						<a href="#" class="bttn theme">For Mother</a>
+						<a href="#" class="bttn theme active">Frozen</a>
+						<a href="#" class="bttn theme">Glassware</a>
+						<a href="#" class="bttn theme">Luxury</a>
+						<a href="#" class="bttn theme">Novelty</a>
+						<a href="#" class="bttn theme">Outside Gifts</a>
+					</div>
+				</div>
+				<button type="reset" class="bttn reset" value="Reset">Reset Filters</button>
+			</div>
+		</div>
+		<button class="close closeFilters" type="button" data-target-element=".facets">×</button>
+	</div>
+</div>

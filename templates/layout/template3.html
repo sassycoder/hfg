@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>     <html class="no-js ie ltie10 ltie9 ltie8 ltie7 ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>        <html class="no-js ie ltie10 ltie9 ltie8 gtie6 gtie5 ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>        <html class="no-js ie ltie10 ltie9 gtie7 gtie6 gtie5 ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>        <html class="no-js ie ltie10 gtie8 gtie7 gtie6 gtie5 ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+	<!--(bake /templates/structure/html-header.html)-->
+</head>
+
+<body class="wpp">
+<div><a href="#skipnav" class="skip">Skip to main content</a></div>
+<div class="actions">
+	<a href="#" class="toggle-grid">Toggle grid</a>
+<!-- 	<a href="#" class="toggle-grid-type">Toggle gutters</a> -->
+</div>
+
+<div class="wrapper">
+
+	<!--(bake /templates/structure/header.html)-->
+
+		<div class="main off-area">
+	    <a id="skipnav" tabindex="-1"></a>
+
+      <div class="row">
+				<div class="pane base12">
+					<h2>
+						Valentines Day
+						<span>Gifts for foodies</span>
+					</h2>
+				</div>
+			</div>
+
+	    <div class="row">
+	        <!--(bake /templates/components/_filters-eggs.html)-->
+	    </div>
+
+	    <div class="row v3">
+				<div class="pane base9-4 tp12 ml6 mp12" data-order="1">
+					<!--(bake /templates/components/_infobox-hero.html)-->
+				</div>
+				<div class="pane base3-4 grid-sizer tp-mgZero ml6 ml-mgZero mp12" data-order="2">
+					<!--(bake /templates/components/_infobox.html)-->
+				</div>
+				<div class="pane base3-4 grid-sizer tp-mgZero ml6 ml-mgZero mp12" data-order="3">
+					<!--(bake /templates/components/_infobox.html)-->
+				</div>
+				<div class="pane base9-4 tp12 ml6 mp12" data-order="5,6">
+					<!--(bake /templates/components/_infobox-hero.html)-->
+				</div>
+				<div class="pane base3-4 grid-sizer tp-mgZero ml6 ml-mgZero mp12" data-order="4">
+					<!--(bake /templates/components/_infobox.html)-->
+				</div>
+				<div class="pane base3-4 grid-sizer tp-mgZero ml6 ml-mgZero mp12" data-order="6,5">
+					<!--(bake /templates/components/_infobox.html)-->
+				</div>
+				<div class="grid-gutter"></div>
+			</div><!-- .row -->
+		</div><!-- .main -->
+	<div class="push"></div> <!-- For sticky footer -->
+</div><!-- .wrapper -->
+
+	<!--(bake /templates/structure/footer.html)-->
+
+			<script type="text/javascript">
+			(function () {
+				'use strict';
+
+		      var rangeFrom = $('#rangeSliderFrom'),
+		          rangeTo = $('#rangeSliderTo');
+
+		      $("#rangeSlider").ionRangeSlider({
+		        type: "double",
+		        min: 0,
+		        max: 100,
+		        from: 12,
+		        to: 32,
+		        hide_min_max: true,
+		        prefix: '£',
+		        onFinish: function (data) {
+		            $(rangeFrom).val(data.from);
+		            $(rangeTo).val(data.to);
+		        }
+		      });
+
+			    var $container3 = $('.v3');
+					// init
+					$container3.isotope({
+					  // options
+					  itemSelector: '.pane',
+					  layoutMode: 'masonry',
+					  masonry: {
+					  	columnWidth: '.grid-sizer',
+						  gutter: '.grid-gutter'
+						},
+						getSortData: {
+					    order: function (item) {
+					    	var screenWidth = $(window).innerWidth(),
+					    		order = new Array(),
+					    		orderData = $(item).data('order');
+					    		order = JSON.parse("[" + orderData + "]");
+
+					    	if (screenWidth > 1023) {
+					    		return order[0];
+					    	} else if (screenWidth < 1023 && screenWidth > 767) {
+					    		return order[1] === undefined ? order[0] : order[1];
+					    	} else return order[2] === undefined ? order[1] : order[2];
+					    }
+					  },
+					  // sort by data-order
+					  sortBy: 'order'
+					});
+
+					$container3.imagesLoaded( function() {
+					  $container3.isotope('layout');
+					});
+
+					$(window).resize(function() {
+				    $container3.isotope('updateSortData').isotope();
+				    $container3.isotope('layout');
+					});
+
+			   AdobeEdge.loadComposition('eggs', 'EDGE-1477869', {
+				    scaleToFit: "none",
+				    centerStage: "none",
+				    minW: "0",
+				    maxW: "undefined",
+				    width: "800px",
+				    height: "434px"
+				}, {"dom":{}}, {"dom":{}});
+			}());
+		    </script>
+	
+    </body>
+</html>

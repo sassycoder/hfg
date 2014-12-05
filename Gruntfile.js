@@ -4,6 +4,8 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
   
   grunt.loadNpmTasks('grunt-text-replace');
+  grunt.loadNpmTasks('grunt-bake');
+
   grunt.initConfig({
     watch: {
       compass: {
@@ -18,6 +20,11 @@ module.exports = function (grunt) {
           'assets/js/lib/*.js'
         ],
         tasks: ['build']
+      },
+
+      bake: {
+        files: ['templates/**/*.html'],
+        tasks: 'bake:build'
       }
     },
 
@@ -28,7 +35,8 @@ module.exports = function (grunt) {
       },
 
       all: [
-        'Gruntfile.js'
+        'Gruntfile.js',
+        'assets/js/components/*.js'
       ]
     },
 
@@ -43,7 +51,6 @@ module.exports = function (grunt) {
       },
       library: {
         src: ['assets/js/lib/single/jquery-2.1.1.js',
-              'assets/js/lib/single/owl.carousel.js',
               'assets/js/lib/*.js'],
         dest: 'assets/js/lib.js'
       }
@@ -55,6 +62,15 @@ module.exports = function (grunt) {
           'assets/js/components.min.js': 'assets/js/components.js',
           'assets/js/framework.min.js': 'assets/js/framework.js',
           'assets/js/lib.min.js': 'assets/js/lib.js'
+        }
+      }
+    },
+
+    bake: {
+      build: {
+        files: {
+            'index.html': 'templates/structure/index.html',
+            'style-guide.html': 'templates/structure/style-guide.html'
         }
       }
     },
@@ -84,6 +100,6 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('build', ['compass:clean', 'compass:dist', 'concat', 'uglify', 'replace']);
+  grunt.registerTask('build', ['compass:clean', 'compass:dist', 'jshint', 'concat', 'uglify', 'replace']);
   grunt.registerTask('default', ['build']);
 };

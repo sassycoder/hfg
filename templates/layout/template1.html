@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>     <html class="no-js ie ltie10 ltie9 ltie8 ltie7 ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>        <html class="no-js ie ltie10 ltie9 ltie8 gtie6 gtie5 ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>        <html class="no-js ie ltie10 ltie9 gtie7 gtie6 gtie5 ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>        <html class="no-js ie ltie10 gtie8 gtie7 gtie6 gtie5 ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+	<!--(bake /templates/structure/html-header.html)-->
+</head>
+
+<body class="wpp">
+<div><a href="#skipnav" class="skip">Skip to main content</a></div>
+<div class="actions">
+	<a href="#" class="toggle-grid">Toggle grid</a>
+<!-- 	<a href="#" class="toggle-grid-type">Toggle gutters</a> -->
+</div>
+
+<div class="wrapper">
+
+	<!--(bake /templates/structure/header.html)-->
+
+		<div class="main off-area">
+		    <a id="skipnav" tabindex="-1"></a>
+
+        <div class="row">
+					<div class="pane base12">
+						<h2>
+							Valentines Day
+							<span>Gifts for foodies</span>
+						</h2>
+					</div>
+				</div><!-- .row -->
+
+		    <div class="row">
+		        <!--(bake /templates/components/_filters-bird.html)-->
+		    </div><!-- .row -->
+
+		    <div class="row v1">
+					<div class="pane base9-4 tp12 ml6 mp12">
+						<!--(bake /templates/components/_infobox-hero.html)-->
+					</div>
+					<div class="pane base3-4 grid-sizer tp-mgZero ml6 ml-mgZero mp12">
+						<!--(bake /templates/components/_infobox.html)-->
+					</div>
+					<div class="pane base3-4 grid-sizer ml6 mp12">
+						<!--(bake /templates/components/_infobox.html)-->
+					</div>
+					<div class="pane base3-4 grid-sizer dw-mgZero ml-mgZero ml6 mp12">
+						<!--(bake /templates/components/_infobox.html)-->
+					</div>
+					<div class="pane base3-4 grid-sizer ml6 mp12">
+						<!--(bake /templates/components/_infobox.html)-->
+					</div>
+					<div class="pane base3-4 grid-sizer tp-mgZero ml6 ml-mgZero mp12">
+						<!--(bake /templates/components/_infobox.html)-->
+					</div>
+					<div class="pane base3-4 grid-sizer ml6 mp12">
+						<!--(bake /templates/components/_infobox.html)-->
+					</div>
+					<div class="pane base3-4 grid-sizer dw-mgZero ml-mgZero ml6 mp12">
+						<!--(bake /templates/components/_infobox.html)-->
+					</div>
+					<div class="pane base3-4 grid-sizer ml6 mp12">
+						<!--(bake /templates/components/_infobox.html)-->
+					</div>
+					<div class="pane base3-4 grid-sizer tp-mgZero ml6 ml-mgZero mp12">
+						<!--(bake /templates/components/_infobox.html)-->
+					</div>
+					<div class="pane base3-4 grid-sizer ml6 mp12">
+						<!--(bake /templates/components/_infobox.html)-->
+					</div>
+				<div class="grid-gutter"></div>
+			</div><!-- .row -->
+		</div><!-- .main -->
+	<div class="push"></div> <!-- For sticky footer -->
+</div><!-- .wrapper -->
+
+	<!--(bake /templates/structure/footer.html)-->
+
+			<script type="text/javascript">
+			(function () {
+				'use strict';
+		      var rangeFrom = $('#rangeSliderFrom'),
+		          rangeTo = $('#rangeSliderTo');
+
+		      $("#rangeSlider").ionRangeSlider({
+		        type: "double",
+		        min: 0,
+		        max: 100,
+		        from: 12,
+		        to: 32,
+		        hide_min_max: true,
+		        prefix: '£',
+		        onFinish: function (data) {
+		            $(rangeFrom).val(data.from);
+		            $(rangeTo).val(data.to);
+		        }
+		      });
+
+		    var $container1 = $('.v1');
+				// init
+				$container1.isotope({
+				  // options
+				  itemSelector: '.pane',
+				  layoutMode: 'masonry',
+				  masonry: {
+				  	columnWidth: '.grid-sizer',
+					  gutter: '.grid-gutter'
+					}
+				});
+
+				$container1.imagesLoaded( function() {
+				  $container1.isotope('layout');
+				});
+
+				$(window).resize(function() {  
+			    $container1.isotope('updateSortData').isotope();
+			    $container1.isotope('layout');
+				});
+
+				   AdobeEdge.loadComposition('birds', 'EDGE-845735', {
+				    scaleToFit: "none",
+				    centerStage: "none",
+				    minW: "0",
+				    maxW: "undefined",
+				    width: "860px",
+				    height: "769px"
+				}, {dom: [ ]}, {dom: [ ]});
+
+			}());
+		    </script>
+	
+    </body>
+</html>
