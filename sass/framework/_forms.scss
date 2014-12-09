@@ -15,6 +15,20 @@ fieldset legend {
     background-color: #fff
 }
 
+label {
+    font-family: 'MuseoSlab900';
+    font-size: 13px;
+    font-size: 1.3rem;
+    line-height: 20px;
+    line-height: 2rem;
+
+    .small {
+        font-family: 'MuseoSans300';
+        font-size: 11px;
+        font-size: 1.1rem;
+    }
+}
+
 .field-row {
     float: none;
     overflow: hidden;
@@ -51,12 +65,29 @@ input[type="file"],select {
     cursor: pointer
 }
 
+input {
+    &[type="text"], &[type="email"], &[type="password"] {
+        display: inline-block;
+        border: 1px solid #becf00;
+        color: #000;
+        padding: 10px 8px;
+        border-radius: 5px;
+        width: auto;
+        font-family: 'MuseoSans300';
+        font-size: 14px;
+        font-size: 1.4rem;
+        line-height: 16px;
+        line-height: 1.6rem;
+    }
+}
+
 input:hover,input:focus,input:active,input[type="text"]:hover,input[type="text"]:focus,input[type="text"]:active,input[type="password"]:hover,input[type="password"]:focus,input[type="password"]:active,input[type="file"]:hover,input[type="file"]:focus,input[type="file"]:active,input[type="email"]:hover,input[type="email"]:focus,input[type="email"]:active,textarea:hover,textarea:focus,textarea:active {
-    background: #F3F3F3
+    //background: #F3F3F3
+    outline: none;
 }
 
 select:hover,select:focus,select:active {
-    background: #F3F3F3
+    //background: #F3F3F3
 }
 
 .fields-floated .field-row {
@@ -153,7 +184,7 @@ select:hover,select:focus,select:active {
 }
 
 .error-select span {
-    background-color: #f3f3f3 !important
+    //background-color: #f3f3f3 !important
 }
 
 div.error-message {

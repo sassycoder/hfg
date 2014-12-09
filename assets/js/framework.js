@@ -337,6 +337,11 @@ $(function () {
     e.preventDefault();
     $(body).toggleClass('gutterless');
   });
+
+  $(document).on( 'click', '.toggle-ads', function(e) {
+    e.preventDefault();
+    $(body).toggleClass('takeover-active');
+  });
 });
 
 /* COMPONENT - placeholderText 1.0 */
@@ -375,3 +380,31 @@ window.rm.placeholderText = (function ($) {
     });
     
 }(jQuery));
+
+
+function getStyle(el,styleProp) {
+    var x = document.getElementById(el);
+    if (x.currentStyle)
+        var y = x.currentStyle[styleProp];
+    else if (window.getComputedStyle)
+        var y = document.defaultView.getComputedStyle(x,null).getPropertyValue(styleProp);
+    return y;
+};
+
+var setAdWidth = function () {
+    var marginL = getStyle('wrapper', 'margin-left'),
+        marginR = getStyle('wrapper', 'margin-right'); 
+    $('.ad-left').css('width', marginL);
+    $('.ad-right').css('width', marginR);
+}
+
+$(window).on('resize', function () {
+    if ($(this).innerWidth() > 1024) {
+        setAdWidth();
+
+    }
+});
+
+$(function (){
+    setAdWidth();
+});

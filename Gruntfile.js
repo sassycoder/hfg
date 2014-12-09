@@ -70,7 +70,8 @@ module.exports = function (grunt) {
       build: {
         files: {
             'index.html': 'templates/structure/index.html',
-            'style-guide.html': 'templates/structure/style-guide.html'
+            'style-guide.html': 'templates/structure/style-guide.html',
+            'template1.html': 'templates/layout/template1.html'
         }
       }
     },
@@ -100,6 +101,6 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('build', ['compass:clean', 'compass:dist', 'jshint', 'concat', 'uglify', 'replace']);
+  grunt.registerTask('build', ['compass:clean', 'compass:dist', 'jshint', 'concat', 'uglify', 'bake:build', 'replace']);
   grunt.registerTask('default', ['build']);
 };
