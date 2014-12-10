@@ -3,7 +3,16 @@
 
   var isTouch = $('html').hasClass('touch')
     , $document = $(document)
-    , isResponsive = true;
+    , isResponsive = true
+    , $findParent = $('.site-section');
+
+    $findParent.each(function () {
+      var $this = $(this);
+
+      if ($this.has('.mega-drop').length > 0) {
+        $this.addClass('has-children');
+      }
+    });
 
   $document.on('click', '.top-level-item, .mega-item', function (ev) {
 
@@ -31,7 +40,7 @@
         $this
           .addClass('active')
           .closest('li')
-          .find('.mega-drop')
+          .children('.mega-drop')
           .show()
           .parents('.megamenu')
           .addClass('open');
@@ -64,10 +73,11 @@
       , $controls = $this.closest('.nav')
       , dropdownSelector = '.search-box, .megamenu-list'
       , closeMobNav = function (ev) {
-          if ($(ev.target).closest('.nav-btn').length === 0) {
+          if ($(ev.target).closest('.megamenu-list').length === 0) {
             $controls.find('.nav-btn').removeClass('open');
             $controls.find(dropdownSelector).hide();
-            //console.log(ev);
+          } else {
+            $document.one('click', closeMobNav);
           }
         };
 

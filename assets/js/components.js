@@ -1,27 +1,36 @@
 (function () {
 	'use strict';
-	var $document = $(document);
+	var $document = $(document),
+		targetEl,
+		offsetHeight,
+		coords,
+		parentCoords = $(targetEl).parent().offset(),
+		closeFn = function (ev) {
+			if ((ev === undefined) || $(ev.target).closest(targetEl).length === 0) {
+				$(targetEl).hide();
+				$(this).removeClass('active');
+			} else {
+				$document.one('click', closeFn);
+			}
+		};
 
 	$document.on('click', '.show-dialog', function (ev) {
-		var $this = $(this),
-			targetEl = $this.data('target-element'),
-			offsetHeight = $this.height(),
-			coords = $this.offset(),
-			parentCoords = $(targetEl).parent().offset(),
-			closeFn = function (ev) {
-				if ($(ev.target).closest(targetEl).length === 0) {
-					$(targetEl).hide();
-					$this.removeClass('active');
-				} else {
-					$document.one('click', closeFn);
-				}
-			};
+		var $this = $(this);
+			targetEl = $this.data('target-element');
+			offsetHeight = $this.height();
+			coords = $this.offset();
+			parentCoords = $(targetEl).parent().offset();
 
 		if ($this.hasClass('active')) {
 			$(targetEl).hide();
 			$this.toggleClass('active');
 			$document.off('click', closeFn);
 		} else {
+			if ($(window).innerWidth() < 1023) {
+				$('.nav').find('.nav-btn').removeClass('open');
+				$('.nav').find('.megamenu-list').hide();
+			}
+
 			$(targetEl).show().css({
 				top: (coords.top - parentCoords.top) + offsetHeight,
 				left: ((coords.left + ($this.width()/2)) - ($(targetEl).width() + parentCoords.left))
@@ -33,13 +42,26 @@
 		ev.preventDefault();
 	});
 
+	$(window).on('resize', function () {
+		closeFn();
+	});
+
 }());
 (function () {
   'use strict';
 
   var isTouch = $('html').hasClass('touch')
     , $document = $(document)
-    , isResponsive = true;
+    , isResponsive = true
+    , $findParent = $('.site-section');
+
+    $findParent.each(function () {
+      var $this = $(this);
+
+      if ($this.has('.mega-drop').length > 0) {
+        $this.addClass('has-children');
+      }
+    });
 
   $document.on('click', '.top-level-item, .mega-item', function (ev) {
 
@@ -67,7 +89,7 @@
         $this
           .addClass('active')
           .closest('li')
-          .find('.mega-drop')
+          .children('.mega-drop')
           .show()
           .parents('.megamenu')
           .addClass('open');
@@ -100,10 +122,11 @@
       , $controls = $this.closest('.nav')
       , dropdownSelector = '.search-box, .megamenu-list'
       , closeMobNav = function (ev) {
-          if ($(ev.target).closest('.nav-btn').length === 0) {
+          if ($(ev.target).closest('.megamenu-list').length === 0) {
             $controls.find('.nav-btn').removeClass('open');
             $controls.find(dropdownSelector).hide();
-            //console.log(ev);
+          } else {
+            $document.one('click', closeMobNav);
           }
         };
 
