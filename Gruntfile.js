@@ -71,7 +71,8 @@ module.exports = function (grunt) {
         files: {
             'index.html': 'templates/structure/index.html',
             'style-guide.html': 'templates/structure/style-guide.html',
-            'template1.html': 'templates/layout/template1.html'
+            'template1.html': 'templates/layout/template1.html',
+            'breadcrumb.html': 'templates/components/breadcrumb.html'
         }
       }
     },
@@ -101,6 +102,6 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('build', ['compass:clean', 'compass:dist', 'jshint', 'concat', 'uglify', 'bake:build', 'replace']);
+  grunt.registerTask('build', ['compass:dist', 'jshint', 'concat', 'uglify', 'bake:build', 'replace']);
   grunt.registerTask('default', ['build']);
 };

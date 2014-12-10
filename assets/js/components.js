@@ -35,6 +35,7 @@
 				top: (coords.top - parentCoords.top) + offsetHeight,
 				left: ((coords.left + ($this.width()/2)) - ($(targetEl).width() + parentCoords.left))
 			});
+			$(targetEl).find('#username').focus();
 			$this.toggleClass('active');
 			$document.one('click', closeFn);
 		}

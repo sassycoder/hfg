@@ -8,14 +8,15 @@
 	<!--(bake /templates/structure/html-header.html)-->
 </head>
 
-<body class="wpp">
+<body class="framework takeover-active">
 <div><a href="#skipnav" class="skip">Skip to main content</a></div>
-<div class="actions">
-	<a href="#" class="toggle-grid">Toggle grid</a>
-<!-- 	<a href="#" class="toggle-grid-type">Toggle gutters</a> -->
-</div>
 
-<div class="wrapper">
+<div class="ad-top takeover">
+	<img src="/hfg/assets/img/structure/bg-leaderboard.png" alt="Advert">
+</div>
+<div class="ad-left takeover"></div>
+
+<div id="wrapper" class="wrapper">
 
 	<!--(bake /templates/structure/header.html)-->
 
@@ -26,9 +27,9 @@
 			<div class="pane base12 component-header">
 
 				<!-- START: COMPONENT DETAILS -->
-				<h2>Component: Buttons</h2>
+				<h2>Component: Breadcrumb</h2>
 
-				<p><strong>Description:</strong> Buttons</p>
+				<p><strong>Description:</strong> Breadcrumb</p>
 				<!-- END: COMPONENT DETAILS -->
 
 			</div><!-- .pane -->
@@ -36,13 +37,15 @@
 
     <div class="row">
         <div class="pane base12">
-            <!--(bake /templates/components/_buttons.html)-->
+        	<span class="base-desc">.base12</span>
+            <!--(bake /templates/components/_breadcrumb.html)-->
         </div>
     </div>
 
 	</div><!-- .main -->
 	<div class="push"></div> <!-- For sticky footer -->
 </div><!-- .wrapper -->
+<div class="ad-right takeover"></div>
 
 		<!--(bake /templates/structure/footer.html)-->
 

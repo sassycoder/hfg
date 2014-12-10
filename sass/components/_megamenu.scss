@@ -257,35 +257,35 @@
 
   .megamenu-container .inner {
     box-shadow: none;
-  }
 
-  ul {
-      &.mobile {
-        border-top: 1px dotted #ccc;
-      }
-      li {
-        &:first-child {
-          border: none;
+    ul {
+        &.mobile {
+          border-top: 1px dotted #ccc;
         }
-        padding-left: 10px;
-        border-top: 1px dotted #ccc;
+        li {
+          &:first-child {
+            border: none;
+          }
+          padding-left: 10px;
+          border-top: 1px dotted #ccc;
 
-        a {
-          display: block;
-          padding: 8px 0 3px 16px;
-          color: #333;
-          font-family: 'WaitroseRegular';
-          font-size: 16px;
-          font-size: 1.6rem;
-          line-height: 26px;
-          line-height: 2.6rem;
-          position: relative;
+          a {
+            display: block;
+            padding: 8px 0 3px 16px;
+            color: #333;
+            font-family: 'WaitroseRegular';
+            font-size: 16px;
+            font-size: 1.6rem;
+            line-height: 26px;
+            line-height: 2.6rem;
+            position: relative;
 
-          &:before {
-            font-size: 14px;
-            padding: 5px 3px 0 0;
-            position: absolute;
-            left: 0;
+            &:before {
+              font-size: 14px;
+              padding: 5px 3px 0 0;
+              position: absolute;
+              left: 0;
+            }
           }
         }
       }
