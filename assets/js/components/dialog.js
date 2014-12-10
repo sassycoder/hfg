@@ -24,7 +24,7 @@
 		} else {
 			$(targetEl).show().css({
 				top: (coords.top - parentCoords.top) + offsetHeight,
-				left: (coords.left - ($(targetEl).width() + parentCoords.left))
+				left: ((coords.left + ($this.width()/2)) - ($(targetEl).width() + parentCoords.left))
 			});
 			$this.toggleClass('active');
 			$document.one('click', closeFn);
