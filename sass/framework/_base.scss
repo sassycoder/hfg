@@ -185,6 +185,10 @@ ul li,ol li {
   &.secondary {
     background-color: #fff;
     color: #8cb624;
+
+    &:hover, &:focus, &:active {
+      color: black;
+    }
   }
 }
 
@@ -340,7 +344,7 @@ footer {
       margin: 0 5px;
 
       &:hover, &:focus, &:active {
-        text-decoration: underline;
+        color: black;
       }
     }
     p {
@@ -432,7 +436,11 @@ footer {
     line-height: 16px;
     line-height: 1.6rem;
     font-family: 'MuseoSansCond900';
-    text-transform: uppercase;  
+    text-transform: uppercase;
+
+    &:hover, &:focus, &:active {
+      color: #becf00;
+    }
   }
 
   .social {

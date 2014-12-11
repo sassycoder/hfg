@@ -8,14 +8,15 @@
 	<!--(bake /templates/structure/html-header.html)-->
 </head>
 
-<body class="wpp">
+<body class="framework takeover-active">
 <div><a href="#skipnav" class="skip">Skip to main content</a></div>
-<div class="actions">
-	<a href="#" class="toggle-grid">Toggle grid</a>
-<!-- 	<a href="#" class="toggle-grid-type">Toggle gutters</a> -->
-</div>
 
-<div class="wrapper">
+<div class="ad-top takeover">
+	<img src="/hfg/assets/img/structure/bg-leaderboard.png" alt="Advert">
+</div>
+<div class="ad-left takeover"></div>
+
+<div id="wrapper" class="wrapper">
 
 	<!--(bake /templates/structure/header.html)-->
 
@@ -23,35 +24,28 @@
     <a id="skipnav" tabindex="-1"></a>
 
     <div class="row">
-		<div class="pane base12">
-			<h2>Your Lightbox</h2>
-			<p class="body-large">Prices and information correct at time of publication xxxxx. Please contact a mezz mber of the communications team before publication.</p>
+			<div class="pane base12 component-header">
+
+				<!-- START: COMPONENT DETAILS -->
+				<h2>Component: Recipe header</h2>
+
+				<p><strong>Description:</strong> Recipe header</p>
+				<!-- END: COMPONENT DETAILS -->
+
+			</div><!-- .pane -->
 		</div>
-	</div>
 
     <div class="row">
         <div class="pane base12">
-            <!--(bake /templates/components/_lightbox-pagination-top.html)-->
+        	<span class="base-desc">.base12</span>
+            <!--(bake /templates/components/_recipe-header.html)-->
         </div>
     </div>
-    <div class="row">
-        <div class="pane base12">
-            <!--(bake /templates/components/_lightbox-item.html)-->
-            <!--(bake /templates/components/_lightbox-item.html)-->
-            <!--(bake /templates/components/_lightbox-item.html)-->
-            <!--(bake /templates/components/_lightbox-item.html)-->
-        </div>
-    </div>
-    <div class="row">
-        <div class="pane base12">
-            <!--(bake /templates/components/_lightbox-pagination-bottom.html)-->
-        </div>
-    </div>
-
 
 	</div><!-- .main -->
 	<div class="push"></div> <!-- For sticky footer -->
 </div><!-- .wrapper -->
+<div class="ad-right takeover"></div>
 
 		<!--(bake /templates/structure/footer.html)-->
 
