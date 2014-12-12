@@ -70,7 +70,7 @@
 	.wrap {
 		&.details {
 			position: relative;
-			background-color:#fbfcf3;
+			background: url(/assets/img/structure/bg-recipe-panel.jpg) repeat left top transparent;
 			border: 1px solid #becf00;
 			border-top-width: 5px;
 			border-left: none;
@@ -86,18 +86,95 @@
 			.ratings, .comments, .serving, .prep, .cook {
 				margin-left: 10px;
 
+				&:before {
+					color: #becf00;
+					margin-right: 5px;
+					font-size: 16px;
+					font-size: 1.6rem;
+				}
+
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+			.ratings:before {
+				color: #ff9000;
+			}
+		}
+		&.infographics {
+			font-size: 0;
+			margin-top: 20px;
+
+			.infographic {
+				margin-left: 10px;
 				&:first-child {
 					margin-left: 0;
 				}
 			}
 		}
+
 		&.action {
 			float: right;
+			margin: 13px 0 0 0;
+			padding-bottom: 13px;
 			border-bottom: 1px dotted black;
-			padding-bottom: 10px;
+			
 			.bttn {
-				display: inline-block;
+				float: left;
+				margin-left: 10px;
+				&:first-child {
+					margin-left: 0;
+				}
+				.icon:before {
+					font-size: 16px;
+					font-size: 1.6rem;
+				}
+			}
+			.social {
+				float: right;
 			}
 		}
 	}
 }
+
+.component.recipe-body {
+	h3 {
+		display: inline-block;
+		width: 100%;
+	}
+
+	ol li {
+  	list-style-type: decimal;
+  	list-style-position: inside;
+  	color: #becf00;
+
+  	span { color: #000; }
+	}
+
+	.credit {
+		display: block;
+		text-align: right;
+		border-bottom: 1px solid #becf00;
+	}
+}
+
+.nutrition-panel {
+	display: block;
+	float: left;
+	width: 100%;
+	padding: 15px;
+	border: 1px solid #30b0ce;
+	background: url(/assets/img/structure/bg-nutrition-panel.jpg) repeat left top transparent;
+
+	h3 {
+		border: none;
+		color: #30b0ce;
+		padding-top: 0;
+	}
+}
+
+
+
+
+
+

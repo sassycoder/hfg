@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>     <html class="no-js ie ltie10 ltie9 ltie8 ltie7 ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>        <html class="no-js ie ltie10 ltie9 ltie8 gtie6 gtie5 ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>        <html class="no-js ie ltie10 ltie9 gtie7 gtie6 gtie5 ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>        <html class="no-js ie ltie10 gtie8 gtie7 gtie6 gtie5 ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+	<!--(bake /templates/structure/html-header.html)-->
+</head>
+
+<body class="framework takeover-active">
+<div><a href="#skipnav" class="skip">Skip to main content</a></div>
+
+<div class="ad-top takeover">
+	<img src="/hfg/assets/img/structure/bg-leaderboard.png" alt="Advert">
+</div>
+<div class="ad-left takeover"></div>
+
+<div id="wrapper" class="wrapper">
+
+	<!--(bake /templates/structure/header.html)-->
+
+	<div class="main off-area">
+    <a id="skipnav" tabindex="-1"></a>
+
+    <div class="row">
+			<div class="pane base12 component-header">
+
+				<!-- START: COMPONENT DETAILS -->
+				<h2>Component: Recipe list items</h2>
+
+				<p><strong>Description:</strong> Recipe list items</p>
+				<!-- END: COMPONENT DETAILS -->
+
+			</div><!-- .pane -->
+		</div>
+
+    <div class="row">
+        <div class="pane base12">
+        	<span class="base-desc">.base12</span>
+            <!--(bake /templates/components/_recipe-list-item.html)-->
+            <!--(bake /templates/components/_recipe-list-item.html)-->
+            <!--(bake /templates/components/_recipe-list-item.html)-->
+        </div>
+    </div>
+
+	</div><!-- .main -->
+	<div class="push"></div> <!-- For sticky footer -->
+</div><!-- .wrapper -->
+<div class="ad-right takeover"></div>
+
+		<!--(bake /templates/structure/footer.html)-->
+
+	</body>
+</html>

@@ -341,15 +341,15 @@
   .wrapper {
     width: 976px;
     min-height: 100%;
-    margin: 0 auto -150px;
-    padding: 0 20px;
+    margin: 0 auto -302px;
+    padding: 0 20px 50px;
     background-color: #fff;
     border-radius: 10px;
     position: relative;
     box-sizing: content-box;
   }
 
-  .push { height: 150px;}
+  .push { height: 302px;}
 
   .row {
     width: 100%;
