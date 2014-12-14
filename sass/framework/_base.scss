@@ -100,6 +100,12 @@ img {
     display: block
 }
 
+strong {
+  font-family: 'MuseoSans900';
+  letter-spacing: -.9px;
+  letter-spacing: -.09rem; 
+}
+
 h1,h2,h3,h4 {
     font-weight: normal;
     font-family: Arial, Verdana;
@@ -127,9 +133,10 @@ h3 {
     font-family: 'MuseoSlab900';
     font-size: 18px;
     font-size: 1.8rem;
-    padding: 10px 0 10px;
-    margin: 0;
+    padding: 10px 0 25px;
+    margin: 0 0 10px;
     border-top: 2px solid #000;
+    border-bottom: 1px solid #000;
 }
 
 h4 {
@@ -152,8 +159,8 @@ ul {
 }
 
 ul li,ol li {
-    font-size: 15px;
-    font-size: 1.5rem;
+    font-size: 14px;
+    font-size: 1.4rem;
     margin: 0;
     padding: 0 0 9px 0;
     padding: 0 0 0.9rem 0;
@@ -161,7 +168,7 @@ ul li,ol li {
 }
 
 .bttn {
-  padding: 12px;
+  padding: 9px 12px;
   text-align: center;
   font-size: 13px;
   font-size: 1.3rem;
@@ -195,6 +202,10 @@ ul li,ol li {
       background-color: #becf00;
       color: #fff;
     }
+  }
+
+  > .icon {
+    margin-right: 5px;
   }
 }
 
@@ -287,6 +298,76 @@ a.skip:active,a.skip:focus {
     }
   }
 
+  .nutrographic {
+    width: 54px;
+    height: 51px;
+    margin: 0 2px;
+    padding: 27px 0 0;
+    text-align: center;
+    display: inline-block;
+    font-family: 'MuseoSans900';
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 17px;
+    line-height: 1.7rem;
+
+    &.cal {
+      @include icons-sprite(icon-nut-cal);
+    }
+    &.calc {
+      @include icons-sprite(icon-nut-calc);
+    }
+    &.carb {
+      @include icons-sprite(icon-nut-carb);
+    }
+    &.fat {
+      @include icons-sprite(icon-nut-fat);
+    }
+    &.fibre {
+      @include icons-sprite(icon-nut-fibre);
+    }
+    &.iron {
+      @include icons-sprite(icon-nut-iron);
+    }
+    &.protein {
+      @include icons-sprite(icon-nut-protein);
+    }
+    &.salt {
+      @include icons-sprite(icon-nut-salt);
+    }
+    &.sat {
+      @include icons-sprite(icon-nut-sat);
+    }
+    &.sugar {
+      @include icons-sprite(icon-nut-sugar);
+    }
+  }
+
+  .ratings {
+    &:before {
+      font-size: 16px;
+      font-size: 1.6rem;
+      color: #ff9000;
+    }
+  }
+
+  .icon {
+    &.question {
+      display: block;
+      font-size: 13px;
+      font-size: 1.3rem;
+      line-height: 21px;
+      line-height: 2.1rem;
+      &:before { 
+        color: #30b0cf; 
+        margin-right: 5px;
+        font-size: 16px;
+        font-size: 1.6rem;
+        float: left;
+      }
+    }
+  }
+
   .dialog {
     position: absolute;
     padding: 15px;
@@ -345,6 +426,7 @@ footer {
 
   .wrapper {
     margin: 0 auto;
+    padding-bottom: 0;
     background: transparent;
   }
 

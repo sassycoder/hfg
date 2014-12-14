@@ -1,0 +1,40 @@
+.component.recipe-list-item {
+	margin-top: 10px;
+
+	li {
+		margin: 10px 0 0;
+		padding: 10px 0 0;
+		border-top: 1px dotted #000;
+
+		&:first-child {
+			margin-top: 0;
+			padding-top: 0;
+			border: 0;
+		}
+	}
+
+	.img {
+		width: 91px;
+		height: 90px;
+		display: table-cell;
+		vertical-align: middle;
+
+		img {
+			margin: 0 auto;
+		}
+	}
+	.info {
+		display: table-cell;
+		padding-left: 10px;
+
+		.item, .ratings { display: block; }
+
+		.item {
+			font-family: 'MuseoSlab300';
+			font-size: 16px;
+			font-size: 1.6rem;
+			line-height: 19px;
+			line-height: 1.9rem;
+		}
+	}
+}

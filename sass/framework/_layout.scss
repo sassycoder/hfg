@@ -341,7 +341,7 @@
   .wrapper {
     width: 976px;
     min-height: 100%;
-    margin: 0 auto -302px;
+    margin: 0 auto -332px;
     padding: 0 20px 50px;
     background-color: #fff;
     border-radius: 10px;
@@ -349,7 +349,28 @@
     box-sizing: content-box;
   }
 
-  .push { height: 302px;}
+  .push { height: 332px;}
+
+  .aside {
+    padding-left: 12px;
+
+    > .component {
+      margin-top: 20px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    .bttn {
+      margin-top: 20px;
+    }
+
+    > h3 {
+      border-color: #becf00;
+      margin-top: 30px;
+    }
+  }
 
   .row {
     width: 100%;

@@ -18,8 +18,8 @@
 
 	.cal-label-border {
 		position: absolute;
-		left: -9px;
-		top: -22px;
+		left: -4px;
+		top: -27px;
 		width: 90px;
 		min-height: 85px;
 		text-align: center;
@@ -52,7 +52,7 @@
 			padding: 24px 5px 9px;
 			word-wrap: break-word;
 			background-color: white;
-			word-break: break-all;
+			word-break: break-word;
 		}
 
 		.cals {
@@ -141,20 +141,36 @@
 	h3 {
 		display: inline-block;
 		width: 100%;
+		border-bottom-style: dotted;
 	}
 
 	ol li {
   	list-style-type: decimal;
   	list-style-position: inside;
   	color: #becf00;
+  	font-family: 'MuseoSlab900';
 
-  	span { color: #000; }
+  	span { 
+  		color: #000;
+  		font-family: 'MuseoSans300';
+  	}
+	}
+
+	.question {
+		margin-top: 15px;
 	}
 
 	.credit {
-		display: block;
+		float: left;
+		color: #999999;
+		width: 100%;
+		margin-top: 40px;
 		text-align: right;
 		border-bottom: 1px solid #becf00;
+		font-size: 10px;
+		font-size: 1rem;
+		line-height: 12px;
+		line-height: 1.2rem;
 	}
 }
 
@@ -162,14 +178,20 @@
 	display: block;
 	float: left;
 	width: 100%;
-	padding: 15px;
+	margin: 40px 0 0;
+	padding: 15px 10px;
 	border: 1px solid #30b0ce;
 	background: url(/assets/img/structure/bg-nutrition-panel.jpg) repeat left top transparent;
 
 	h3 {
-		border: none;
+		border: 0;
 		color: #30b0ce;
 		padding-top: 0;
+		padding-bottom: 10px;
+	}
+
+	.info {
+		text-align: center;
 	}
 }
 
