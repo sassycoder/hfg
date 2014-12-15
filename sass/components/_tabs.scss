@@ -1,0 +1,44 @@
+.component.tabs {
+
+	.nav {
+
+		width: 100%;
+		border-bottom: 1px solid #becf00;
+
+		.tab-item {
+			float: left;
+			padding: 13px 12px 9px;
+			background-color: #fff;
+			color: #8cb656;
+			border-radius: 5px 5px 0 0;
+			font-family: 'MuseoSansCond700';
+			font-size: 13px;
+			font-size: 1.3rem;
+			line-height: 16px;
+			line-height: 1.6rem;
+			letter-spacing: 1px;
+			letter-spacing: .1rem;
+			text-transform: uppercase;
+
+			&:hover, &:focus, &:active {
+				background-color: #ff9000;
+				color: #fff;
+			}
+
+			&.active {
+				background-color: #becf00;
+				color: #fff;
+				cursor: default;
+			}
+		}
+	}
+	
+	.article {
+		position: relative;
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+}

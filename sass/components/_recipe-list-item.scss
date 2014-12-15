@@ -30,11 +30,17 @@
 		.item, .ratings { display: block; }
 
 		.item {
-			font-family: 'MuseoSlab300';
+			font-family: 'MuseoSlab900';
 			font-size: 16px;
 			font-size: 1.6rem;
 			line-height: 19px;
 			line-height: 1.9rem;
+			color: #000;
+		}
+	}
+	a{
+		&:hover, &:focus, &:active {
+			.item { text-decoration: underline; }
 		}
 	}
 }

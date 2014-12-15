@@ -56,7 +56,7 @@
 				</div>
 				<div class="login">
 					<a href="#">Become a member</a>
-					<a href="#" class="show-dialog" data-target-element="#login_dialog">Sign in</a>
+					<a href="#" class="log-in">Sign in</a>
 				</div>
 				<div class="search">				
 						<input id="global-search" class="global-search" name="global-search" placeholder="Find a recipe, ingredient, dish, topic" type="text" value="">
@@ -135,8 +135,8 @@
 		            <span class="mega-item"></span>
 		          </li>
 		          <li class="site-section mobile">
-		            <a href="#" class="top-level-item"><span>Sign in</span></a>
-		            <span class="mega-item show-dialog" data-target-element="#login_dialog"></span>
+		            <a href="#"><span>Sign in</span></a>
+		            <span class="mega-item log-in tooltipstered"></span>
 		          </li>
 		        </ol>
 		      </div>
@@ -192,12 +192,12 @@
 											<span class="cook" data-icon="">Cook <strong>3 1/2 hr</strong></span>
 										</div>
 										<div class="wrap infographics">
-											<span class="infographic low-cal"></span>
-											<span class="infographic low-fat"></span>
-											<span class="infographic low-sugar"></span>
-											<span class="infographic low-salt"></span>
-											<span class="infographic high-fibre"></span>
-											<span class="infographic high-protein"></span>
+											<span class=" infographic low-cal" title="This is a low calorie dish"></span>
+											<span class=" infographic low-fat" title="This dish is low in fat."></span>
+											<span class=" infographic low-sugar" title="Only 20% of your RDA"></span>
+											<span class=" infographic low-salt" title="Contains a low amount of salt"></span>
+											<span class=" infographic high-fibre" title="This recipe is high in fibre."></span>
+											<span class=" infographic high-protein" title="At least 20% of the calories come from protein."></span>
 										</div>
 									</div>
 								</div>
@@ -207,7 +207,7 @@
 											<span class="icon" data-icon=""></span>
 											Print
 										</a>
-										<a href="#" class="bttn primary">
+										<a href="#" class="bttn primary save-recipe">
 											<span class="icon" data-icon=""></span>
 											Save
 										</a>
@@ -271,7 +271,7 @@
 										<span class="nutrographic iron">4.6g</span>
 									</div>
 									<span class="icon icon_question_alt question">
-										Read more on how we calculate nutrition.
+										<a href="#">Read more on how we calculate nutrition.</a>
 									</span>
 								</div>
 								<p class="credit">Recipe by <strong>Sarah Swain</strong>. Photography by <strong>Devin Hart</strong></p>
@@ -285,31 +285,37 @@
 							<div class="component recipe-list-item cf">
 								<ul>
 									<li class="cf">
-										<div class="img">
-											<img src="assets/img/components/recipe_list_item/recipe-image.jpg" alt="recipe image">
-										</div>
-										<div class="info">
-											<p class="item">Butter Bean &amp Chorizo Stew with Tomatoes</p>
-											<span class="ratings" data-rating="3.5" data-icon=""></span>
-										</div>
+										<a href="#">
+											<div class="img">
+												<img src="assets/img/components/recipe_list_item/recipe-image.jpg" alt="recipe image">
+											</div>
+											<div class="info">
+												<p class="item">Chorizo sweet potato enchiladas</p>
+												<span class="ratings" data-rating="3.5" data-icon=""></span>
+											</div>
+										</a>
 									</li>
 									<li class="cf">
-										<div class="img">
-											<img src="assets/img/structure/recipe-header-hero.jpg" alt="recipe image">
-										</div>
-										<div class="info">
-											<p class="item">Chorizo sweet potato enchiladas</p>
-											<span class="ratings" data-rating="3" data-icon=""></span>
-										</div>
+										<a href="#">
+											<div class="img">
+												<img src="assets/img/structure/recipe-header-hero.jpg" alt="recipe image">
+											</div>
+											<div class="info">
+												<p class="item">Chorizo sweet potato enchiladas</p>
+												<span class="ratings" data-rating="3" data-icon=""></span>
+											</div>
+										</a>
 									</li>
 									<li class="cf">
-										<div class="img">
-											<img src="assets/img/structure/logo.png" alt="recipe image">
-										</div>
-										<div class="info">
-											<p class="item">Portuguese-style Chorizo</p>
-											<span class="ratings" data-rating="3" data-icon=""></span>
-										</div>
+										<a href="#">
+											<div class="img">
+												<img src="assets/img/structure/logo.png" alt="recipe image">
+											</div>
+											<div class="info">
+												<p class="item">Portuguese-style Chorizo</p>
+												<span class="ratings" data-rating="3" data-icon=""></span>
+											</div>
+										</a>
 									</li>
 								</ul>
 							</div>
@@ -317,43 +323,130 @@
 							<div class="component mpu">
 							<img src="assets/img/structure/mpu.jpg" alt="mpu ad">
 							</div>
-							<h3>Popular Recipes</h3>
+							<h3 class="no-border">Popular Recipes</h3>
 							<div class="component tabs">
-								<ul>
-									<li><a href="#">tab 1</a></li>
-									<li><a href="#">tab 2</a></li>
-								</ul>
-							</div>
-							<div class="component recipe-list-item cf">
-								<ul>
-									<li class="cf">
-										<div class="img">
-											<img src="assets/img/components/recipe_list_item/recipe-image.jpg" alt="recipe image">
+								<div class="nav cf">
+									<a class="tab-item active" href="#">Most popular</a>
+									<a class="tab-item" href="#">Most Discussed</a>
+								</div>
+							
+								<div class="sections">
+									<div class="article active">
+										<div class="component recipe-list-item cf">
+											<ul>
+												<li class="cf">
+													<a href="#">
+														<div class="img">
+															<img src="assets/img/components/recipe_list_item/recipe-image.jpg" alt="recipe image">
+														</div>
+														<div class="info">
+															<p class="item">Chorizo sweet potato enchiladas</p>
+															<span class="ratings" data-rating="3.5" data-icon=""></span>
+														</div>
+													</a>
+												</li>
+												<li class="cf">
+													<a href="#">
+														<div class="img">
+															<img src="assets/img/structure/recipe-header-hero.jpg" alt="recipe image">
+														</div>
+														<div class="info">
+															<p class="item">Chorizo sweet potato enchiladas</p>
+															<span class="ratings" data-rating="3" data-icon=""></span>
+														</div>
+													</a>
+												</li>
+												<li class="cf">
+													<a href="#">
+														<div class="img">
+															<img src="assets/img/structure/logo.png" alt="recipe image">
+														</div>
+														<div class="info">
+															<p class="item">Portuguese-style Chorizo</p>
+															<span class="ratings" data-rating="3" data-icon=""></span>
+														</div>
+													</a>
+												</li>
+											</ul>
 										</div>
-										<div class="info">
-											<p class="item">Butter Bean &amp Chorizo Stew with Tomatoes</p>
-											<span class="ratings" data-rating="3.5" data-icon=""></span>
+									</div>
+									<div class="article">
+										<div class="component recipe-list-item cf">
+											<ul>
+												<li class="cf">
+													<a href="#">
+														<div class="img">
+															<img src="assets/img/components/recipe_list_item/recipe-image.jpg" alt="recipe image">
+														</div>
+														<div class="info">
+															<p class="item">Chorizo sweet potato enchiladas</p>
+															<span class="ratings" data-rating="3.5" data-icon=""></span>
+														</div>
+													</a>
+												</li>
+												<li class="cf">
+													<a href="#">
+														<div class="img">
+															<img src="assets/img/structure/recipe-header-hero.jpg" alt="recipe image">
+														</div>
+														<div class="info">
+															<p class="item">Chorizo sweet potato enchiladas</p>
+															<span class="ratings" data-rating="3" data-icon=""></span>
+														</div>
+													</a>
+												</li>
+												<li class="cf">
+													<a href="#">
+														<div class="img">
+															<img src="assets/img/structure/logo.png" alt="recipe image">
+														</div>
+														<div class="info">
+															<p class="item">Portuguese-style Chorizo</p>
+															<span class="ratings" data-rating="3" data-icon=""></span>
+														</div>
+													</a>
+												</li>
+											</ul>
 										</div>
-									</li>
-									<li class="cf">
-										<div class="img">
-											<img src="assets/img/structure/recipe-header-hero.jpg" alt="recipe image">
+										<div class="component recipe-list-item cf">
+											<ul>
+												<li class="cf">
+													<a href="#">
+														<div class="img">
+															<img src="assets/img/components/recipe_list_item/recipe-image.jpg" alt="recipe image">
+														</div>
+														<div class="info">
+															<p class="item">Chorizo sweet potato enchiladas</p>
+															<span class="ratings" data-rating="3.5" data-icon=""></span>
+														</div>
+													</a>
+												</li>
+												<li class="cf">
+													<a href="#">
+														<div class="img">
+															<img src="assets/img/structure/recipe-header-hero.jpg" alt="recipe image">
+														</div>
+														<div class="info">
+															<p class="item">Chorizo sweet potato enchiladas</p>
+															<span class="ratings" data-rating="3" data-icon=""></span>
+														</div>
+													</a>
+												</li>
+												<li class="cf">
+													<a href="#">
+														<div class="img">
+															<img src="assets/img/structure/logo.png" alt="recipe image">
+														</div>
+														<div class="info">
+															<p class="item">Portuguese-style Chorizo</p>
+															<span class="ratings" data-rating="3" data-icon=""></span>
+														</div>
+													</a>
+												</li>
+											</ul>
 										</div>
-										<div class="info">
-											<p class="item">Chorizo sweet potato enchiladas</p>
-											<span class="ratings" data-rating="3" data-icon=""></span>
-										</div>
-									</li>
-									<li class="cf">
-										<div class="img">
-											<img src="assets/img/structure/logo.png" alt="recipe image">
-										</div>
-										<div class="info">
-											<p class="item">Portuguese-style Chorizo</p>
-											<span class="ratings" data-rating="3" data-icon=""></span>
-										</div>
-									</li>
-								</ul>
+									</div>
+								</div>
 							</div>
 							<a href="#" class="bttn secondary">More Recipes</a>
 						</div>
@@ -363,26 +456,52 @@
 
 		</div><!-- .main -->
 		<div class="push"></div> <!-- For sticky footer -->
-		<div id="login_dialog" class="dialog primary">
-			<form>
-				<div class="row">
-					<label for="username">Username or Email: <span class="small">(required)</span></label>
-					<input class="" id="username" name="username" placeholder="" type="text" value="">
-				</div>
-				<div class="row">
-					<label for="password">Password: <span class="small">(required)</span></label>
-					<input class="" id="password" name="password" placeholder="" type="password" value="">
-				</div>
 
-				<div class="row">
-					<a href="#" class="forgotten-password">Forgotten your password?</a>
-				</div>
+		<!-- Login popup  -->
+		<div id="login-dialog" class="dialog">
+			<div class="login-dialog">
+				<form>
+					<div class="row">
+						<label for="username">Username or Email: <span class="small">(required)</span></label>
+						<input class="" id="username" name="username" placeholder="" type="text" value="">
+					</div>
+					<div class="row">
+						<label for="password">Password: <span class="small">(required)</span></label>
+						<input class="" id="password" name="password" placeholder="" type="password" value="">
+					</div>
 
-				<div class="row">
-					<input type="submit" class="bttn primary" value="Sign in">
-				</div>
-			</form>
+					<div class="row">
+						<a href="#" class="forgotten-password">Forgotten your password?</a>
+					</div>
+
+					<div class="row">
+						<input type="submit" class="bttn primary" value="Sign in">
+					</div>
+				</form>
+			</div>
 		</div>
+
+		<!-- Save recipe popup  -->
+		<div id="save-recipe-dialog" class="dialog">
+			<div class="save-recipe-dialog">
+				<div class="row">
+					<p>Saved to your recipes.</p>
+				</div>
+				<div class="row">
+					<input type="submit" class="bttn primary" value="More on nutrition">
+				</div>
+			</div>
+		</div>
+
+		<!-- infographic popup  -->
+		<div id="infographic-dialog" class="dialog">
+			<div class="infographic-dialog">
+				<div class="row">
+					<input type="submit" class="bttn primary" value="View your recipes">
+				</div>
+			</div>
+		</div>
+
 	</div><!-- .wrapper -->
 	<div class="ad-right takeover"></div>
 
@@ -432,8 +551,57 @@
 	</footer><!-- footer -->
 	
 	<script type="text/javascript" src="assets/js/lib.min.js"></script>
+	<script type="text/javascript" src="assets/js/lib/single/jquery.tooltipster.min.js"></script>
 	<script type="text/javascript" src="assets/js/framework.js"></script>
 	<script type="text/javascript" src="assets/js/components.js"></script>
+
+	<script type="text/javascript">
+	'use strict';
+
+		$(document).ready(function() {
+
+			$(this).on('click', 'a.tooltipstered', function (ev) {
+				ev.preventDefault();
+			});
+
+			$('.infographic').tooltipster({
+				trigger: 'hover',
+				contentAsHTML: true,
+				interactive: true,
+				maxWidth: 180,
+				position: 'bottom-left',
+				functionInit: function (origin, content) {
+					return content + $('#infographic-dialog').html();
+				}
+			});
+
+			//For save recipe button
+      $('.save-recipe').tooltipster({
+          trigger: 'click',
+          contentAsHTML: true,
+          interactive: true,
+          position: 'bottom-left',
+          offsetX: 20,
+          functionInit: function() {
+	        	return $('#save-recipe-dialog').html();
+			    }
+      });
+
+    	// For login
+      $('.log-in').tooltipster({
+          trigger: 'click',
+          contentAsHTML: true,
+          interactive: true,
+          minWidth: 290,
+          position: 'bottom-right',
+          offsetX: -20,
+          functionInit: function() {
+	        	return $('#login-dialog').html();
+			    }
+      });
+	  });
+
+	</script>
 	
   </body>
 </html>
