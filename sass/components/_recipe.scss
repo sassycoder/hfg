@@ -99,6 +99,7 @@
 			.ratings, .comments, .serving, .prep, .cook {
 				margin-left: 15px;
 				color: #000;
+				white-space: nowrap;
 
 				&:before {
 					color: #becf00;
@@ -179,6 +180,7 @@
 
 	.question {
 		margin-top: 15px;
+		text-align: left;
 	}
 
 	.credit {
@@ -236,6 +238,7 @@
 			&.action {
 				float: none;
 				display: block;
+				border: 0;
 
 				.buttons, .social {
 					float: none;
@@ -256,6 +259,58 @@
 				}
 			}
 		}
+	}
+
+	.component.recipe-body {
+		h3 {
+			border: 0;
+			padding: 15px 0;
+			margin: 0;
+			text-align: center;
+			color: #8cb624;
+			cursor: pointer;
+			border: 1px solid #becf00;
+			border-top:0;
+
+			&.first {
+				border-top: 1px solid;
+			}
+
+			&.active {
+				background-color: #becf00;
+				color: #fff;
+			}
+		}
+
+		.nutrition-panel {
+			margin: 0;
+			padding: 0;
+			background: none;
+			border: none;
+
+			h3 {
+				color: #8cb624;
+
+				&.active {
+					background-color: #becf00;
+					color: #fff;
+				}
+			}
+
+			.question {
+				text-align: center;
+			}
+		}
+
+		.credit {
+			text-align: center;
+		}
+	}
+
+	.panel {
+		display: none;
+		padding: 20px;
+		border: 1px solid #becf00;
 	}
 }
 

@@ -325,7 +325,8 @@ $(function () {
 /*******************************************************************************/
 
 $(function () {
-  var body = $('body');
+  var body = $('body'),
+      html = $('html');
 
   //toggle grid
   $(document).on( 'click', '.toggle-grid', function(e) {
@@ -340,7 +341,7 @@ $(function () {
 
   $(document).on( 'click', '.toggle-ads', function(e) {
     e.preventDefault();
-    $(body).toggleClass('takeover-active');
+    $(html).toggleClass('takeover-active');
   });
 });
 

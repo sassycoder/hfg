@@ -7,7 +7,8 @@
 html {
     //overflow-y: scroll;
     font-size: 62.5%;
-    background: url('/assets/img/structure/bg-takeover.jpg') no-repeat center top fixed #3D3A4B;
+    background: rgba(170, 204, 24, 0.3);
+    
 }
 
 html, body {
@@ -377,7 +378,6 @@ a.skip:active,a.skip:focus {
         margin-right: 5px;
         font-size: 16px;
         font-size: 1.6rem;
-        float: left;
       }
     }
   }
@@ -578,6 +578,7 @@ footer {
 }
 
 .takeover-active {
+    background: url('/assets/img/structure/bg-takeover.jpg') no-repeat center top fixed #becf00;
     .takeover { display: block; }
 }
 
@@ -757,6 +758,10 @@ footer {
 }
 
 @media all and (max-width: 1023px) {
+
+  html {
+    background: #fff;
+  }
 
   .mobile {
     display: block!important;
