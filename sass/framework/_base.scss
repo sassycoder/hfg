@@ -57,6 +57,10 @@ span.hiddentext,h1.hiddentext {
     zoom: 1
 }
 
+.mobile {
+  display: none!important;
+}
+
 .actions {
     position: fixed;
     top: 0;
@@ -77,12 +81,12 @@ body {
 
 a {
     text-decoration: none;
-    color: #0b70e4
+    color: #000;
 }
 
 a:hover,a:focus,a:active {
     text-decoration: none;
-    color: black;
+    color: #becf00;
 }
 
 a:focus,a:active {
@@ -283,9 +287,10 @@ a.skip:active,a.skip:focus {
   }
 
   .infographic {
-    width: 39px;
-    height: 38px;
+    width: 40px;
+    height: 40px;
     display: inline-block;
+    cursor: pointer;
     
     &.low-cal {
       @include icons-sprite(icon-low-cal);
@@ -308,10 +313,10 @@ a.skip:active,a.skip:focus {
   }
 
   .nutrographic {
-    width: 54px;
-    height: 51px;
+    width: 55px;
+    height: 52px;
     margin: 0 2px;
-    padding: 27px 0 0;
+    padding: 30px 0 0;
     text-align: center;
     display: inline-block;
     font-family: 'MuseoSans900';
@@ -752,6 +757,10 @@ footer {
 }
 
 @media all and (max-width: 1023px) {
+
+  .mobile {
+    display: block!important;
+  }
   .wrapper > header {
     background-color: #bed000;
     min-height: 0;

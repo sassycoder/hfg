@@ -35,10 +35,10 @@
 					</div><!-- .row -->
 
 					<div class="row">
-						<div class="pane base8 ml12">
+						<div class="pane base8 tp12 ml12">
 							<!--(bake /templates/components/_recipe-body.html)-->
 						</div>
-						<div class="pane base4 ml12 aside">
+						<div class="pane base4 tp12 ml12 tp-mgZero aside">
 							<!--(bake /templates/components/_mpu.html)-->
 							<h3>More Chorizo Recipes</h3>
 							<!--(bake /templates/components/_recipe-list-item.html)-->
@@ -86,7 +86,7 @@
 					<p>Saved to your recipes.</p>
 				</div>
 				<div class="row">
-					<input type="submit" class="bttn primary" value="More on nutrition">
+					<a href="#" class="bttn primary">More on nutrition</a>
 				</div>
 			</div>
 		</div>
@@ -95,7 +95,7 @@
 		<div id="infographic-dialog" class="dialog">
 			<div class="infographic-dialog">
 				<div class="row">
-					<input type="submit" class="bttn primary" value="View your recipes">
+					<a href="#" class="bttn primary">View your recipes</a>
 				</div>
 			</div>
 		</div>
@@ -112,6 +112,14 @@
 
 			$(this).on('click', 'a.tooltipstered', function (ev) {
 				ev.preventDefault();
+			});
+
+			$(this).on('focus', '.infographic', function () {
+				$(this).tooltipster('show');
+			});
+
+			$(this).on('blur', '.infographic', function () {
+				$(this).tooltipster('hide');
 			});
 
 			$('.infographic').tooltipster({

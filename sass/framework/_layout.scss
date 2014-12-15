@@ -742,6 +742,12 @@
     width: 93.6%;
     margin: 0 3.2%;
   }
+
+  .ml-break-out {
+      margin-left: -3.2%;
+      float: none!important;
+      width: 100vw;
+    }
     .pane {
       &.ml12 {
         width: 100%;
@@ -854,10 +860,6 @@
       }
       &.ml-mgZero {
         margin-left: 0;
-      }
-      &.break-out {
-        margin-left: -3.2%;
-        float: none!important;
       }
       &:last-child {
         float: right;
@@ -972,7 +974,6 @@
     &.base12 {
       width: 100%;
       &.break-out {
-        background-color: rgba(0, 128, 0, 0.41);;
         width: 100vw;
       }
       .pane {
@@ -1468,7 +1469,7 @@
       margin-left: 4%;
     }
     &.tp-mgZero {
-      margin-left: 4%;
+      margin-left: 0;
     }
     &.ml-mgZero {
       margin-left: 0;
