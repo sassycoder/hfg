@@ -825,8 +825,6 @@ footer {
   }
 
   footer {
-    width: 768px;
-
     .mags {
       right: 220px;
     }
@@ -850,14 +848,12 @@ footer {
 @media all and (max-width: 767px) {
 
     .wrapper > header {
-      margin-left: -3.2%;
-      width: 100vw;
       .megamenu-container {
         .mega-btn {
           left: 0;
         }
         .search-btn {
-          right: 0;
+          right: 7px;
         }
 
         .megamenu-list {
@@ -867,7 +863,6 @@ footer {
     }
 
     footer {
-        width: 100vw;
         padding-top: 180px;
 
         h3 {
