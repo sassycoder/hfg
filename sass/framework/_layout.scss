@@ -536,6 +536,7 @@
 
   .aside {
     margin-top: 20px;
+    padding: 0;
     > * {
       display: none;
     }
@@ -1509,8 +1510,8 @@
 }
 @media all and(max-width: 480px) {
   .wrapper {
-    width: 93.6%;
-    margin: 0 3.2%;
+    width: 100%;
+    margin: 0;
   }
   .rwd {
     .pane {

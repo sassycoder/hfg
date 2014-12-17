@@ -72,12 +72,15 @@ module.exports = function (grunt) {
             'index.html': 'templates/structure/index.html',
             'style-guide.html': 'templates/structure/style-guide.html',
             'template1.html': 'templates/layout/template1.html',
+            'template2.html': 'templates/layout/template2.html',
             'breadcrumb.html': 'templates/components/breadcrumb.html',
             'recipe-header.html': 'templates/components/recipe-header.html',
             'recipe-body.html': 'templates/components/recipe-body.html',
             'recipe-list-item.html': 'templates/components/recipe-list-item.html',
             'tabs.html': 'templates/components/tabs.html',
-            'tabs-small.html': 'templates/components/tabs-small.html'
+            'tabs-small.html': 'templates/components/tabs-small.html',
+            'article-header.html': 'templates/components/article-header.html',
+            'article-body.html': 'templates/components/article-body.html'
         }
       }
     },

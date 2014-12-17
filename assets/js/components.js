@@ -16,12 +16,12 @@ var $document = $(document),
 			var $this = $(this);
 
 			if ($this.hasClass('active')) {
-				$(this).next('.panel').slideUp(500, function () {
+				$(this).next('.panel').slideUp('fast', function () {
 					$this.toggleClass('active');
 				});
 			} else {
 				$this.toggleClass('active');
-				$(this).next('.panel').slideDown(400);
+				$(this).next('.panel').slideDown('fast');
 			}
 		}
 		ev.preventDefault();
@@ -31,7 +31,7 @@ var $document = $(document),
 		if ($(this).innerWidth() > 1023) {
 			$('.panel').show();
 		} else {
-			$('.panel').hide().prev().find('.panel-header').removeClass('active');
+			$('.panel').hide().prev('.panel-header').removeClass('active');
 		}
 	});
 (function () {
