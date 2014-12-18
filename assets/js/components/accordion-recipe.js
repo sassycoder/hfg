@@ -12,7 +12,7 @@ var $document = $(document),
 		});
 
 	$document.on('click', '.panel-header', function (ev) {
-		if ($(window).innerWidth() < 1024) {
+		if ($(window).innerWidth() < 768) {
 			var $this = $(this);
 
 			if ($this.hasClass('active')) {
@@ -27,10 +27,17 @@ var $document = $(document),
 		ev.preventDefault();
 	});
 
+
+	var windowWidth = $(window).innerWidth();
+
 	$(window).on('resize', function () {
-		if ($(this).innerWidth() > 1023) {
-			$('.panel').show();
-		} else {
-			$('.panel').hide().prev('.panel-header').removeClass('active');
+		if ($(window).width() != windowWidth) {
+			windowWidth = $(window).innerWidth();
+
+			if ($(this).innerWidth() > 767) {
+				$('.panel').show();
+			} else {
+				$('.panel').hide().prev('.panel-header').removeClass('active');
+			}
 		}
 	});

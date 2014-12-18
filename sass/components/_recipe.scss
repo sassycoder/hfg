@@ -79,7 +79,7 @@
 			border-left: none;
 			min-height: 220px;
 
-			h2 {
+			h1 {
 				font-size: 46px;
 				font-size: 4.6rem;
 				line-height: 46px;
@@ -100,7 +100,7 @@
 			}
 
 			.ratings, .comments, .serving, .prep, .cook {
-				margin-left: 15px;
+				margin-right: 15px;
 				color: #000;
 				white-space: nowrap;
 
@@ -112,8 +112,8 @@
 					text-decoration: none!important;
 				}
 
-				&:first-child {
-					margin-left: 0;
+				&:last-child {
+					margin-right: 0;
 				}
 			}
 			.ratings:before {
@@ -229,12 +229,132 @@
 		font-size: 1rem;
 		line-height: 12px;
 		line-height: 1.2rem;
+
+		a {
+			font-family: 'MuseoSans900';
+			color: #8cb624;
+		}
 	}
 
-	&.article {
+	&.article-body {
+
 		.credit {
 			text-align: left;
+			font-size: 13px;
+			font-size: 1.3rem;
+			line-height: 21px;
+			line-height: 2.1rem;
+			color: #333;
+
+			a {
+				font-family: 'MuseoSans900';
+				font-size: 13px;
+				font-size: 1.3rem;
+				line-height: 21px;
+				line-height: 2.1rem;
+				color: #8cb624;
+			}
 		}
+
+		// rich text styles
+
+		h1, h2, h3, h4, h5 ,h6 {
+	    display: block;
+	    padding: 0;
+	    margin: 0;
+	  }
+
+	  h2 {
+	    font-family: 'MuseoSlab900';
+	    font-size: 24px;
+	    font-size: 2.4rem;
+	    line-height: 20px;
+	    line-height: 2rem;
+	    color: #8cb624;
+	  }
+
+	  h3 {
+	    font-family: 'MuseoSlab900';
+	    font-size: 16px;
+	    font-size: 1.6rem;
+	    line-height: 20px;
+	    line-height: 2rem;
+	    color: #8cb624;
+	    border: 0;
+
+	    &.black {
+	    	color: #000;
+	    }
+	  }
+
+	  p {
+	    font-family: 'MuseoSlab300';
+	    font-size: 14px;
+	    font-size: 1.4rem;
+	    line-height: 20px;
+	    line-height: 2rem;
+	    color: #333;
+	  }
+
+	  .intro-text {
+	    font-family: 'MuseoSlab300';
+	    font-size: 26px;
+	    font-size: 2.6rem;
+	    line-height: 30px;
+	    line-height: 3rem;
+	    color: #8cb624;
+	  }
+
+	  .quote-text {
+	    font-family: 'MuseoSlab900';
+	    font-size: 35px;
+	    font-size: 3.5rem;
+	    line-height: 37px;
+	    line-height: 3.75rem;
+	    color: #becf00;
+	    position: relative;
+
+	    &:before {
+	      content: '\2018';
+	      font-family: Serif;
+	      font-size: 100px;
+	      line-height: 75px;
+	      position: absolute;
+	      left: -8px;
+	      top: 0;
+	    }
+
+	    &:after {
+	      content: '\2019';
+	      font-family: Serif;
+	      font-size: 100px;
+	      line-height: 8px;
+	      position: absolute;
+	      right: 0;
+	      bottom: 0;
+	    }
+
+	    &::first-letter {
+	      padding-left: 22px;
+	    }
+	  }
+
+	  img {
+	    @extend .border;
+
+	    &::after {
+	      content: 'this is some dummy text';
+	    }
+
+	    &.left {
+	      margin: 16px;
+	      margin-left: 0; 
+	    }
+	    &.right {
+	      margin: 16px;
+	      margin-right: 0; 
+	    }
+	  }
 	}
 }
 
@@ -260,6 +380,25 @@
 }
 
 @media all and (max-width: 1023px) {
+	.component.recipe-header {
+		.img {
+			width: 279px;
+
+			.border {
+				max-width: 279px;
+			}
+		}
+
+		.author {
+			img {
+				display: none;
+			}
+		}
+	}
+
+}
+
+@media all and (max-width: 767px) {
 	.component.recipe-header {
 		.img {
 			width: 100%;

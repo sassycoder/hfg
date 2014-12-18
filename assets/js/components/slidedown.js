@@ -37,7 +37,7 @@
 
   $(window).on('resize', function () {
 
-      if ($(this).innerWidth() > 1023) {
+      if ($(this).innerWidth() > 767) {
         $(targetEls).each(function (i) {
           $(targetEls[i]).show();
         });

@@ -547,7 +547,7 @@
     }
   }
   .row {
-    &.with-margin {
+    &.tp-margin, &.margin {
       padding-left: 28px;
       padding-right: 28px;
     }
@@ -857,7 +857,12 @@
       }
     }
     .row {
-      &.with-margin {
+
+      &.tp-margin {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      &.ml-margin, &.margin {
         padding-left: 3.2%;
         padding-right: 3.2%;
       }
@@ -1515,7 +1520,15 @@
   }
 
   .row {
-    &.with-margin {
+    &.tp-margin {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &.ml-margin {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &.mp-margin, &.margin  {
       padding-left: 3.2%;
       padding-right: 3.2%;
     }
