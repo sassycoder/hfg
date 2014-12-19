@@ -118,6 +118,7 @@ strong {
   font-family: 'MuseoSans900';
   letter-spacing: -.9px;
   letter-spacing: -.09rem; 
+  font-weight: normal;
 }
 
 h1,h2,h3,h4 {
@@ -135,7 +136,7 @@ h1 {
     padding: 15px 0 10px;
     margin: 0;
 
-    .highlight {
+    strong {
       font-family: 'MuseoSlab900';
       color: #becf00;
     }
@@ -198,201 +199,57 @@ ul li,ol li {
   box-shadow: 0px 0px 12px 0px rgba(138,138,0,0.55);
 }
 
-.article-body {
-
-    // rich text styles
-
-    h1, h2, h3, h4, h5 ,h6 {
-      display: block;
-      padding: 0;
-      margin: 0;
-    }
-
-    h2 {
-      font-family: 'MuseoSlab900';
-      font-size: 24px;
-      font-size: 2.4rem;
-      line-height: 20px;
-      line-height: 2rem;
-      color: #8cb624;
-    }
-
-    h3 {
-      font-family: 'MuseoSlab900';
-      font-size: 16px;
-      font-size: 1.6rem;
-      line-height: 20px;
-      line-height: 2rem;
-      color: #8cb624;
-      border: 0;
-
-      &.black {
-        color: #000;
-      }
-    }
-
-    h4 {
-      font-family: 'MuseoSlab900';
-      font-size: 14px;
-      font-size: 1.4rem;
-      line-height: 20px;
-      line-height: 2rem;
-    }
-
-    h5 {
-      font-family: 'MuseoSlab900';
-      font-size: 12px;
-      font-size: 1.2rem;
-      line-height: 16px;
-      line-height: 1.6rem;
-    }
-
-    h6 {
-      font-family: 'MuseoSlab300';
-      font-size: 18px;
-      font-size: 1.8rem;
-      line-height: 20px;
-      line-height: 2rem;
-      color: #8cb624;
-    }
-
-    p {
-      font-family: 'MuseoSlab300';
-      font-size: 14px;
-      font-size: 1.4rem;
-      line-height: 20px;
-      line-height: 2rem;
-      color: #333;
-
-      &.smaller {
-        font-size: 12px;
-        font-size: 1.2rem;
-        line-height: 16px;
-        line-height: 1.6rem;
-      }
-    }
-
-    .intro-text {
-      font-family: 'MuseoSlab300';
-      font-size: 26px;
-      font-size: 2.6rem;
-      line-height: 30px;
-      line-height: 3rem;
-      color: #8cb624;
-    }
-
-    .quote-text {
-      font-family: 'MuseoSlab900';
-      font-size: 35px;
-      font-size: 3.5rem;
-      line-height: 37px;
-      line-height: 3.75rem;
-      color: #becf00;
-      position: relative;
-
-      &:before {
-        content: '\2018';
-        font-family: Serif;
-        font-size: 100px;
-        line-height: 75px;
-        position: absolute;
-        left: -8px;
-        top: 0;
-      }
-
-      &:after {
-        content: '\2019';
-        font-family: Serif;
-        font-size: 100px;
-        line-height: 8px;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-      }
-
-      &::first-letter {
-        padding-left: 22px;
-      }
-    }
-
-    img {
-      @extend .border;
-      margin: 16px 0;
-
-      &.left {
-        margin: 16px;
-        margin-left: 0; 
-      }
-      &.right {
-        margin: 16px;
-        margin-right: 0; 
-      }
-    }
-
-    table {
-      width: 100%;
-      max-width: 100%;
-      margin-bottom: 20px;
-      text-align: center;
-      border-bottom: 1px solid #000;
-
-      > thead {
-        > tr > th { 
-          font-family: 'MuseoSansCond700';
-          font-size: 14px;
-          font-size: 1.4rem;
-          line-height: 17px;
-          line-height: 1.7rem;
-          padding: 8px;
-          color: #fff;
-          background: #8cb624;
-          text-transform: uppercase;
-          border: 1px solid #8cb624;
-
-          &:first-of-type {
-            border-radius: 5px 0 0 0;
-          }
-          &:last-of-type {
-            border-radius: 0 5px 0 0;
-          }
-        }
-      }
-      >tbody {
-        > tr {
-          
-          &:last-child {
-            td { border: 0; }
-          }
-
-          > td {
-            font-family: 'MuseoSansCond300';
-            font-size: 12px;
-            font-size: 1.2rem;
-            line-height: 26px;
-            padding: 4px;
-            line-height: 2.6rem;
-            border-bottom: 1px solid #ccc;
-
-            &:first-of-type {
-              font-family: 'MuseoSansCond900'; 
-            }
-          }
-        }
-      }
-    }
-
-    .col {
-      float: left;
-      width: 48.4%;
-      margin-left: 3.2%;
-      margin-bottom: 20px;
-
-      &:first-of-type {
-        margin-left: 0;
-      }
-    }
+.pull-out {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin: 0 0 20px 0;
+  padding: 30px;
+  
+  h3 {
+    text-transform: uppercase;
+  }
+  li, a {
+    color: #fff;
+    font-family: 'MuseoSlab300';
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 16px;
+    line-height: 1.6rem;
   }
 
+  li {
+    list-style-type: disc;
+    list-style-position: inside;
+    padding-bottom: 5px;
+  }
+
+  &.green {
+    background-color: #becf00;
+  }
+  &.orange {
+    background-color: #f2aa18;
+  }
+
+  &.left {
+    width: 48.4%;
+    margin: 0 3.2% 16px 0;
+  }
+  &.right {
+    width: 48.4%;
+    margin: 0 0 16px 3.2%;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 2px dotted white;
+  } 
+}
 
 .bttn {
   padding: 9px 12px;

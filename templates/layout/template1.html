@@ -110,15 +110,17 @@
 
 		$(document).ready(function() {
 
-			$(this).on('click', 'a.tooltipstered', function (ev) {
+			var $this = $(this);
+
+			$this.on('click', 'a.tooltipstered', function (ev) {
 				ev.preventDefault();
 			});
 
-			$(this).on('focus', '.infographic', function () {
+			$this.on('focus', '.infographic', function () {
 				$(this).tooltipster('show');
 			});
 
-			$(this).on('blur', '.infographic', function () {
+			$this.on('blur', '.infographic', function () {
 				$(this).tooltipster('hide');
 			});
 

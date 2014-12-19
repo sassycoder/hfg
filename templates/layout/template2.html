@@ -34,7 +34,7 @@
 							<!--(bake /templates/components/_article-header.html)-->
 					</div><!-- .row -->
 
-					<div class="row tp-margin">
+					<div class="row tp-margin ml-margin mp-margin">
 						<div class="pane base8 tp12 ml12">
 							<!--(bake /templates/components/_article-body.html)-->
 						</div>
@@ -110,15 +110,17 @@
 
 		$(document).ready(function() {
 
-			$(this).on('click', 'a.tooltipstered', function (ev) {
+			var $this = $(this);
+
+			$this.on('click', 'a.tooltipstered', function (ev) {
 				ev.preventDefault();
 			});
 
-			$(this).on('focus', '.infographic', function () {
+			$this.on('focus', '.infographic', function () {
 				$(this).tooltipster('show');
 			});
 
-			$(this).on('blur', '.infographic', function () {
+			$this.on('blur', '.infographic', function () {
 				$(this).tooltipster('hide');
 			});
 
