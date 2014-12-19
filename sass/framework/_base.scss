@@ -325,7 +325,7 @@ a.skip:active,a.skip:focus {
 
     &:hover, &:active, &:focus {
       background-color: #ff9000;
-      color: inherit;
+      color: #fff;
       text-decoration: none;
     }
   }
@@ -921,8 +921,13 @@ footer {
       }
     }
 
+    .nutrographic {
+      margin-bottom: 7px;
+    }
+
     footer {
         padding-top: 180px;
+        text-align: center;
 
         h3 {
           text-align: center;
