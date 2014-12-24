@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>     <html class="no-js ie ltie10 ltie9 ltie8 ltie7 ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>        <html class="no-js ie ltie10 ltie9 ltie8 gtie6 gtie5 ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>        <html class="no-js ie ltie10 ltie9 gtie7 gtie6 gtie5 ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>        <html class="no-js ie ltie10 gtie8 gtie7 gtie6 gtie5 ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+	<!--(bake /templates/structure/html-header.html)-->
+</head>
+
+<body class="framework takeover-active">
+<div><a href="#skipnav" class="skip">Skip to main content</a></div>
+
+<div class="ad-top takeover">
+	<img src="/hfg/assets/img/structure/bg-leaderboard.png" alt="Advert">
+</div>
+<div class="ad-left takeover"></div>
+
+<div id="wrapper" class="wrapper">
+
+	<!--(bake /templates/structure/header.html)-->
+
+	<div class="main off-area">
+    <a id="skipnav" tabindex="-1"></a>
+
+    <div class="row">
+			<div class="pane base12 component-header">
+
+				<!-- START: COMPONENT DETAILS -->
+				<h2>Component: Homepage carousel</h2>
+
+				<p><strong>Description:</strong> Responsive carousel with multiple components</p>
+				<!-- END: COMPONENT DETAILS -->
+
+			</div><!-- .pane -->
+		</div>
+
+    <div class="row relative">
+        <div class="pane base6">
+        	<span class="base-desc">.base6</span>
+            <!--(bake /templates/components/_homepage-carousel.html)-->
+        </div>
+    </div>
+
+	</div><!-- .main -->
+	<div class="push"></div> <!-- For sticky footer -->
+</div><!-- .wrapper -->
+<div class="ad-right takeover"></div>
+
+		<!--(bake /templates/structure/footer.html)-->
+
+		<script type="text/javascript">
+		'use strict';
+
+			$(document).ready(function() {
+			 
+			  $('.owl-carousel').owlCarousel({
+			  	singleItem : true,
+			  	pagination: true,
+			  	navigation: true,
+			  	scrollPerPage: true,
+			  	navigationText: ["4","5"]
+			  });
+			 
+			});
+
+		</script>
+
+	</body>
+</html>

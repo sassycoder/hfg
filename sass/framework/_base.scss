@@ -116,8 +116,8 @@ img {
 
 strong {
   font-family: 'MuseoSans900';
-  letter-spacing: -.9px;
-  letter-spacing: -.09rem; 
+  letter-spacing: -.5px;
+  letter-spacing: -.05rem; 
   font-weight: normal;
 }
 
@@ -252,7 +252,7 @@ ul li,ol li {
 }
 
 .bttn {
-  padding: 9px 12px;
+  padding: 12px 12px 8px;
   text-align: center;
   font-size: 13px;
   font-size: 1.3rem;
@@ -513,27 +513,23 @@ a.skip:active,a.skip:focus {
 
     .dialog {
       display: none;
-      // position: absolute;
-      // padding: 15px;
-      // box-shadow: 0px 6px 12px 0px rgba(50,50,50,0.75);
-      // display: none;
-
-      // &.primary {
-      //   border: 1px solid #becf00;
-      //   border-top-width: 5px;
-      //   background-color: #fff;
-      // }
-
-      // &:before {
-      //   content: '';
-      //   position: absolute;
-      //   top: -17px;
-      //   right: 11px;
-      //   width: 24px;
-      //   height: 17px;
-      //   @include icons-sprite(dialog-arrow-up);
-      // }
     }
+
+  .hero-area {
+
+    &.row .pane {
+      //margin-left: 10px;
+    }
+    .component.infobox {
+      &.square {
+        margin-top: 10px;
+
+        &:first-of-type {
+          margin-top: 0;
+        }
+      }
+    }
+  }
 
 footer {
   width: 100%;

@@ -377,6 +377,10 @@
     float: left;
     padding-bottom: 20px;
 
+    &.relative {
+      position: relative;
+    }
+
     .pane {
       display: block;
       float: left;

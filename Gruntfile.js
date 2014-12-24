@@ -73,6 +73,7 @@ module.exports = function (grunt) {
             'style-guide.html': 'templates/structure/style-guide.html',
             'template1.html': 'templates/layout/template1.html',
             'template2.html': 'templates/layout/template2.html',
+            'template3.html': 'templates/layout/template3.html',
             'breadcrumb.html': 'templates/components/breadcrumb.html',
             'recipe-header.html': 'templates/components/recipe-header.html',
             'recipe-body.html': 'templates/components/recipe-body.html',
@@ -80,7 +81,11 @@ module.exports = function (grunt) {
             'tabs.html': 'templates/components/tabs.html',
             'tabs-small.html': 'templates/components/tabs-small.html',
             'article-header.html': 'templates/components/article-header.html',
-            'article-body.html': 'templates/components/article-body.html'
+            'article-body.html': 'templates/components/article-body.html',
+            'homepage-carousel.html': 'templates/components/homepage-carousel.html',
+            'infobox-hero.html': 'templates/components/infobox-hero.html',
+            'infobox-square.html': 'templates/components/infobox-square.html',
+            'infobox-list.html': 'templates/components/infobox-list.html'
         }
       }
     },

@@ -1,0 +1,112 @@
+.component.infobox {
+	position: relative;
+
+	h1, h2 {
+		padding-top: 0;
+		padding-bottom: 0;
+		font-family: 'MuseoSansCond900';
+		font-size: 42px;
+    font-size: 4.2rem;
+    line-height: 40px;
+    line-height: 4rem;
+    color: #fff;
+	}
+
+	p {
+		display: inline-block;
+		margin-top: 12px;
+		margin-bottom: 8px;
+		font-family: 'MuseoSlab300';
+		font-size: 15px;
+    font-size: 1.5rem;
+    line-height: 18px;
+    line-height: 1.8rem;
+    max-width: 240px;
+    margin-right: 32px;
+    padding-bottom: 0;
+	}
+
+	.cta {
+		position: relative;
+	}
+
+	.bttn {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		display: inline-block;
+		background-color: transparent;
+		color: #fff;
+		border: 1px solid #fff;
+
+		&:hover, &:focus, &:active {
+			background-color: white;
+			color: #becf00;
+		}
+	}
+
+	&.v1 {
+		background-color: #becf00;
+	}
+
+	&.v2 {
+		background-color: #ff9000;
+	}
+
+	&.hero {
+		.thumbnail {
+			position: absolute;
+			left: 20px;
+			top: 20px;
+			vertical-align: bottom;
+
+			img {
+				display: inline-block;
+				margin: 0 5px 0 0;
+			}
+			p {
+				display: inline-block;
+				font-size: 10px;
+				font-size: 1rem;
+				line-height: 10px;
+				line-height: 1rem;
+				max-width: 135px;
+			}
+		}
+
+		.overlay {
+			position: absolute;
+			left: 20px;
+			bottom: 20px;
+			padding: 10px;
+			background-color: #becf00;
+			max-width: 355px;
+		}
+	}
+
+	&.square {
+		padding: 10px 10px 37px;
+		min-height: 240px;
+
+		.bttn {
+			bottom: 10px;
+			right: 10px;
+		}
+	}
+
+	&.list {
+		border: 2px dotted #becf00;
+		border-top: 2px solid #becf00;
+		padding: 10px;
+
+		h3 {
+			border-top: none;
+			border-bottom-style: dotted;
+		}
+
+		.component.recipe-list-item .info .item {
+			font-family: 'MuseoSlab300';
+		}
+	}
+
+}
