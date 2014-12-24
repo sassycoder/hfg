@@ -12,20 +12,6 @@
     color: #fff;
 	}
 
-	p {
-		display: inline-block;
-		margin-top: 12px;
-		margin-bottom: 8px;
-		font-family: 'MuseoSlab300';
-		font-size: 15px;
-    font-size: 1.5rem;
-    line-height: 18px;
-    line-height: 1.8rem;
-    max-width: 240px;
-    margin-right: 32px;
-    padding-bottom: 0;
-	}
-
 	.cta {
 		position: relative;
 	}
@@ -81,12 +67,40 @@
 			padding: 10px;
 			background-color: #becf00;
 			max-width: 355px;
+
+			p {
+				display: inline-block;
+				margin-top: 12px;
+				margin-bottom: 8px;
+				font-family: 'MuseoSlab300';
+				font-size: 15px;
+		    font-size: 1.5rem;
+		    line-height: 18px;
+		    line-height: 1.8rem;
+		    max-width: 240px;
+		    margin-right: 32px;
+		    padding-bottom: 0;
+			}
 		}
 	}
 
 	&.square {
 		padding: 10px 10px 37px;
 		min-height: 240px;
+
+		p {
+			display: inline-block;
+			margin-top: 12px;
+			margin-bottom: 8px;
+			font-family: 'MuseoSlab300';
+			font-size: 15px;
+	    font-size: 1.5rem;
+	    line-height: 18px;
+	    line-height: 1.8rem;
+	    max-width: 240px;
+	    margin-right: 32px;
+	    padding-bottom: 0;
+		}
 
 		.bttn {
 			bottom: 10px;
@@ -97,15 +111,28 @@
 	&.list {
 		border: 2px dotted #becf00;
 		border-top: 2px solid #becf00;
-		padding: 10px;
+		padding: 10px 10px 65px;
 
 		h3 {
 			border-top: none;
 			border-bottom-style: dotted;
 		}
 
-		.component.recipe-list-item .info .item {
-			font-family: 'MuseoSlab300';
+		.bttn {
+			bottom: 10px;
+			right: 10px;
+			border-color: #8cb624;
+			color: #becf00;
+		}
+
+		.component.recipe-list-item {
+			.info .item {
+				font-family: 'MuseoSlab300';
+			}
+			.img {
+				width: 60px;
+				height: 56px;
+			}
 		}
 	}
 
