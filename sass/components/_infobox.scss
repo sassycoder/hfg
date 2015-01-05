@@ -40,6 +40,13 @@
 	}
 
 	&.hero {
+		.image-wrapper {
+			text-align: center;
+		}
+		.image {
+			position: relative;
+			display: inline-block;
+		}
 		.thumbnail {
 			position: absolute;
 			left: 20px;
@@ -67,6 +74,7 @@
 			padding: 10px;
 			background-color: #becf00;
 			max-width: 355px;
+			text-align: left;
 
 			p {
 				display: inline-block;
@@ -136,4 +144,79 @@
 		}
 	}
 
+	&.homepage {
+
+		h3 {
+			border-bottom-style: dotted;
+		}
+		.image {
+			float: left;
+			margin: 0 10px 0 0;
+		}
+
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			left: -10px;
+			top: 0;
+			height: 100%;
+			width: 1px;
+			border-left: 1px dotted #000;
+		}
+
+		&.full {
+			.image {
+				float: none;
+				display: block;
+				margin: 0 0 10px 0;
+
+				img {
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+}
+
+.row > .pane:first-child > .component.infobox {
+	&.homepage {
+		&:before { border: 0; }
+	}
+}
+
+@media all and (max-width: 767px) {
+	.component.infobox {
+		&.hero {
+			img {
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+@media all and (max-width: 480px) {
+	.component.infobox {
+		&.hero {
+			.overlay {
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: 0;
+				max-width: 100%;
+			}
+
+			h1 {
+				font-size: 25px;
+				font-size: 2.5rem;
+				line-height: 25px;
+				line-height: 2.5rem;
+				text-align: center;
+			}
+
+			.cta {
+				display: none;
+			}
+		}
+	}
 }

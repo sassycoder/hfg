@@ -1,0 +1,1 @@
+.component.expert{position:relative}.component.expert img{margin:0 0 10px 0}.component.expert:before{content:'';display:block;position:absolute;left:-10px;top:0;height:100%;width:1px;border-left:1px dotted #000}.row>.pane:first-child>.component.expert:before{border:0}

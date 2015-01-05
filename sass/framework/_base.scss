@@ -157,7 +157,7 @@ h3 {
     padding: 10px 0 25px;
     margin: 0 0 10px;
     border-top: 2px solid #000;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px dotted #000;
 }
 
 h4 {
@@ -311,6 +311,43 @@ a.skip:active,a.skip:focus {
     width: 14em;
     text-align: center;
     font-weight: bold
+}
+
+.quote-text {
+  font-family: 'MuseoSlab900';
+  font-size: 35px;
+  font-size: 3.5rem;
+  line-height: 37px;
+  line-height: 3.75rem;
+  color: #becf00;
+  display: inline;
+  padding-left: 22px;
+  padding-right: 30px;
+  position: relative;
+
+  &:before {
+    content: '\2018';
+    font-family: Serif;
+    font-size: 100px;
+    line-height: 75px;
+    position: absolute;
+    left: -8px;
+    top: 0;
+  }
+
+  &:after {
+    content: '\2019';
+    font-family: Serif;
+    font-size: 100px;
+    line-height: 8px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  &::first-letter {
+    padding-left: 22px;
+  }
 }
 
 .social-icon {
@@ -833,6 +870,11 @@ footer {
   .mobile {
     display: block!important;
   }
+
+  .desktop {
+    display: none!important;
+  }
+
   .wrapper > header {
     background-color: #bed000;
     min-height: 0;
@@ -901,6 +943,10 @@ footer {
 
 
 @media all and (max-width: 767px) {
+
+    .tablet {
+      display: none!important;
+    }
 
     .wrapper > header {
       .megamenu-container {

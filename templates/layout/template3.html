@@ -31,14 +31,14 @@
 					</div><!-- .row -->
 
 			    <div class="row relative hero-area">
-			    	<div class="pane base6">
+			    	<div class="pane base6 tp8 ml12">
 							<!--(bake /templates/components/_homepage-carousel.html)-->
 						</div>
-						<div class="pane base3">
+						<div class="pane base3 tp4 tablet">
 							<!--(bake /templates/components/_infobox-square-v1.html)-->
 							<!--(bake /templates/components/_infobox-square-v2.html)-->
 						</div>
-						<div class="pane base3">
+						<div class="pane base3 desktop">
 							<!--(bake /templates/components/_infobox-list.html)-->
 						</div>
 					</div><!-- .row -->
@@ -46,33 +46,63 @@
 					<div class="row tp-margin ml-margin mp-margin">
 						<div class="pane base8 tp12 ml12">
 							<div class="row">
-								<div class="pane base4">
-									homepage infobox
+								<div class="pane base4 tp6">
+									<!--(bake /templates/components/_infobox-homepage.html)-->
 								</div>
-								<div class="pane base4">
-									homepage infobox
+								<div class="pane base4 tp6">
+									<!--(bake /templates/components/_infobox-homepage.html)-->
 								</div>
 							</div>
 								<div class="row">
-									<div class="pane base8">
-										meet our experts carousel
+									<div class="pane base8 tp12 ml12">
+										<h3>Meet Our Experts</h3>
+										<div id="expert-carousel" class="component owl-carousel body cf">
+											<div class="item pane base2 tp3 ml12 cf">
+												<!--(bake /templates/components/_expert-list-item.html)-->
+											</div>
+
+											<div class="item pane base2 tp3 ml12 cf">
+												<!--(bake /templates/components/_expert-list-item.html)-->
+											</div>
+
+											<div class="item pane base2 tp3 ml12 cf">
+												<!--(bake /templates/components/_expert-list-item.html)-->
+											</div>
+
+											<div class="item pane base2 tp3 ml12 cf">
+												<!--(bake /templates/components/_expert-list-item.html)-->
+											</div>
+
+											<div class="item pane base2 tp3 ml12 cf">
+												<!--(bake /templates/components/_expert-list-item.html)-->
+											</div>
+
+											<div class="item pane base2 tp3 ml12 cf">
+												<!--(bake /templates/components/_expert-list-item.html)-->
+											</div>
+
+											<div class="item pane base2 tp3 ml12 cf">
+												<!--(bake /templates/components/_expert-list-item.html)-->
+											</div>
+
+										</div>
 									</div>
 								</div>
 								<div class="row">
-									<div class="pane base4">
-										homepage infobox full width
+									<div class="pane base4 tp6 ml6">
+										<!--(bake /templates/components/_infobox-homepage-full.html)-->
 									</div>
-									<div class="pane base4">
-										homepage infobox full width
-									</div>
-								</div>
-								<div class="row">
-									<div class="pane base8">
-										tips from the experts
+									<div class="pane base4 tp6 ml6">
+										<!--(bake /templates/components/_infobox-homepage-full.html)-->
 									</div>
 								</div>
 								<div class="row">
-									<div class="pane base8">
+									<div class="pane base8 tp12 ml12">
+										<!--(bake /templates/components/_expert-tips.html)-->
+									</div>
+								</div>
+								<div class="row">
+									<div class="pane base8 tp12 ml12">
 										advertising
 									</div>
 								</div>
@@ -186,15 +216,25 @@
 	        	return $('#login-dialog').html();
 			    }
       });
- 
-		  $('.owl-carousel').owlCarousel({
-		  	singleItem : true,
+
+		  $('#home-hero-carousel').owlCarousel({
+		  	singleItem: true,
 		  	pagination: true,
 		  	navigation: true,
 		  	scrollPerPage: true,
 		  	navigationText: ["4","5"]
 		  });
 	  });
+
+			$('#expert-carousel').owlCarousel({
+		  	pagination: true,
+		  	navigation: true,
+		  	scrollPerPage: true,
+		  	items: 4,
+		  	itemsDesktopSmall: false,
+		  	itemsMobile: [767,2],
+		  	navigationText: ["4","5"]
+		  });
 
 	</script>
 	

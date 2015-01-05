@@ -3,6 +3,18 @@
 *	v1.3.3
 */
 
+.owl-carousel {
+	&.body {
+		.owl-item {
+			&:first-child {
+				margin-left: 0;
+			}
+			margin-left: 5px;
+			-webkit-transform: none;
+		}
+	}
+}
+
 .owl-theme .owl-controls{
 	margin:0;
 	text-align: center;
@@ -32,6 +44,21 @@
 	z-index: 10;
 }
 
+.owl-theme.body .owl-controls .owl-buttons div{
+	top: -35px;
+	border-radius: 4px;
+	padding: 2px 3px;
+}
+
+.owl-theme.body .owl-next {
+	right: 0;
+}
+
+.owl-theme.body .owl-prev {
+	right: 35px;
+	left: auto;
+}
+
 .owl-prev { left: -20px; border-radius: 0 4px 4px 0; font-family: 'ElegantIcons'; }
 .owl-next { right: -20px; border-radius: 4px 0 0 4px; font-family: 'ElegantIcons'; }
 
@@ -51,6 +78,20 @@
 		&.owl-next {
 			border-right-color: #fff;
 		}
+	}
+}
+
+.owl-theme.body .owl-controls.clickable .owl-buttons div {
+
+	&:hover, &:active, &:focus {
+		&.owl-prev {
+			border-left-color: #becf00;
+		}
+
+		&.owl-next {
+			border-right-color: #becf00;
+		}
+
 	}
 }
 
@@ -109,15 +150,23 @@
 		padding-bottom: 0;
 	}
 
+@media all and (max-width: 1023px) {
+	.owl-next {
+		right: 0;
+	}
+	.owl-prev {
+		left: 0;
+	}
+}
 
 @media all and (max-width: 767px) {
 
-	.owl-buttons {
-    display:none
-  }
+	// .owl-buttons {
+ //    display:none
+ //  }
 
-  .owl-pagination {
-    display: block
-  }
+ //  .owl-pagination {
+ //    display: block
+ //  }
 
 }

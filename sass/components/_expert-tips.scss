@@ -1,0 +1,36 @@
+.component.expert-tips {
+	position: relative;
+
+	.quote-wrapper {
+		width: 66%;
+		margin: 0 0 15px 0;
+	}
+
+	p {
+		width: 66%;
+	}
+
+	.expert-quote {
+		@extend .quote-text;
+	}
+
+	img {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+}
+
+@media all and (max-width: 480px) {
+	.component.expert-tips {
+		.quote-wrapper, p {
+			width: 50%;
+		}
+		.quote-text {
+			font-size: 22px;
+			font-size: 2.2rem;
+			line-height: 24px;
+			line-height: 2.4rem;
+		}
+	}
+}

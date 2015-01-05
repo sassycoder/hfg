@@ -348,41 +348,17 @@
 	    }
 
 	    .quote-text {
-	      font-family: 'MuseoSlab900';
-	      font-size: 35px;
-	      font-size: 3.5rem;
-	      line-height: 37px;
-	      line-height: 3.75rem;
-	      color: #becf00;
-	      display: inline;
-	      padding-left: 22px;
-				padding-right: 30px;
-	      position: relative;
-
-	      &:before {
-	        content: '\2018';
-	        font-family: Serif;
-	        font-size: 100px;
-	        line-height: 75px;
-	        position: absolute;
-	        left: -8px;
-	        top: 0;
-	      }
-
-	      &:after {
-	        content: '\2019';
-	        font-family: Serif;
-	        font-size: 100px;
-	        line-height: 8px;
-	        position: absolute;
-	        right: 0;
-	        bottom: 0;
-	      }
-
-	      &::first-letter {
-	        padding-left: 22px;
-	      }
-	    }
+			  font-family: 'MuseoSlab900';
+			  font-size: 35px;
+			  font-size: 3.5rem;
+			  line-height: 37px;
+			  line-height: 3.75rem;
+			  color: #becf00;
+			  display: inline;
+			  padding-left: 22px;
+			  padding-right: 30px;
+			  position: relative;
+			}
 
 	    img {
 	      @extend .border;
