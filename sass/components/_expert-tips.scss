@@ -32,5 +32,16 @@
 			line-height: 24px;
 			line-height: 2.4rem;
 		}
+
+		.expert-quote {
+			&:before {
+				font-size: 80px;
+				line-height: 55px;
+			}
+
+			&:after {
+				font-size: 70px;
+			}
+		}
 	}
 }

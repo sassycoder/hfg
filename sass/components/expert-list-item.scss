@@ -2,14 +2,14 @@
 	position: relative;
 	
 	img {
-		margin: 0 0 10px 0;		
+		margin: 0 0 10px 0;
 	}
 
 	&:before {
 		content: '';
 		display: block;
 		position: absolute;
-		left: -10px;
+		right: -12px;
 		top: 0;
 		height: 100%;
 		width: 1px;
@@ -19,4 +19,21 @@
 
 .row > .pane:first-child > .component.expert {
 	&:before { border: 0; }
+}
+
+@media all and (max-width: 767px) {
+	.component.expert {
+		img {
+			float: left;
+			margin: 0 10px 0 0;		
+		}
+
+		p {
+			margin-right: 4%;
+		}
+
+		&:before {
+			right: -0.4%;
+		}
+	}
 }

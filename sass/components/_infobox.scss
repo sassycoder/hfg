@@ -64,6 +64,7 @@
 				line-height: 10px;
 				line-height: 1rem;
 				max-width: 135px;
+				text-align: left;
 			}
 		}
 
@@ -96,6 +97,15 @@
 		padding: 10px 10px 37px;
 		min-height: 240px;
 
+		h2 {
+			font-family: 'MuseoSlab300';
+			font-size: 36px;
+			font-size: 3.6rem;
+			line-height: 40px;
+			line-height: 4rem;
+
+		}
+
 		p {
 			display: inline-block;
 			margin-top: 12px;
@@ -113,6 +123,61 @@
 		.bttn {
 			bottom: 10px;
 			right: 10px;
+		}
+	}
+
+	&.recipe-square {
+		position: relative;
+		margin-top: 10px;
+
+		&:first-of-type {
+			margin-top: 0;
+		}
+
+		.header {
+			background-color: #bece2a;
+			padding: 10px;
+
+			h2 {
+				font-family: 'MuseoSlab900';
+				font-size: 18px;
+				font-size: 1.8rem;
+				line-height: 20px;
+				line-height: 2rem;
+				margin-bottom: 5px;
+			}
+
+			a {
+				font-size: 11px;
+				font-size: 1.1rem;
+				line-height: 13px;
+				line-height: 1.3rem;
+				
+			}
+		}
+
+		.icons {
+			position: absolute;
+			left: 15px;
+			bottom: 8px;
+		}
+
+		&.v1 {
+			.header {
+				h2 {
+					color: #000;
+				}
+
+				a {
+					color: #fff;
+				}
+			}
+		}
+
+		&.v2 {
+			.header {
+				background-color: #fd9025;
+			}
 		}
 	}
 
@@ -136,6 +201,7 @@
 		.component.recipe-list-item {
 			.info .item {
 				font-family: 'MuseoSlab300';
+				padding-bottom: 0;
 			}
 			.img {
 				width: 60px;
@@ -151,7 +217,7 @@
 		}
 		.image {
 			float: left;
-			margin: 0 10px 0 0;
+			margin: 0 10px 10px 0;
 		}
 
 		&:before {
@@ -190,6 +256,12 @@
 		&.hero {
 			img {
 				margin: 0 auto;
+			}
+		}
+
+		&.homepage {
+			&:before {
+				left: -4%;
 			}
 		}
 	}
