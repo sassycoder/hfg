@@ -81,6 +81,52 @@ input {
     }
 }
 
+div.selector {
+    display: inline-block;
+    border: 1px solid #becf00;
+    color: #000;
+    border-radius: 5px;
+    width: auto;
+    padding: 0;
+    font-family: 'MuseoSans300';
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 16px;
+    line-height: 1.6rem;
+    background: #fff;
+    height: auto;
+
+    span {
+      background: none;
+      color: #000;
+      height: auto;
+      padding: 10px 8px;
+      font-family: 'MuseoSans300';
+      font-size: 14px;
+      font-size: 1.4rem;
+      line-height: 16px;
+      line-height: 1.6rem;
+      width: 300px;
+
+      &:after {
+        content: '3';
+        position: absolute;
+        right: 8px;
+        top: 0;
+        font-family: 'ElegantIcons';
+        font-size: 22px;
+        font-size: 2.2rem;
+        line-height: 26px;
+        line-height: 3.2rem;
+      }
+    }
+
+    select {
+      height: 100%;
+      top: 0;
+    }
+}
+
 input:hover,input:focus,input:active,input[type="text"]:hover,input[type="text"]:focus,input[type="text"]:active,input[type="password"]:hover,input[type="password"]:focus,input[type="password"]:active,input[type="file"]:hover,input[type="file"]:focus,input[type="file"]:active,input[type="email"]:hover,input[type="email"]:focus,input[type="email"]:active,textarea:hover,textarea:focus,textarea:active {
     //background: #F3F3F3
     outline: none;

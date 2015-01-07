@@ -191,14 +191,17 @@
 												<div class="row">
 													<label for="username">Username: <span class="small">(required)</span></label>
 													<input id="username" name="username" placeholder="" type="text" value="juliette_kellow">
+													<a href="#" class="infographic icon_question_alt" title="Your username will appear next to any comments you make on the site. Spaces are allowed; punctuation is not allowed."></a>
 												</div>
 												<div class="row">
 													<label for="email">Email: <span class="small">(required)</span></label>
 													<input id="email" name="Email" placeholder="" type="email" value="juliette.kellow@eyetoeyemedia.co.uk">
+													<a href="#" class="infographic icon_question_alt" title="Your username will appear next to any comments you make on the site. Spaces are allowed; punctuation is not allowed."></a>
 												</div>
 												<div class="row">
 													<label for="password">Password: <span class="small">(required)</span></label>
 													<input id="password" name="password" placeholder="" type="password" value="123456">
+													<a href="#" class="infographic icon_question_alt" title="Your username will appear next to any comments you make on the site. Spaces are allowed; punctuation is not allowed."></a>
 												</div>
 												<div class="row">
 													<label for="confirmPassword">Confirm Password: <span class="small">(required)</span></label>
@@ -217,17 +220,18 @@
 													<div class="profile-pic cf">
 														<img src="assets/img/components/profile/profile-pic.jpg" alt="profile picture">
 														<a href="#" class="bttn primary">Upload image</a>
+														<a href="#" class="infographic icon_question_alt" title="Your username will appear next to any comments you make on the site. Spaces are allowed; punctuation is not allowed."></a>
 													</div>
 												</div>
 												<div class="row">
 													<label for="lastName">Gender: <span class="small">(optional)</span></label>
-													<select>
+													<select class="uniform">
 														<option selected>Female</option>
 														<option>Male</option>
 													</select>
 												</div>
 
-												<div class="row">
+												<div class="row row-action">
 													<input type="submit" class="bttn primary" value="Update account">
 												</div>
 											</form>
@@ -569,7 +573,7 @@
 		</div>
 	</footer><!-- footer -->
 	
-	<script type="text/javascript" src="assets/js/lib.min.js"></script>
+	<script type="text/javascript" src="assets/js/lib.js"></script>
 	<script type="text/javascript" src="assets/js/lib/single/jquery.tooltipster.min.js"></script>
 	<script type="text/javascript" src="assets/js/framework.js"></script>
 	<script type="text/javascript" src="assets/js/components.js"></script>
@@ -594,11 +598,12 @@
 			});
 
 			$('.infographic').tooltipster({
+				theme: 'tooltipster-profile',
 				trigger: 'hover',
 				contentAsHTML: true,
 				interactive: true,
 				maxWidth: 180,
-				position: 'bottom-left',
+				position: 'right',
 				functionInit: function (origin, content) {
 					return content + $('#infographic-dialog').html();
 				}

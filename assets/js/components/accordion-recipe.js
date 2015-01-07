@@ -1,3 +1,5 @@
+$(function () {
+
 'use strict';
 
 var $document = $(document),
@@ -41,3 +43,4 @@ var $document = $(document),
 			}
 		}
 	});
+});

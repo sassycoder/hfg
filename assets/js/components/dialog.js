@@ -1,4 +1,4 @@
-(function () {
+$(function () {
 	'use strict';
 	var $document = $(document),
 		targetEl,
@@ -47,4 +47,4 @@
 		closeFn();
 	});
 
-}());
+});

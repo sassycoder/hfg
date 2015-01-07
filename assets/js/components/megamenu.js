@@ -1,4 +1,4 @@
-(function () {
+$(function () {
   'use strict';
 
   var isTouch = $('html').hasClass('touch')
@@ -113,4 +113,4 @@
 
     }
   });
-}());
+});

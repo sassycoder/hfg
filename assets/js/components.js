@@ -1,3 +1,5 @@
+$(function () {
+
 'use strict';
 
 var $document = $(document),
@@ -41,7 +43,8 @@ var $document = $(document),
 			}
 		}
 	});
-(function () {
+});
+$(function () {
 	'use strict';
 	var $document = $(document),
 		targetEl,
@@ -90,8 +93,16 @@ var $document = $(document),
 		closeFn();
 	});
 
-}());
-(function () {
+});
+$(function () {
+
+	'use strict';
+	$('select').uniform({
+		selectAutoWidth: false
+	});
+	$('.uniform').uniform();
+});
+$(function () {
   'use strict';
 
   var isTouch = $('html').hasClass('touch')
@@ -206,7 +217,9 @@ var $document = $(document),
 
     }
   });
-}());
+});
+$(function () {
+
   'use strict';
 
   var $document = $(document),
@@ -291,6 +304,7 @@ var $document = $(document),
         });
       }
   });
+});
 $(function () {
 	'use strict';
 
