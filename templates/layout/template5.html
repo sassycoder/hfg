@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>     <html class="no-js ie ltie10 ltie9 ltie8 ltie7 ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>        <html class="no-js ie ltie10 ltie9 ltie8 gtie6 gtie5 ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>        <html class="no-js ie ltie10 ltie9 gtie7 gtie6 gtie5 ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>        <html class="no-js ie ltie10 gtie8 gtie7 gtie6 gtie5 ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js takeover-active" lang="en"><!--<![endif]-->
+<head>
+	<!--(bake /templates/structure/html-header.html)-->
+</head>
+
+<body>
+<div><a href="#skipnav" class="skip">Skip to main content</a></div>
+
+<div class="ad-top takeover">
+	<img src="/hfg/assets/img/structure/bg-leaderboard.png" alt="Advert">
+</div>
+<div class="ad-left takeover"></div>
+
+	<div id="wrapper" class="wrapper">
+
+		<!--(bake /templates/structure/header.html)-->
+
+			<div class="main off-area">
+			    <a id="skipnav" tabindex="-1"></a>
+
+			    <div class="row margin">
+						<div class="pane base12">
+							<!--(bake /templates/components/_breadcrumb.html)-->
+						</div>
+					</div><!-- .row -->
+
+					<div class="row tp-margin ml-margin mp-margin">
+						<div class="pane base8 tp12 ml12">
+
+							<div class="row">
+								<h1 class="section">My Account</h1>
+
+								<div class="component tabs">
+									<div class="nav cf">
+										<a class="tab-item active" href="#">profile</a>
+										<a class="tab-item" href="#">recipes</a>
+										<a class="tab-item" href="#">articles</a>
+										<a class="tab-item" href="#">diet planners</a>
+										<a class="tab-item" href="#">comments</a>
+										<a class="tab-item" href="#">newsletters</a>
+									</div>
+
+									<div class="sections">
+										<div class="article profile active cf">
+											<h2>Your details</h2>
+
+											<form>
+												<div class="row">
+													<label for="username">Username: <span class="small">(required)</span></label>
+													<input id="username" name="username" placeholder="" type="text" value="juliette_kellow">
+												</div>
+												<div class="row">
+													<label for="email">Email: <span class="small">(required)</span></label>
+													<input id="email" name="Email" placeholder="" type="email" value="juliette.kellow@eyetoeyemedia.co.uk">
+												</div>
+												<div class="row">
+													<label for="password">Password: <span class="small">(required)</span></label>
+													<input id="password" name="password" placeholder="" type="password" value="123456">
+												</div>
+												<div class="row">
+													<label for="confirmPassword">Confirm Password: <span class="small">(required)</span></label>
+													<input id="confirmPassword" name="confirmPassword" placeholder="" type="password" value="123456">
+												</div>
+												<div class="row">
+													<label for="firstName">First Name: <span class="small">(required)</span></label>
+													<input id="firstName" name="firstName" placeholder="" type="text" value="Juliette">
+												</div>
+												<div class="row">
+													<label for="lastName">Last Name: <span class="small">(required)</span></label>
+													<input id="lastName" name="lastName" placeholder="" type="text" value="Kellow">
+												</div>
+												<div class="row">
+													<label>Profile Picture: <span class="small">(optional)</span></label>
+													<div class="profile-pic cf">
+														<img src="assets/img/components/profile/profile-pic.jpg" alt="profile picture">
+														<a href="#" class="bttn primary">Upload image</a>
+													</div>
+												</div>
+												<div class="row">
+													<label for="lastName">Gender: <span class="small">(optional)</span></label>
+													<select>
+														<option selected>Female</option>
+														<option>Male</option>
+													</select>
+												</div>
+
+												<div class="row">
+													<input type="submit" class="bttn primary" value="Update account">
+												</div>
+											</form>
+										</div>
+
+										<div class="article profile">
+											<!--(bake /templates/components/_recipe-list-item.html)-->
+											<!--(bake /templates/components/_recipe-list-item.html)-->
+										</div>
+
+										<div class="article profile">
+											<!--(bake /templates/components/_recipe-list-item.html)-->
+										</div>
+
+										<div class="article profile">
+											<!--(bake /templates/components/_recipe-list-item.html)-->
+										</div>
+
+										<div class="article profile">
+											<!--(bake /templates/components/_recipe-list-item.html)-->
+										</div>
+
+										<div class="article profile">
+											<!--(bake /templates/components/_recipe-list-item.html)-->
+										</div>
+									</div>
+								</div>
+							</div>
+							
+
+
+							</div>
+						<div class="pane base4 tp12 ml12 tp-mgZero aside">
+							<!--(bake /templates/components/_mpu.html)-->
+							<!--(bake /templates/components/_mpu.html)-->
+							<!--(bake /templates/components/_mpu.html)-->
+						</div>
+							
+					</div><!-- .row -->
+
+
+		</div><!-- .main -->
+		<div class="push"></div> <!-- For sticky footer -->
+
+		<!-- Login popup  -->
+		<div id="login-dialog" class="dialog">
+			<div class="login-dialog">
+				<form>
+					<div class="row">
+						<label for="username">Username or Email: <span class="small">(required)</span></label>
+						<input class="" id="username" name="username" placeholder="" type="text" value="">
+					</div>
+					<div class="row">
+						<label for="password">Password: <span class="small">(required)</span></label>
+						<input class="" id="password" name="password" placeholder="" type="password" value="">
+					</div>
+
+					<div class="row">
+						<a href="#" class="forgotten-password">Forgotten your password?</a>
+					</div>
+
+					<div class="row">
+						<input type="submit" class="bttn primary" value="Sign in">
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<!-- infographic popup  -->
+		<div id="infographic-dialog" class="dialog"></div>
+
+	</div><!-- .wrapper -->
+	<div class="ad-right takeover"></div>
+
+	<!--(bake /templates/structure/footer.html)-->
+
+	<script type="text/javascript">
+	'use strict';
+
+		$(document).ready(function() {
+
+			var $this = $(this);
+
+			$this.on('click', 'a.tooltipstered', function (ev) {
+				ev.preventDefault();
+			});
+
+			$this.on('focus', '.infographic', function () {
+				$(this).tooltipster('show');
+			});
+
+			$this.on('blur', '.infographic', function () {
+				$(this).tooltipster('hide');
+			});
+
+			$('.infographic').tooltipster({
+				trigger: 'hover',
+				contentAsHTML: true,
+				interactive: true,
+				maxWidth: 180,
+				position: 'bottom-left',
+				functionInit: function (origin, content) {
+					return content + $('#infographic-dialog').html();
+				}
+			});
+
+    	// For login
+      $('.log-in').tooltipster({
+          trigger: 'click',
+          contentAsHTML: true,
+          interactive: true,
+          minWidth: 290,
+          position: 'bottom-right',
+          offsetX: -20,
+          functionInit: function() {
+	        	return $('#login-dialog').html();
+			    }
+      });
+    });
+
+	</script>
+	
+  </body>
+</html>

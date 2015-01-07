@@ -140,6 +140,18 @@ h1 {
       font-family: 'MuseoSlab900';
       color: #becf00;
     }
+
+    &.section {
+      font-family: 'MuseoSlab900';
+      font-size: 35px;
+      font-size: 3.5rem;
+      line-height: 37px;
+      line-height: 3.7rem;
+      color: #becf00;
+      padding-top: 0;
+      padding-bottom: 40px;
+
+    }
 }
 
 h2 {
@@ -686,6 +698,46 @@ footer {
     .takeover { display: block; }
 }
 
+.search-wrapper {
+  position: relative;
+  font-size: 0;
+}
+
+input[type='text'].search-box {
+  border-right: none;
+  padding-right: 31px;
+  width: 100%;
+
+  &:hover, &:active, &:focus {
+    border-color: #000;
+    color: #000;
+
+    + .icon_search {
+      border-color: #000;
+      color: #000;
+    }
+  }
+}
+
+.icon_search {
+  position: absolute;
+  right: 0;
+  border: 1px solid #becf00;
+  border-left: none;
+  color: #becf00;
+  padding: 7px 4px 9px 10px;
+  border-radius: 0 5px 5px 0;
+  text-decoration: none;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 19px;
+  line-height: 1.9rem;  
+
+  &:hover, &:focus, &:active {
+    color: #000;
+  }
+}
+
 .wrapper > header {
   width: 100%;
   padding: 22px 0 0 0;
@@ -773,52 +825,10 @@ footer {
   }
 
   .search {
+    position: relative;
     text-align: right;
     margin: 30px 0 0 0;
     font-size: 0; /*  remove gap between inline block elements */
-
-    .global-search {
-      display: inline-block;
-      border: 1px solid #becf00;
-      border-right: none;
-      color: #000;
-      padding: 10px 8px;
-      border-radius: 5px 0 0 5px;
-      width: 240px;
-      font-family: 'MuseoSans300';
-      font-size: 14px;
-      font-size: 1.4rem;
-      line-height: 16px;
-      line-height: 1.6rem;
-
-      &:hover, &:active, &:focus {
-        border-color: #000;
-        color: #000;
-
-        + .icon_search {
-          border-color: #000;
-          color: #000;
-        }
-      }
-    }
-
-    .icon_search {
-      display: inline-block;
-      border: 1px solid #becf00;
-      border-left: none;
-      color: #becf00;
-      padding: 7px 4px 9px 10px;
-      border-radius: 0 5px 5px 0;
-      text-decoration: none;
-      font-size: 16px;
-      font-size: 1.6rem;
-      line-height: 19px;
-      line-height: 1.9rem;  
-
-      &:hover, &:focus, &:active {
-        color: #000;
-      }
-    }
   }
   .nav {
     display: inline-block;

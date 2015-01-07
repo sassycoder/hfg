@@ -91,15 +91,6 @@
 			</div>
 		</div>
 
-		<!-- infographic popup  -->
-		<div id="infographic-dialog" class="dialog">
-			<div class="infographic-dialog">
-				<div class="row">
-					<a href="#" class="bttn primary">View your recipes</a>
-				</div>
-			</div>
-		</div>
-
 	</div><!-- .wrapper -->
 	<div class="ad-right takeover"></div>
 
@@ -122,17 +113,6 @@
 
 			$this.on('blur', '.infographic', function () {
 				$(this).tooltipster('hide');
-			});
-
-			$('.infographic').tooltipster({
-				trigger: 'hover',
-				contentAsHTML: true,
-				interactive: true,
-				maxWidth: 180,
-				position: 'bottom-left',
-				functionInit: function (origin, content) {
-					return content + $('#infographic-dialog').html();
-				}
 			});
 
 			//For save recipe button

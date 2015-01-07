@@ -44,6 +44,48 @@
 						<div class="pane base8 tp12 ml12">
 
 							<div class="row">
+								<div class="search-wrapper">
+									<input id="body-search" class="search-box" name="body-search" placeholder="Search Cuisine" type="text" value="">
+									<a href="#" class="icon_search" title="search"><span></span></a>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="pane base8 tp12 ml12">
+									<div class="component popular-recipes">
+										<h3>Popular Recipes</h3>
+										<div id="popular-recipes" class="component owl-carousel body cf">
+											
+											<div class="item cf">
+												<!--(bake /templates/components/_popular-recipe-list-item.html)-->
+											</div>
+
+											<div class="item cf">
+												<!--(bake /templates/components/_popular-recipe-list-item.html)-->
+											</div>
+
+											<div class="item cf">
+												<!--(bake /templates/components/_popular-recipe-list-item.html)-->
+											</div>
+
+											<div class="item cf">
+												<!--(bake /templates/components/_popular-recipe-list-item.html)-->
+											</div>
+
+											<div class="item cf">
+												<!--(bake /templates/components/_popular-recipe-list-item.html)-->
+											</div>
+
+											<div class="item cf">
+												<!--(bake /templates/components/_popular-recipe-list-item.html)-->
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
 								<div class="pane base4 tp6 ml6">
 									<!--(bake /templates/components/_infobox-homepage-full.html)-->
 								</div>
@@ -63,30 +105,30 @@
 							
 								<div class="row">
 									<div class="pane base8 tp12 ml12">
-										<h3>Meet Our Experts</h3>
-										<div id="expert-carousel" class="component owl-carousel body cf">
+										<h3>Popular Diet Planners</h3>
+										<div id="diet-carousel" class="component owl-carousel body cf">
 											<div class="item pane base2 tp3 ml12 mp12 cf">
-												<!--(bake /templates/components/_expert-list-item.html)-->
+												<!--(bake /templates/components/_recipe-list-item-carousel.html)-->
 											</div>
 
 											<div class="item pane base2 tp3 ml12 mp12 cf">
-												<!--(bake /templates/components/_expert-list-item.html)-->
+												<!--(bake /templates/components/_recipe-list-item-carousel.html)-->
 											</div>
 
 											<div class="item pane base2 tp3 ml12 mp12 cf">
-												<!--(bake /templates/components/_expert-list-item.html)-->
+												<!--(bake /templates/components/_recipe-list-item-carousel.html)-->
 											</div>
 
 											<div class="item pane base2 tp3 ml12 mp12 cf">
-												<!--(bake /templates/components/_expert-list-item.html)-->
+												<!--(bake /templates/components/_recipe-list-item-carousel.html)-->
 											</div>
 
 											<div class="item pane base2 tp3 ml12 mp12 cf">
-												<!--(bake /templates/components/_expert-list-item.html)-->
+												<!--(bake /templates/components/_recipe-list-item-carousel.html)-->
 											</div>
 
 											<div class="item pane base2 tp3 ml12 mp12 cf">
-												<!--(bake /templates/components/_expert-list-item.html)-->
+												<!--(bake /templates/components/_recipe-list-item-carousel.html)-->
 											</div>
 
 										</div>
@@ -139,18 +181,6 @@
 						<input type="submit" class="bttn primary" value="Sign in">
 					</div>
 				</form>
-			</div>
-		</div>
-
-		<!-- Save recipe popup  -->
-		<div id="save-recipe-dialog" class="dialog">
-			<div class="save-recipe-dialog">
-				<div class="row">
-					<p>Saved to your recipes.</p>
-				</div>
-				<div class="row">
-					<a href="#" class="bttn primary">More on nutrition</a>
-				</div>
 			</div>
 		</div>
 
@@ -221,7 +251,31 @@
 		  });
 	  });
 
-			$('#expert-carousel').owlCarousel({
+			$('#popular-recipes').owlCarousel({
+		  	pagination: true,
+		  	navigation: true,
+		  	scrollPerPage: true,
+		  	rewindNav: false,
+		  	addClassActive: true,
+		  	items: 3,
+		  	itemsDesktop: false,
+		  	itemsDesktopSmall: false,
+		  	itemsTablet: false,
+		  	itemsTabletSmall: [767,3],
+		  	itemsMobile: [480,2],
+		  	navigationText: ["4","5"],
+		  	afterMove: function (o) {
+		  		var getItems = $(o).find('.owl-item'),
+		  				getActive = $(o).find('.active'),
+		  				activeLength = getActive.length;
+
+		  		$(getItems).removeClass('first last');
+		  		$(getActive).eq(0).addClass('first');
+		  		$(getActive).eq((activeLength - 2)).addClass('last');
+		  	}
+		  });
+
+		  $('#diet-carousel').owlCarousel({
 		  	pagination: true,
 		  	navigation: true,
 		  	scrollPerPage: true,

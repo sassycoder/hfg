@@ -9,8 +9,10 @@
 			float: left;
 			padding: 13px 12px 9px;
 			background-color: #fff;
-			color: #8cb656;
-			border-radius: 5px 5px 0 0;
+			color: #becf00;
+			border: 1px solid #becf00;
+			border-left: 0;
+			border-bottom: 0;
 			font-family: 'MuseoSansCond700';
 			font-size: 13px;
 			font-size: 1.3rem;
@@ -30,6 +32,14 @@
 				color: #fff;
 				cursor: default;
 			}
+
+			&:first-child {
+				border-radius: 5px 0 0 0;
+				border-left: 1px solid;
+			}
+			&:last-child {
+				border-radius: 0 5px 0 0;
+			}
 		}
 	}
 	
@@ -39,6 +49,50 @@
 
 		&.active {
 			display: block;
+		}
+
+		&.profile {
+			border: 1px solid #becf00;
+			border-top-width: 2px;
+			background-color: #f9faee;
+			padding: 45px 35px 35px;
+
+			h2 {
+				padding-bottom: 35px;
+			}
+
+			label {
+				display: block;
+				font-family: 'MuseoSans900';
+				font-size: 14px;
+				font-size: 1.4rem;
+				line-height: 16px;
+				line-height: 1.6rem;
+			}
+
+			input {
+				&[type='text'], &[type='email'], &[type='password'] {
+					width: 300px;
+				}
+			}
+
+			.profile-pic {
+				font-size: 0;
+
+				img {
+					display: inline-block;
+					max-width: 82px;
+					margin-right: 100px;
+					border-radius: 5px;
+					border: 1px solid #becf00;
+				}
+
+				.bttn {
+					display: inline-block;
+					vertical-align: bottom;
+				}
+			}
+
 		}
 	}
 }
