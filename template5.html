@@ -167,15 +167,17 @@
 						</div>
 					</div><!-- .row -->
 
-					<div class="row tp-margin ml-margin mp-margin">
+					<div class="row margin">
+						<h1 class="section">My Account</h1>
+					</div>
+
+					<div class="row tp-margin">
 						<div class="pane base8 tp12 ml12">
 
 							<div class="row">
-								<h1 class="section">My Account</h1>
-
-								<div class="component tabs">
+								<div class="component tabs single-only desktopOnly">
 									<div class="nav cf">
-										<a class="tab-item active" href="#">profile</a>
+										<a class="tab-item" href="#">profile</a>
 										<a class="tab-item" href="#">recipes</a>
 										<a class="tab-item" href="#">articles</a>
 										<a class="tab-item" href="#">diet planners</a>
@@ -184,24 +186,24 @@
 									</div>
 
 									<div class="sections">
-										<div class="article profile active cf">
+										<div class="article profile cf">
 											<h2>Your details</h2>
 
 											<form>
 												<div class="row">
 													<label for="username">Username: <span class="small">(required)</span></label>
 													<input id="username" name="username" placeholder="" type="text" value="juliette_kellow">
-													<a href="#" class="infographic icon_question_alt" title="Your username will appear next to any comments you make on the site. Spaces are allowed; punctuation is not allowed."></a>
+													<a href="#" class="infographic help icon_question_alt" title="Your username will appear next to any comments you make on the site. Spaces are allowed; punctuation is not allowed."></a>
 												</div>
 												<div class="row">
 													<label for="email">Email: <span class="small">(required)</span></label>
 													<input id="email" name="Email" placeholder="" type="email" value="juliette.kellow@eyetoeyemedia.co.uk">
-													<a href="#" class="infographic icon_question_alt" title="Your username will appear next to any comments you make on the site. Spaces are allowed; punctuation is not allowed."></a>
+													<a href="#" class="infographic help icon_question_alt" title="Your username will appear next to any comments you make on the site. Spaces are allowed; punctuation is not allowed."></a>
 												</div>
 												<div class="row">
 													<label for="password">Password: <span class="small">(required)</span></label>
 													<input id="password" name="password" placeholder="" type="password" value="123456">
-													<a href="#" class="infographic icon_question_alt" title="Your username will appear next to any comments you make on the site. Spaces are allowed; punctuation is not allowed."></a>
+													<a href="#" class="infographic help icon_question_alt" title="Your username will appear next to any comments you make on the site. Spaces are allowed; punctuation is not allowed."></a>
 												</div>
 												<div class="row">
 													<label for="confirmPassword">Confirm Password: <span class="small">(required)</span></label>
@@ -219,8 +221,10 @@
 													<label>Profile Picture: <span class="small">(optional)</span></label>
 													<div class="profile-pic cf">
 														<img src="assets/img/components/profile/profile-pic.jpg" alt="profile picture">
-														<a href="#" class="bttn primary">Upload image</a>
-														<a href="#" class="infographic icon_question_alt" title="Your username will appear next to any comments you make on the site. Spaces are allowed; punctuation is not allowed."></a>
+														<div class="upload">
+															<a href="#" class="bttn primary">Upload image</a>
+															<a href="#" class="infographic help icon_question_alt" title="Your username will appear next to any comments you make on the site. Spaces are allowed; punctuation is not allowed."></a>
+														</div>
 													</div>
 												</div>
 												<div class="row">
@@ -552,7 +556,7 @@
 					<div class="mags"></div>
 				</div>
 	
-				<div class="pane base3 ml12">
+				<div class="pane base3 ml12 ml-mgZero">
 					<h3>Subscribe to Healthy Food Guide</h3>
 					
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla scelerisque, nulla nec tempor sagittis, justo eros egestas metus, ut bibendum eros Nulla scelerisque, nulla nec tempor.</p>
@@ -597,7 +601,7 @@
 				$(this).tooltipster('hide');
 			});
 
-			$('.infographic').tooltipster({
+			$('.help').tooltipster({
 				theme: 'tooltipster-profile',
 				trigger: 'hover',
 				contentAsHTML: true,

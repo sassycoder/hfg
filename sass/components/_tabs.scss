@@ -40,6 +40,10 @@
 			&:last-child {
 				border-radius: 0 5px 0 0;
 			}
+
+			+ .article {
+				display: none;
+			}
 		}
 	}
 	
@@ -77,7 +81,7 @@
 				font-size: 23px;
 				font-size: 2.3rem;
 				color: #becf00;
-				vertical-align: middle;
+				vertical-align: bottom;
 			}
 
 			input {
@@ -96,13 +100,21 @@
 
 			.profile-pic {
 				font-size: 0;
+				width: 328px;
+				min-width: 230px;
+				position: relative;
 
 				img {
 					display: inline-block;
 					max-width: 82px;
-					margin-right: 100px;
 					border-radius: 5px;
 					border: 1px solid #becf00;
+				}
+
+				.upload {
+					position: absolute;
+					right: 0;
+					bottom: 0;
 				}
 
 				.bttn {
@@ -111,6 +123,74 @@
 				}
 			}
 
+			.row-action {
+				.bttn {
+					display: inline-block;
+				}
+			}
+
+		}
+	}
+}
+
+@media all and (max-width: 767px) {
+	.component.tabs {
+
+		.sections {
+			display: none;
+		}
+
+		.nav {
+			.tab-item {
+
+				&:first-child {
+					border-left: 1px solid #becf00;
+					border-radius: 0;
+				}
+
+				display: block;
+				float: none;
+				border-radius: 0;
+				border-left: 1px solid;
+
+				&.active {
+					cursor: pointer;
+
+					+ .article {
+						display: block!important;
+					}
+				}
+			}
+		}
+
+		.article {
+			&.profile {
+				padding: 45px 10px 15px;
+				border-bottom: 0;
+
+				input {
+					&[type='text'], &[type='email'], &[type='password'] {
+						width: 85%;
+					}
+				}
+
+				.selector, .selector span {
+					width: 85%;
+				}
+
+				select {
+					width: 100%;
+				}
+
+				.profile-pic {
+					width: 89%;
+				}
+
+				.row-action {
+					text-align: center;
+				}
+
+			}
 		}
 	}
 }

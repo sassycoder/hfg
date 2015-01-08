@@ -381,6 +381,12 @@
       position: relative;
     }
 
+    &.grid {
+      .pane {
+        &:nth-child(4n + 1) { margin-left: 0; }
+      }
+    }
+
     .pane {
       display: block;
       float: left;
@@ -558,6 +564,12 @@
     &.tp-margin, &.margin {
       padding-left: 28px;
       padding-right: 28px;
+    }
+
+    &.grid {
+      .pane {
+        &:nth-child(4n + 1) { margin-left: 0; }
+      }
     }
 
     .pane {
@@ -875,6 +887,12 @@
         padding-right: 3.2%;
       }
 
+      &.grid {
+        .pane {
+          &:nth-child(4n + 1) { margin-left: 0; }
+        }
+      }
+
       .pane, .pane .pane {
         margin-left: 0;
         &.dw-mgZero {
@@ -1103,9 +1121,9 @@
         &.base3 {
           width: 34%;
         }
-        &.base2 {
-          width: 20%;
-        }
+        // &.base2 {
+        //   width: 20%;
+        // }
       }
     }
     &.base7 {
@@ -1539,6 +1557,12 @@
     &.mp-margin, &.margin  {
       padding-left: 3.2%;
       padding-right: 3.2%;
+    }
+
+    &.grid {
+      .pane {
+        &:nth-child(2n + 1) { margin-left: 0; }
+      }
     }
     .pane {
       margin-left: 4%;

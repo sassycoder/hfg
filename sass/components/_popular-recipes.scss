@@ -16,6 +16,10 @@
 			margin: 0;
 		}
 
+		img {
+			@extend .border;
+		}
+
 		p {
 			text-align: center;
 			padding: 10px 15px 0;
@@ -28,10 +32,29 @@
 				line-height: 1.5rem;
 			}
 		}
+
+		&.cuisine {
+			margin-bottom: 20px;
+		}
 	}
-	.popular-recipe-item {
-		img {
-			@extend .border;
+
+	&.popular-recipe-item {
+
+		p {
+			text-align: center;
+			padding: 10px 15px 0;
+
+			strong {
+				font-family: 'MuseoSlab900';
+				font-size: 13px;
+				font-size: 1.3rem;
+				line-height: 15px;
+				line-height: 1.5rem;
+			}
+		}
+
+		.number {
+			color: #8cb624;
 		}
 	}
 }

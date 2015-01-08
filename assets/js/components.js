@@ -310,6 +310,8 @@ $(function () {
 
 	var tabNav = $('.tabs .nav .tab-item'),
 			articles = $('.tabs .sections .article'),
+			desktopOnly = $('.tabs').hasClass('desktopOnly'),
+			singleOnly = $('.tabs').hasClass('single-only'),
 
 			runTabs = function (index) {
 				$(tabNav).each(function () {
@@ -326,20 +328,69 @@ $(function () {
 				});
 			};
 
-			//make first tab item active
-			$(tabNav).each(function (i) {
-				if (i === 0) {
-					$(this).addClass('active');
-					return;
-				}
-			});
+		//make first tab item active
+		$(tabNav).each(function (i) {
+			if (i === 0) {
+				$(this).addClass('active');
+				return;
+			}
+		});
 
 		//make all articles invisible apart from the first one
 		$(articles).each(function (i) {
 			if (i === 0) {
 				$(this).addClass('active');
-			} else {
+			}
+
+			$(this).clone().insertAfter(tabNav.eq(i));
+
+			if (i > 0) {
 				$(this).css('opacity', '0');
+			}
+		});
+
+		$(window).on('resize', function () {
+			if ($(this).innerWidth() > 767) {
+				var getActive = $('.sections .article.active').index();
+
+				$(tabNav).removeClass('active').eq(getActive).addClass('active');
+				$('.tab-item + .profile').hide();
+				
+			}
+
+		});
+
+		//event for tab click
+		$(document).on('click', '.tabs .nav .tab-item', function(e) {
+	    e.preventDefault();
+
+	    var windowWidth = $(window).innerWidth(),
+					$this = $(this),
+					index = $(tabNav).index(this); //get index of clicked tab
+
+	    if (windowWidth < 768 && desktopOnly) {
+        if ($this.hasClass('active')) {
+					$(this).next('.article').slideUp('fast', function () {
+						$this.toggleClass('active');
+					});
+				} else {
+					if (singleOnly) {
+						$('.tab-item.active').toggleClass('active').next('.article').slideUp('fast', function () {
+
+						});
+					}
+					$this.next('.article').slideDown('fast', function () {
+						$this.toggleClass('active');
+					});
+				}
+      } else {
+
+		    if ($(this).hasClass('active')) {
+					return;
+		    } else {
+					runTabs(index);
+					$(this).addClass('active');	//add active class to clicked tab anchor
+				}
 			}
 		});
 
@@ -368,17 +419,4 @@ $(function () {
 			runTabs(index);
 			$(tabNav).eq(index).addClass('active');	//add active class to clicked tab anchor
 		});
-
-		//event for tab click
-		$(document).on('click', '.tabs .nav a', function(e) {
-	    e.preventDefault();
-
-	    if ($(this).hasClass('active')) {
-				return;
-	    } else {
-				var index = $(tabNav).index(this); //get index of clicked tab
-				runTabs(index);
-				$(this).addClass('active');	//add active class to clicked tab anchor
-			}
-	});
 });
