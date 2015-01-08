@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>     <html class="no-js ie ltie10 ltie9 ltie8 ltie7 ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>        <html class="no-js ie ltie10 ltie9 ltie8 gtie6 gtie5 ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>        <html class="no-js ie ltie10 ltie9 gtie7 gtie6 gtie5 ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>        <html class="no-js ie ltie10 gtie8 gtie7 gtie6 gtie5 ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js takeover-active" lang="en"><!--<![endif]-->
+<head>
+	<!--(bake /templates/structure/html-header.html)-->
+</head>
+
+<body>
+<div><a href="#skipnav" class="skip">Skip to main content</a></div>
+
+<div class="ad-top takeover">
+	<img src="/hfg/assets/img/structure/bg-leaderboard.png" alt="Advert">
+</div>
+<div class="ad-left takeover"></div>
+
+	<div id="wrapper" class="wrapper">
+
+		<!--(bake /templates/structure/header.html)-->
+
+			<div class="main off-area">
+			    <a id="skipnav" tabindex="-1"></a>
+
+			    <div class="row margin">
+						<div class="pane base12">
+							<!--(bake /templates/components/_breadcrumb.html)-->
+						</div>
+					</div><!-- .row -->
+
+					<div class="row margin">
+						<h1 class="section">Chicken</h1>
+					</div>
+
+					<div class="row">
+						<div class="pane base8 tp12 ml12">
+
+							<div class="row tp-margin ml-margin mp-margin">
+								<div class="pane base8 tp12 ml12">
+									<div class="component popular-recipes cuisine">
+										<h3>Popular Chicken</h3>
+										<div id="popular-recipes" class="component owl-carousel body cf">
+											
+											<div class="item cf">
+												<!--(bake /templates/components/_popular-recipe-list-item.html)-->
+											</div>
+
+											<div class="item cf">
+												<!--(bake /templates/components/_popular-recipe-list-item.html)-->
+											</div>
+
+											<div class="item cf">
+												<!--(bake /templates/components/_popular-recipe-list-item.html)-->
+											</div>
+
+											<div class="item cf">
+												<!--(bake /templates/components/_popular-recipe-list-item.html)-->
+											</div>
+
+											<div class="item cf">
+												<!--(bake /templates/components/_popular-recipe-list-item.html)-->
+											</div>
+
+											<div class="item cf">
+												<!--(bake /templates/components/_popular-recipe-list-item.html)-->
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row tp-margin ml-margin mp-margin tablet">
+								<div class="search-wrapper pane base4 tp6">
+									<input id="body-search" class="search-box" name="body-search" placeholder="Search Cuisine" type="text" value="">
+									<a href="#" class="icon_search" title="search"><span></span></a>
+								</div>
+								<div class="toggles pane base4 tp6">
+									<a href="#" class="toggle bttn active">A-Z</a>
+									<a href="#" class="toggle bttn">Rating</a>
+									<a href="#" class="toggle bttn">Latest</a>
+									<a href="#" class="toggle bttn">Popular</a>
+									</a>
+								</div>
+							</div>
+
+							<div class="row tp-margin ml-margin mp-margin">
+								<div class="pane base2 tp3 tablet">
+									<!--(bake /templates/components/_filters.html)-->
+								</div>
+								<div class="pane base6 tp9 ml12 ml-mgZero">
+									<!--(bake /templates/components/_grid-list-item.html)-->
+									<!--(bake /templates/components/_grid-list-item.html)-->
+									<!--(bake /templates/components/_grid-list-item.html)-->
+									<!--(bake /templates/components/_grid-list-item.html)-->
+									<!--(bake /templates/components/_grid-list-item.html)-->
+									<!--(bake /templates/components/_grid-list-item.html)-->
+									<!--(bake /templates/components/_grid-list-item.html)-->
+									<a href="#" class="bttn">SHOW MORE (viewing 15 of 122)</a>
+								</div>
+							</div>
+
+						</div>
+						<div class="pane base4 tp12 ml12 tp-mgZero aside">
+							<!--(bake /templates/components/_mpu.html)-->
+							<!--(bake /templates/components/_mpu.html)-->
+							<!--(bake /templates/components/_mpu.html)-->
+						</div>
+							
+					</div><!-- .row -->
+
+
+		</div><!-- .main -->
+		<div class="push"></div> <!-- For sticky footer -->
+
+		<!-- Login popup  -->
+		<div id="login-dialog" class="dialog">
+			<div class="login-dialog">
+				<form>
+					<div class="row">
+						<label for="username">Username or Email: <span class="small">(required)</span></label>
+						<input class="" id="username" name="username" placeholder="" type="text" value="">
+					</div>
+					<div class="row">
+						<label for="password">Password: <span class="small">(required)</span></label>
+						<input class="" id="password" name="password" placeholder="" type="password" value="">
+					</div>
+
+					<div class="row">
+						<a href="#" class="forgotten-password">Forgotten your password?</a>
+					</div>
+
+					<div class="row">
+						<input type="submit" class="bttn primary" value="Sign in">
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<!-- infographic popup  -->
+		<div id="infographic-dialog" class="dialog">
+			<div class="infographic-dialog">
+				<div class="row">
+					<a href="#" class="bttn primary">View your recipes</a>
+				</div>
+			</div>
+		</div>
+
+	</div><!-- .wrapper -->
+	<div class="ad-right takeover"></div>
+
+	<!--(bake /templates/structure/footer.html)-->
+
+	<script type="text/javascript">
+	'use strict';
+
+		$(document).ready(function() {
+
+			var $this = $(this);
+
+			$this.on('click', 'a.tooltipstered', function (ev) {
+				ev.preventDefault();
+			});
+
+			$this.on('focus', '.infographic', function () {
+				$(this).tooltipster('show');
+			});
+
+			$this.on('blur', '.infographic', function () {
+				$(this).tooltipster('hide');
+			});
+
+			$('.infographic').tooltipster({
+				trigger: 'hover',
+				contentAsHTML: true,
+				interactive: true,
+				maxWidth: 180,
+				position: 'bottom-left',
+				functionInit: function (origin, content) {
+					return content + $('#infographic-dialog').html();
+				}
+			});
+
+    	// For login
+      $('.log-in').tooltipster({
+          trigger: 'click',
+          contentAsHTML: true,
+          interactive: true,
+          minWidth: 290,
+          position: 'bottom-right',
+          offsetX: -20,
+          functionInit: function() {
+	        	return $('#login-dialog').html();
+			    }
+      });
+
+
+			$('#popular-recipes').owlCarousel({
+		  	pagination: true,
+		  	navigation: true,
+		  	scrollPerPage: true,
+		  	rewindNav: false,
+		  	addClassActive: true,
+		  	items: 3,
+		  	itemsDesktop: false,
+		  	itemsDesktopSmall: false,
+		  	itemsTablet: false,
+		  	itemsTabletSmall: [767,3],
+		  	itemsMobile: [480,2],
+		  	navigationText: ["4","5"],
+		  	afterMove: function (o) {
+		  		var getItems = $(o).find('.owl-item'),
+		  				getActive = $(o).find('.active'),
+		  				activeLength = getActive.length;
+
+		  		$(getItems).removeClass('first last');
+		  		$(getActive).eq(0).addClass('first');
+		  		$(getActive).eq((activeLength - 2)).addClass('last');
+		  	}
+		  });
+	  });
+
+	</script>
+	
+  </body>
+</html>

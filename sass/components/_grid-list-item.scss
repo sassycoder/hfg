@@ -1,0 +1,37 @@
+.component.grid-list-item {
+	&:first-child {
+		border-top: none;
+		padding-top: 0;
+	}
+	border-top: 1px dotted #000;
+	padding: 10px 0;
+
+	.item-heading {
+		display: block;
+		font-family: 'MuseoSlab900';
+		font-size: 18px;
+		font-size: 1.8rem;
+		line-height: 18px;
+		line-height: 1.8rem;
+		margin-bottom: 10px;
+	}
+	.wrap {
+		margin-bottom: 10px;
+
+		&.infographics {
+			margin-top: 10px;
+		}
+	}
+}
+
+@media all and (max-width: 480px) {
+	.component.grid-list-item {
+		.item-heading {
+			font-size: 14px;
+			font-size: 1.4rem;
+			line-height: 14px;
+			line-height: 1.4rem;
+		}
+		.wrap.info { display: none; }
+		} 
+}

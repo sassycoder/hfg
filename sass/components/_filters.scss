@@ -1,0 +1,51 @@
+.component {
+
+	&.filters {
+		border: 1px solid #becf00;
+		border-radius: 5px;
+		padding: 5px 5px 15px 5px;
+
+		h3 {
+			font-family: 'MuseoSansCond700';
+			font-size: 13px;
+			font-size: 1.3rem;
+			line-height: 16px;
+			line-height: 1.6rem;
+			color: #becf00;
+			margin: 0 0 5px 0;
+			padding: 0;
+			border: 0;
+			text-transform: uppercase;
+		}
+
+		li {
+			padding-bottom: 3px;
+		}
+
+		.remove {
+			display: inline-block;
+			font-family: 'ElegantIcons';
+			font-size: 15px;
+			font-size: 1.5rem;
+			color: #becf00;
+			padding: 0 4px 0 6px;
+			vertical-align: middle;
+
+			&:hover, &:active, &:focus {
+				color: #ff9000;
+			}
+		}
+
+		.filter {
+			display: inline-block;
+			font-size: 13px;
+			font-size: 1.3rem;
+		}
+	}
+
+	&.facets {
+		.number {
+			color: #999;
+		}
+	}
+}
