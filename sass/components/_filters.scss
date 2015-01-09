@@ -3,6 +3,7 @@
 	&.filters {
 		border: 1px solid #becf00;
 		border-radius: 5px;
+		margin-bottom: 9px;
 		padding: 5px 5px 15px 5px;
 
 		h3 {
@@ -11,7 +12,7 @@
 			font-size: 1.3rem;
 			line-height: 16px;
 			line-height: 1.6rem;
-			color: #becf00;
+			color: #8cb624;
 			margin: 0 0 5px 0;
 			padding: 0;
 			border: 0;
@@ -27,7 +28,7 @@
 			font-family: 'ElegantIcons';
 			font-size: 15px;
 			font-size: 1.5rem;
-			color: #becf00;
+			color: #8cb624;
 			padding: 0 4px 0 6px;
 			vertical-align: middle;
 
@@ -44,8 +45,49 @@
 	}
 
 	&.facets {
+		.item {
+			position: relative;
+			border: 1px solid #becf00;
+			border-radius: 5px;
+			padding: 10px 24px 6px 6px;
+			display: block;
+			color: #8cb624;
+			font-family: 'MuseoSansCond700';
+			font-size: 13px;
+			font-size: 1.3rem;
+			line-height: 16px;
+			line-height: 1.6rem;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+
+			&:after {
+				content: '3';
+				font-family: 'ElegantIcons';
+				font-size: 22px;
+				font-size: 2.2rem;
+				line-height: 26px;
+				line-height: 2.6rem;
+				position: absolute;
+				right: 4px;
+				top: 1px;
+			}
+
+			&:hover, &:active, &:focus, &.active {
+				background-color: #becf00;
+				color: #fff;
+			}
+		}
+
+		.sub-items {
+			padding-left: 12px;
+			padding-top: 15px;
+		}
 		.number {
 			color: #999;
+
+			&:before {
+				content: ' '
+			}
 		}
 	}
 }

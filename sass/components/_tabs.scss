@@ -7,7 +7,7 @@
 
 		.tab-item {
 			float: left;
-			padding: 13px 12px 9px;
+			padding: 13px 10px 9px;
 			background-color: #fff;
 			color: #becf00;
 			border: 1px solid #becf00;
@@ -41,6 +41,15 @@
 				border-radius: 0 5px 0 0;
 			}
 
+			.number {
+				font-family: 'MuseoSans300';
+				font-size: 13px;
+				font-size: 1.3rem;
+				line-height: 15px;
+				line-height: 1.5rem;
+				color: #333;
+			}
+
 			+ .article {
 				display: none;
 			}
@@ -53,6 +62,76 @@
 
 		&.active {
 			display: block;
+		}
+
+		&.grid {
+			padding-top: 20px;
+			border-top: 2px solid #becf00;
+		}
+
+		&.diet {
+			border: 1px solid #becf00;
+			border-top-width: 2px;
+			padding: 35px 15px 15px 25px;
+
+			p {
+				font-size: 14px;
+				font-size: 1.4rem;
+				line-height: 22px;
+				line-height: 2.2rem;
+			}
+
+			em {
+				font-style: normal;
+				color: #8cb624;
+			}
+
+			.heading {
+				color: #8cb624;
+				margin-top: 10px;
+
+				&:first-child {
+					margin-top: 0;
+				}
+
+				strong {
+					letter-spacing: 0
+				}
+			}
+
+			.featured-recipes {
+				float: left;
+				margin-left: 20px;
+				width: 185px;
+
+				h3 {
+					border-bottom: 0;
+				}
+
+				.component {
+					margin-top: 20px;
+
+					&:first-of-type {
+						margin-top: 0;
+					}
+				}
+
+				img {
+					@extend .border;
+				}
+			}
+
+			.cal-label-border {
+				left: auto;
+				right: -20px;
+				top: -40px;
+				min-height: 74px;
+				transform: translate(0) rotate(15deg);
+
+				.cal-label {
+					padding: 24px 5px 23px;
+				}
+			}
 		}
 
 		&.profile {
@@ -136,28 +215,31 @@
 @media all and (max-width: 767px) {
 	.component.tabs {
 
-		.sections {
-			display: none;
-		}
+		&.desktopOnly {
 
-		.nav {
-			.tab-item {
+			.sections {
+				display: none;
+			}
 
-				&:first-child {
-					border-left: 1px solid #becf00;
+			.nav {
+				.tab-item {
+
+					&:first-child {
+						border-left: 1px solid #becf00;
+						border-radius: 0;
+					}
+
+					display: block;
+					float: none;
 					border-radius: 0;
-				}
+					border-left: 1px solid;
 
-				display: block;
-				float: none;
-				border-radius: 0;
-				border-left: 1px solid;
+					&.active {
+						cursor: pointer;
 
-				&.active {
-					cursor: pointer;
-
-					+ .article {
-						display: block!important;
+						+ .article {
+							display: block!important;
+						}
 					}
 				}
 			}
@@ -189,7 +271,12 @@
 				.row-action {
 					text-align: center;
 				}
+			}
 
+			&.diet {
+				.cal-label-border {
+					display: none;
+				}
 			}
 		}
 	}

@@ -28,6 +28,12 @@
 			-webkit-transform: none;
 		}
 	}
+
+	&.blog {
+		.owl-wrapper-outer {
+			padding-top: 10px;
+		}
+	}
 }
 
 .owl-theme .owl-controls{

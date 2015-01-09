@@ -46,15 +46,73 @@
 
 			strong {
 				font-family: 'MuseoSlab900';
-				font-size: 13px;
-				font-size: 1.3rem;
-				line-height: 15px;
-				line-height: 1.5rem;
+				font-size: 14px;
+				font-size: 1.4rem;
+				line-height: 16px;
+				line-height: 1.6rem;
 			}
 		}
 
 		.number {
 			color: #8cb624;
 		}
+
+		&.diet-planner {
+			img {
+				float: left;
+				margin-right: 15px;
+			}
+
+			.heading {
+				font-family: 'MuseoSlab900';
+				font-size: 24px;
+				font-size: 2.4rem;
+				color: #becf00;
+
+				&:hover, &:active, &:focus {
+					color: #ff9000;
+				}
+			}
+
+			p {
+				text-align: left;
+				font-size: 14px;
+				font-size: 1.4rem;
+				line-height: 20px;
+				line-height: 2rem;
+			}
+		}
+
+		&.blog {
+			position: relative;
+
+			.cal-label-border {
+				left: auto;
+				right: 6px;
+				top: -9px;
+				width: 65px;
+				min-height: 65px;
+				font-size: 10px;
+				font-size: 1rem;
+				transform: translate(0) rotate(15deg);
+				z-index: 1;
+
+				&:after {
+					background-image: url('/assets/img/structure/label-recipe-transparent.png');
+					width: 39px;
+				}
+
+				.cal-label {
+					padding: 8px 5px 9px;
+					font-family: 'MuseoSansCond900';
+					text-transform: uppercase;
+				}
+
+				.day {
+					font-size: 22px;
+					font-size: 2.2rem;
+				}
+			}
+		}	
 	}
 }

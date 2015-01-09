@@ -47,7 +47,7 @@ $(function () {
 				var getActive = $('.sections .article.active').index();
 
 				$(tabNav).removeClass('active').eq(getActive).addClass('active');
-				$('.tab-item + .profile').hide();
+				$('.tab-item + .article').hide();
 				
 			}
 

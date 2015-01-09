@@ -397,6 +397,9 @@
       &:first-child {
         margin-left: 0;
       }
+      &.relative {
+        position: relative;
+      }
     }
 
     .gutterless .pane {

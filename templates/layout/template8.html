@@ -30,83 +30,82 @@
 						</div>
 					</div><!-- .row -->
 
-			    <div class="row relative hero-area">
-			    	<div class="pane base12 tp12 ml12">
-							<!--(bake /templates/components/_homepage-carousel.html)-->
-						</div>
-					</div><!-- .row -->
-
-					<div class="row tp-margin ml-margin mp-margin">
+					<div class="row">
 						<div class="pane base8 tp12 ml12">
-							<div class="row">
-								<div class="pane base4 tp6">
-									<!--(bake /templates/components/_infobox-homepage.html)-->
-								</div>
-								<div class="pane base4 tp6">
-									<!--(bake /templates/components/_infobox-homepage.html)-->
-								</div>
+							<div class="row margin">
+								<h1 class="section">Q&amp;A</h1>
+								<p class="section-intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum imperdiet interdum ex at feugiat. Sed eleifend tempus ligula ut malesuada. Quisque accumsan.</p>
 							</div>
-								<div class="row">
-									<div class="pane base8 tp12 ml12">
-										<h3>Meet Our Experts</h3>
-										<div id="expert-carousel" class="component owl-carousel body cf">
-											<div class="item pane base2 tp3 ml12 mp12 cf">
-												<!--(bake /templates/components/_expert-list-item.html)-->
+							<div class="row tp-margin ml-margin mp-margin">
+								<div class="pane base8 tp12 ml12">
+									<div class="component popular-recipes cuisine">
+										<h3>Popular Q&amp;A</h3>
+										<div id="popular-recipes" class="component owl-carousel body cf">
+											
+											<div class="item cf">
+												<!--(bake /templates/components/_popular-qa.html)-->
 											</div>
 
-											<div class="item pane base2 tp3 ml12 mp12 cf">
-												<!--(bake /templates/components/_expert-list-item.html)-->
+											<div class="item cf">
+												<!--(bake /templates/components/_popular-qa.html)-->
 											</div>
 
-											<div class="item pane base2 tp3 ml12 mp12 cf">
-												<!--(bake /templates/components/_expert-list-item.html)-->
+											<div class="item cf">
+												<!--(bake /templates/components/_popular-qa.html)-->
 											</div>
 
-											<div class="item pane base2 tp3 ml12 mp12 cf">
-												<!--(bake /templates/components/_expert-list-item.html)-->
+											<div class="item cf">
+												<!--(bake /templates/components/_popular-qa.html)-->
 											</div>
 
-											<div class="item pane base2 tp3 ml12 mp12 cf">
-												<!--(bake /templates/components/_expert-list-item.html)-->
+											<div class="item cf">
+												<!--(bake /templates/components/_popular-qa.html)-->
 											</div>
 
-											<div class="item pane base2 tp3 ml12 mp12 cf">
-												<!--(bake /templates/components/_expert-list-item.html)-->
+											<div class="item cf">
+												<!--(bake /templates/components/_popular-qa.html)-->
 											</div>
-
-			
 
 										</div>
 									</div>
 								</div>
-								<div class="row">
-									<div class="pane base4 tp6 ml6">
-										<!--(bake /templates/components/_infobox-homepage-full.html)-->
-									</div>
-									<div class="pane base4 tp6 ml6">
-										<!--(bake /templates/components/_infobox-homepage-full.html)-->
-									</div>
+							</div>
+
+							<div class="row tp-margin ml-margin mp-margin tablet">
+								<div class="search-wrapper pane base4 tp6">
+									<input id="body-search" class="search-box" name="body-search" placeholder="Filter Q&amp;A" type="text" value="">
+									<a href="#" class="icon_search" title="search"><span></span></a>
 								</div>
-								<div class="row">
-									<div class="pane base8 tp12 ml12">
-										<!--(bake /templates/components/_expert-tips.html)-->
-									</div>
-								</div>
-								<div class="row">
-									<div class="pane base8 tp12 ml12">
-										advertising
-									</div>
+								<div class="toggles pane base4 tp6">
+									<a href="#" class="toggle bttn active">A-Z</a>
+									<a href="#" class="toggle bttn">Rating</a>
+									<a href="#" class="toggle bttn">Latest</a>
+									<a href="#" class="toggle bttn">Popular</a>
+									</a>
 								</div>
 							</div>
+
+							<div class="row tp-margin ml-margin mp-margin">
+								<div class="pane base2 tp3 tablet">
+									<!--(bake /templates/components/_filters.html)-->
+								</div>
+								<div class="pane base6 tp9 ml12 ml-mgZero">
+									<!--(bake /templates/components/_grid-list-item-qa.html)-->
+									<!--(bake /templates/components/_grid-list-item-qa.html)-->
+									<!--(bake /templates/components/_grid-list-item-qa.html)-->
+									<!--(bake /templates/components/_grid-list-item-qa.html)-->
+									<!--(bake /templates/components/_grid-list-item-qa.html)-->
+									<!--(bake /templates/components/_grid-list-item-qa.html)-->
+									<!--(bake /templates/components/_grid-list-item-qa.html)-->
+									<a href="#" class="bttn">SHOW MORE (viewing 15 of 122)</a>
+								</div>
+							</div>
+
+						</div>
 						<div class="pane base4 tp12 ml12 tp-mgZero aside">
 							<!--(bake /templates/components/_mpu.html)-->
-							<h3>More Chorizo Recipes</h3>
-							<!--(bake /templates/components/_recipe-list-item.html)-->
-							<a href="#" class="bttn secondary">More Recipes</a>
 							<!--(bake /templates/components/_mpu.html)-->
-							<h3 class="no-border">Popular Recipes</h3>
-							<!--(bake /templates/components/_tabs-small.html)-->
-							<a href="#" class="bttn secondary">More Recipes</a>
+							<!--(bake /templates/components/_mpu.html)-->
 						</div>
 							
 					</div><!-- .row -->
@@ -139,6 +138,15 @@
 			</div>
 		</div>
 
+		<!-- infographic popup  -->
+		<div id="infographic-dialog" class="dialog">
+			<div class="infographic-dialog">
+				<div class="row">
+					<a href="#" class="bttn primary">View your recipes</a>
+				</div>
+			</div>
+		</div>
+
 	</div><!-- .wrapper -->
 	<div class="ad-right takeover"></div>
 
@@ -163,6 +171,17 @@
 				$(this).tooltipster('hide');
 			});
 
+			$('.infographic').tooltipster({
+				trigger: 'hover',
+				contentAsHTML: true,
+				interactive: true,
+				maxWidth: 180,
+				position: 'bottom-left',
+				functionInit: function (origin, content) {
+					return content + $('#infographic-dialog').html();
+				}
+			});
+
     	// For login
       $('.log-in').tooltipster({
           trigger: 'click',
@@ -176,26 +195,19 @@
 			    }
       });
 
-		  $('#home-hero-carousel').owlCarousel({
-		  	singleItem: true,
-		  	pagination: true,
-		  	navigation: true,
-		  	scrollPerPage: true,
-		  	rewindNav: false,
-		  	navigationText: ["4","5"]
-		  });
-	  });
 
-			$('#expert-carousel').owlCarousel({
+			$('#popular-recipes').owlCarousel({
 		  	pagination: true,
 		  	navigation: true,
 		  	scrollPerPage: true,
 		  	rewindNav: false,
 		  	addClassActive: true,
-		  	items: 4,
+		  	items: 3,
+		  	itemsDesktop: false,
 		  	itemsDesktopSmall: false,
-		  	itemsTabletSmall: [767,2],
-		  	itemsMobile: [480,1],
+		  	itemsTablet: false,
+		  	itemsTabletSmall: [767,3],
+		  	itemsMobile: [480,2],
 		  	navigationText: ["4","5"],
 		  	afterMove: function (o) {
 		  		var getItems = $(o).find('.owl-item'),
@@ -207,6 +219,7 @@
 		  		$(getActive).eq((activeLength - 2)).addClass('last');
 		  	}
 		  });
+	  });
 
 	</script>
 	
