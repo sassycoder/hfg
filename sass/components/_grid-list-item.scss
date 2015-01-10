@@ -1,17 +1,18 @@
 .component.grid-list-item {
+	border-top: 1px dotted #000;
+	padding: 10px 0;
+
 	&:first-child {
 		border-top: none;
 		padding-top: 0;
 	}
-
-	border-top: 1px dotted #000;
-	padding: 10px 0;
 
 	p {
 		font-size: 14px;
 		font-size: 1.4rem;
 		line-height: 18px;
 		line-height: 1.8rem;
+		padding-bottom: 30px;
 	}
 
 	.item-heading {
@@ -45,6 +46,12 @@
 
 		&.infographics {
 			margin-top: 10px;
+		}
+
+		&.bottom {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
 		}
 	}
 
@@ -103,52 +110,38 @@
 	}
 
 	&.qa {
+		position: relative;
+
 		.item-heading {
 			margin-bottom: 4px;
 		}
 
-		.wrap { 
+		.wrap {
 			margin-bottom: 0;
-			margin-top: 20px;
-
 			.comments {
 				float: left;
 			}
 
 			.tags {
 				float: right;
-				padding-top: 5px;
-
-				li {
-					float: left;
-					margin-left: 3px;
-					padding: 0;
-
-					&:first-child {
-						margin-left: 0;
-					}
-
-					&:last-child {
-						&:after {
-							content: '';
-						}
-					}
-
-					&:after {
-						content: ',';
-					}
-				}
-				
-				a {
-					font-size: 10px;
-					font-size: 1rem;
-					color: #8cb624;
-
-					&:hover, &:focus, &:active {
-						color: #ff9000;
-					}
-				}
 			}
+		}
+	}
+
+	&.table {
+		display: table;
+
+		.pane {
+
+			&:first-child {
+				padding-left: 0;
+			}
+
+			display: table-cell;
+			float: none;
+			vertical-align: top;
+			padding-left: 20px;
+			position: relative;
 		}
 	}
 }

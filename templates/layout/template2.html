@@ -40,13 +40,28 @@
 						</div>
 						<div class="pane base4 tp12 ml12 tp-mgZero aside">
 							<!--(bake /templates/components/_mpu.html)-->
-							<h3>More Chorizo Recipes</h3>
-							<!--(bake /templates/components/_recipe-list-item.html)-->
-							<a href="#" class="bttn secondary">More Recipes</a>
+							<h3>Similar Articles</h3>
+							<!--(bake /templates/components/_article-list-item.html)-->
+							<a href="#" class="bttn secondary">More Articles</a>
 							<!--(bake /templates/components/_mpu.html)-->
-							<h3 class="no-border">Popular Recipes</h3>
-							<!--(bake /templates/components/_tabs-small.html)-->
-							<a href="#" class="bttn secondary">More Recipes</a>
+							<h3 class="no-border">Popular Articles</h3>
+							<div class="component tabs">
+								<div class="nav cf">
+									<a class="tab-item active" href="#">Most popular</a>
+									<a class="tab-item" href="#">Most Discussed</a>
+								</div>
+
+								<div class="sections">
+									<div class="article active">
+										<!--(bake /templates/components/_article-list-item.html)-->
+									</div>
+									<div class="article">
+										<!--(bake /templates/components/_article-list-item.html)-->
+										<!--(bake /templates/components/_article-list-item.html)-->
+									</div>
+								</div>
+							</div>
+							<a href="#" class="bttn secondary">More Articles</a>
 						</div>
 							
 					</div><!-- .row -->

@@ -14,10 +14,10 @@
 	}
 
 	.img {
+		float: left;
+		margin-right: 10px;
 		width: 91px;
 		height: 90px;
-		display: table-cell;
-		vertical-align: top;
 
 		img {
 			margin: 0 auto;
@@ -25,8 +25,6 @@
 		}
 	}
 	.info {
-		display: table-cell;
-		padding-left: 10px;
 
 		.item, .ratings { display: block; }
 

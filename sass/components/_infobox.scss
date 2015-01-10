@@ -156,6 +156,11 @@
 			}
 		}
 
+		.bttn {
+			right: 10px;
+			bottom: 10px;
+		}
+
 		.icons {
 			position: absolute;
 			left: 15px;
@@ -172,10 +177,14 @@
 					color: #fff;
 				}
 			}
+
+			.bttn {
+				background-color: #becf00;
+			}
 		}
 
 		&.v2 {
-			.header {
+			.header, .bttn {
 				background-color: #fd9025;
 			}
 		}

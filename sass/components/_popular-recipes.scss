@@ -57,6 +57,19 @@
 			color: #8cb624;
 		}
 
+		.wrap {
+			position: relative;
+
+			.comments, .tags {
+				position: absolute;
+				bottom: 0;
+			}
+
+			.tags {
+				right: 0;
+			}
+		}
+
 		&.diet-planner {
 			img {
 				float: left;
@@ -114,5 +127,9 @@
 				}
 			}
 		}	
+
+		&.popular-qa {
+			p { padding: 10px 0 0; }
+		}
 	}
 }

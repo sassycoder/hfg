@@ -713,13 +713,14 @@ footer {
   .bttn {
     &.secondary {
       display: inline-block;
-      background-color: transparent;
-      color: #fff;
+      background-color: #fff;;
+      color: #8cb624;
       border: 1px solid #fff;
 
       &:hover, &:focus, &:active {
-        background-color: white;
-        color: #becf00;
+        background-color: #ff9000;
+        color: #fff;
+        border-color: #ff9000;
       }
     }
   }
@@ -1034,6 +1035,41 @@ input[type='text'].search-box {
         float: right;
       }
       .share { display: none; }
+    }
+
+    .tags {
+      float: right;
+      padding-top: 5px;
+
+      li {
+        float: left;
+        margin-left: 3px;
+        padding: 0;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          &:after {
+            content: '';
+          }
+        }
+
+        &:after {
+          content: ',';
+        }
+      }
+      
+      a {
+        font-size: 10px;
+        font-size: 1rem;
+        color: #8cb624;
+
+        &:hover, &:focus, &:active {
+          color: #ff9000;
+        }
+      }
     }
   }
 

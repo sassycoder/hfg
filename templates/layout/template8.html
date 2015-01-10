@@ -39,8 +39,8 @@
 							<div class="row tp-margin ml-margin mp-margin">
 								<div class="pane base8 tp12 ml12">
 									<div class="component popular-recipes cuisine">
-										<h3>Popular Q&amp;A</h3>
-										<div id="popular-recipes" class="component owl-carousel body cf">
+										<h3>Your Questions Answered</h3>
+										<div id="qa" class="component owl-carousel body cf">
 											
 											<div class="item cf">
 												<!--(bake /templates/components/_popular-qa.html)-->
@@ -104,6 +104,7 @@
 						</div>
 						<div class="pane base4 tp12 ml12 tp-mgZero aside">
 							<!--(bake /templates/components/_mpu.html)-->
+							<!--(bake /templates/components/_infobox-question.html)-->
 							<!--(bake /templates/components/_mpu.html)-->
 							<!--(bake /templates/components/_mpu.html)-->
 						</div>
@@ -196,18 +197,13 @@
       });
 
 
-			$('#popular-recipes').owlCarousel({
+			$('#qa').owlCarousel({
 		  	pagination: true,
 		  	navigation: true,
 		  	scrollPerPage: true,
 		  	rewindNav: false,
 		  	addClassActive: true,
-		  	items: 3,
-		  	itemsDesktop: false,
-		  	itemsDesktopSmall: false,
-		  	itemsTablet: false,
-		  	itemsTabletSmall: [767,3],
-		  	itemsMobile: [480,2],
+		  	singleItem: true,
 		  	navigationText: ["4","5"],
 		  	afterMove: function (o) {
 		  		var getItems = $(o).find('.owl-item'),
