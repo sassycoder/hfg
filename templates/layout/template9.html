@@ -150,6 +150,28 @@
 			</div>
 		</div>
 
+		<!-- Signed in popup  -->
+		<div id="signed-in-dialog" class="dialog">
+			<div class="signed-in-dialog">
+				<form>
+					<div class="row">
+						<ul>
+							<li><a href="#">Profile</a></li>
+							<li><a href="#">Recipes</a></li>
+							<li><a href="#">Articles</a></li>
+							<li><a href="#">Diet Planners</a></li>
+							<li><a href="#">Comments</a></li>
+							<li><a href="#">Newsletters</a></li>
+						</ul>	
+					</div>
+
+					<div class="row">
+						<input type="submit" class="bttn primary" value="Sign out">
+					</div>
+				</form>
+			</div>
+		</div>
+
 		<!-- infographic popup  -->
 		<div id="infographic-dialog" class="dialog">
 			<div class="infographic-dialog">
@@ -207,6 +229,17 @@
 			    }
       });
 
+      // For signed-in
+      $('.signed-in').tooltipster({
+          trigger: 'click',
+          contentAsHTML: true,
+          interactive: true,
+          minWidth: 230,
+          position: 'bottom-right',
+          functionInit: function() {
+	        	return $('#signed-in-dialog').html();
+			    }
+      });
 
 			$('#popular-recipes').owlCarousel({
 		  	pagination: true,
