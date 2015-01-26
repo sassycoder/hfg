@@ -2,6 +2,14 @@
     float: left;
 }
 
+.sub-menu li a {
+    color: #becf00;
+
+    .sub-menu li a {
+      color: #000;
+    }
+}
+
 .megamenu-container ul {
     float: left;
 
@@ -23,48 +31,69 @@
       }
     }
 
-    > .sub-menu {
+    > .sub-menu { //first level
       display: none;
       position: absolute;
-      top: 45px;
+      top: 44px;
       left: 0;
       width: 300px;
       background: #fff;
       z-index: 99;
       border: 1px solid #becf00;
+      border-top-width: 3px;
       box-shadow: 0px 6px 12px 0px rgba(50,50,50,0.75);
 
       li {
         float: none;
         display: inline-block;
-        width: 100%;
+        //width: 100%;
 
         a {
           text-align: left;
-          font-family: 'MuseoSans300';
-          font-size: 11px;
-          font-size: 1.1rem;
-          line-height: 13px;
-          line-height: 1.3rem;
+          font-family: 'MuseoSlab900';
+          font-size: 13px;
+          font-size: 1.3rem;
+          line-height: 32px;
+          line-height: 3.2rem;
+          color: #becf00;
+          padding-bottom: 8px;
 
-          &:before {
-            content: '>';
-            float: left;
-            padding: 0 5px 0 0;
+          &:hover, &:active, &:focus {
+            color: #ff9000;
           }
         }
       }
 
-      .sub-menu {
+      .sub-menu { //second level
         display: block;
         position: static;
-        //background: pink;
         box-shadow: none;
         border: 0;
+        width: auto;
 
-        a {
-          padding-left: 24px;
-          float: none;
+        li {
+          display: block;
+          a {
+            font-family: 'MuseoSans300';
+            font-size: 11px;
+            font-size: 1.1rem;
+            line-height: 13px;
+            line-height: 1.3rem;
+            padding: 0 14px 8px 18px;
+            float: none;
+            color: #000;
+
+            &:hover, &:active, &:focus {
+              color: #becf00;
+            }
+
+            &:before {
+              content: '>';
+              float: left;
+              padding: 0 5px 0 0;
+              color: #becf00;
+            }
+          }
         }
       }
     }
@@ -118,7 +147,7 @@
     display: none;
     z-index: 2;
     position: absolute;
-    top: -62px;
+    top: 8px;
     left: 10px;
 }
 
@@ -141,7 +170,7 @@
 .megamenu-container .search-btn {
   left: auto;
   right: 14px;
-  top: -62px;
+  top: 6px;
 
   a {
     margin: 0;
@@ -243,95 +272,109 @@
 
   .megamenu-container ul {
     float: none;
-    border-bottom: 1px solid black;
 
-    &.open > .mobile { display: block; }
-  }
+    .menu-item {
+      float: none;
+      border-bottom: 1px dotted #000;
 
-  .megamenu-container ul .site-section {
-    float: none;
-
-    &:first-child {
-        > a { border-top: none; }
-      }
-
-    > a {
-      text-align: left;
-      font-family: 'MuseoSans300';
-      line-height: 48px;
-      line-height: 4.8rem;
-      margin: 0 14px;
-      padding: 0;
-      border-top: 1px dotted black;
-
-      &.active {
-        background: transparent;
-        color: #000;
-        border-radius: 0;
-        margin-top: 0;
-      }
-
-      span {
-        display: block;
+      a {
+        text-align: left;
       }
     }
 
-    &.active {
-      + .mobile { display: block; }
-    }
   }
 
-  .megamenu-container .mega-drop {
-    position: static;
-  }
+  // .megamenu-container ul {
+  //   float: none;
+  //   border-bottom: 1px solid black;
 
-  .megamenu-container .mega-drop {
-    display: none;
-  }
+  //   &.open > .mobile { display: block; }
+  // }
 
-  .megamenu-container ul .site-section {
-    .inner {
-      padding: 0;
-      background-image: none;
-      border: none;
-    }
-  }
+  // .megamenu-container ul .site-section {
+  //   float: none;
 
-  .megamenu-container .inner {
-    box-shadow: none;
+  //   &:first-child {
+  //       > a { border-top: none; }
+  //     }
 
-    ul {
-        &.mobile {
-          border-top: 1px dotted #ccc;
-        }
-        li {
-          &:first-child {
-            border: none;
-          }
-          padding-left: 10px;
-          border-top: 1px dotted #ccc;
+  //   > a {
+  //     text-align: left;
+  //     font-family: 'MuseoSans300';
+  //     line-height: 48px;
+  //     line-height: 4.8rem;
+  //     margin: 0 14px;
+  //     padding: 0;
+  //     border-top: 1px dotted black;
 
-          a {
-            display: block;
-            padding: 8px 0 3px 16px;
-            color: #333;
-            font-family: 'WaitroseRegular';
-            font-size: 16px;
-            font-size: 1.6rem;
-            line-height: 26px;
-            line-height: 2.6rem;
-            position: relative;
+  //     &.active {
+  //       background: transparent;
+  //       color: #000;
+  //       border-radius: 0;
+  //       margin-top: 0;
+  //     }
 
-            &:before {
-              font-size: 14px;
-              padding: 5px 3px 0 0;
-              position: absolute;
-              left: 0;
-            }
-          }
-        }
-      }
-    }
+  //     span {
+  //       display: block;
+  //     }
+  //   }
+
+  //   &.active {
+  //     + .mobile { display: block; }
+  //   }
+  // }
+
+  // .megamenu-container .mega-drop {
+  //   position: static;
+  // }
+
+  // .megamenu-container .mega-drop {
+  //   display: none;
+  // }
+
+  // .megamenu-container ul .site-section {
+  //   .inner {
+  //     padding: 0;
+  //     background-image: none;
+  //     border: none;
+  //   }
+  // }
+
+  // .megamenu-container .inner {
+  //   box-shadow: none;
+
+  //   ul {
+  //       &.mobile {
+  //         border-top: 1px dotted #ccc;
+  //       }
+  //       li {
+  //         &:first-child {
+  //           border: none;
+  //         }
+  //         padding-left: 10px;
+  //         border-top: 1px dotted #ccc;
+
+  //         a {
+  //           display: block;
+  //           padding: 8px 0 3px 16px;
+  //           color: #333;
+  //           font-family: 'WaitroseRegular';
+  //           font-size: 16px;
+  //           font-size: 1.6rem;
+  //           line-height: 26px;
+  //           line-height: 2.6rem;
+  //           position: relative;
+
+  //           &:before {
+  //             font-size: 14px;
+  //             padding: 5px 3px 0 0;
+  //             position: absolute;
+  //             left: 0;
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
 }
 
 @media only screen and (max-width: 567px) {
