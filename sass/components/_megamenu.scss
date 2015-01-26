@@ -2,10 +2,10 @@
     float: left;
 }
 
-.megamenu-container ol {
+.megamenu-container ul {
     float: left;
 
-  .site-section {
+  .menu-item {
     float: left;
     margin: 0;
     padding: 0;
@@ -19,6 +19,52 @@
       a {
         &.active {
           border-radius: 0 5px 0 0;
+        }
+      }
+    }
+
+    > .sub-menu {
+      display: none;
+      position: absolute;
+      top: 45px;
+      left: 0;
+      width: 300px;
+      background: #fff;
+      z-index: 99;
+      border: 1px solid #becf00;
+      box-shadow: 0px 6px 12px 0px rgba(50,50,50,0.75);
+
+      li {
+        float: none;
+        display: inline-block;
+        width: 100%;
+
+        a {
+          text-align: left;
+          font-family: 'MuseoSans300';
+          font-size: 11px;
+          font-size: 1.1rem;
+          line-height: 13px;
+          line-height: 1.3rem;
+
+          &:before {
+            content: '>';
+            float: left;
+            padding: 0 5px 0 0;
+          }
+        }
+      }
+
+      .sub-menu {
+        display: block;
+        position: static;
+        //background: pink;
+        box-shadow: none;
+        border: 0;
+
+        a {
+          padding-left: 24px;
+          float: none;
         }
       }
     }
@@ -72,7 +118,7 @@
     display: none;
     z-index: 2;
     position: absolute;
-    top: 8px;
+    top: -62px;
     left: 10px;
 }
 
@@ -95,7 +141,7 @@
 .megamenu-container .search-btn {
   left: auto;
   right: 14px;
-  top: 5px;
+  top: -62px;
 
   a {
     margin: 0;
@@ -195,14 +241,14 @@
     cursor: pointer;
   }
 
-  .megamenu-container ol {
+  .megamenu-container ul {
     float: none;
     border-bottom: 1px solid black;
 
     &.open > .mobile { display: block; }
   }
 
-  .megamenu-container ol .site-section {
+  .megamenu-container ul .site-section {
     float: none;
 
     &:first-child {
@@ -243,7 +289,7 @@
     display: none;
   }
 
-  .megamenu-container ol .site-section {
+  .megamenu-container ul .site-section {
     .inner {
       padding: 0;
       background-image: none;

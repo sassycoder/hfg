@@ -127,20 +127,20 @@ $(function () {
 
   var isTouch = $('html').hasClass('touch')
     , $document = $(document)
-    , isResponsive = true
-    , $findParent = $('.site-section');
+    , isResponsive = true;
+    //, $findParent = $('.menu-item');
 
-    $findParent.each(function () {
-      var $this = $(this);
+    // $findParent.each(function () {
+    //   var $this = $(this);
 
-      if ($this.has('.mega-drop').length > 0) {
-        $this.addClass('has-children');
-      }
-    });
+    //   if ($this.has('.sub-menu').length > 0) {
+    //     $this.addClass('has-children');
+    //   }
+    // });
 
-  $document.on('click', '.top-level-item, .mega-item', function (ev) {
+  $document.on('click', '.menu-item > a, .mega-item', function (ev) {
 
-    var isDesktopEv = $(ev.currentTarget).hasClass('top-level-item');
+    var isDesktopEv = $(ev.currentTarget).parent().hasClass('menu-item');
 
     if ($(window).innerWidth() < 1023 && isDesktopEv && isResponsive) {
       return true;
@@ -151,20 +151,20 @@ $(function () {
         , $menu = $this.closest('.megamenu-list')
         , closeFn = function (ev) {
             if ($(ev.target).closest('.megamenu-list').length === 0) {
-              $menu.find('.top-level-item').removeClass('active').parents('.megamenu').removeClass('open');
-              $menu.find('.mega-drop').hide();
+              $menu.find('.menu-item > a').removeClass('active').parents('.megamenu').removeClass('open');
+              $menu.find('.sub-menu').hide();
               //console.log(ev);
             }
           };
 
-      $menu.find('.top-level-item').removeClass('active').parents('.megamenu').removeClass('open');
-      $menu.find('.mega-drop').hide();
+      $menu.find('.menu-item > a').removeClass('active').parents('.megamenu').removeClass('open');
+      $menu.find('.megamenu > .menu-item > .sub-menu').hide();
 
       if (needsToOpen) {
         $this
           .addClass('active')
           .closest('li')
-          .children('.mega-drop')
+          .children('.sub-menu')
           .show()
           .parents('.megamenu')
           .addClass('open');
@@ -183,11 +183,11 @@ $(function () {
     }
   });
 
-  $document.on('click', '.mega-drop .close', function (ev) {
+  $document.on('click', '.sub-menu .close', function (ev) {
     var $tab = $(this).closest('.site-section');
 
     $tab.find('.top-level-item').removeClass('active').parents('.megamenu').removeClass('open');
-    $tab.find('.mega-drop').hide();
+    $tab.find('.sub-menu').hide();
     ev.preventDefault();
   });
 

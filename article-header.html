@@ -24,6 +24,42 @@
 	    <!--[if lt IE 9]>    	
 			<script src="assets/js/lib/single/respond.min.js"></script>
 		<![endif]-->
+	
+	<!-- Start: GPT Async -->
+		<script type='text/javascript'>
+			var gptadslots=[];
+			var googletag = googletag || {};
+			googletag.cmd = googletag.cmd || [];
+			(function(){ var gads = document.createElement('script');
+				gads.async = true; gads.type = 'text/javascript';
+				var useSSL = 'https:' == document.location.protocol;
+				gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+				var node = document.getElementsByTagName('script')[0];
+				node.parentNode.insertBefore(gads, node);
+			})();
+		</script>
+	
+		<script type="text/javascript">
+			googletag.cmd.push(function() {
+	
+				//Adslot 1 declaration
+				gptadslots[1]= googletag.defineSlot('/4817/healthyfoodguide.co.uk', [[970,250],[940,250],[728,90]],'div-gpt-ad-leaderboard_top').setTargeting('pos',['top']).addService(googletag.pubads());
+	
+				//Adslot 2 declaration
+				gptadslots[2]= googletag.defineSlot('/4817/healthyfoodguide.co.uk', [[300,600],[300,250]],'div-gpt-ad-mpu_top').setTargeting('pos',['top']).addService(googletag.pubads());
+	
+				//Adslot 3 declaration
+				gptadslots[3]= googletag.defineSlot('/4817/healthyfoodguide.co.uk', [[300,250],[300,251]],'div-gpt-ad-mpu_bottom').setTargeting('pos',['bottom']).addService(googletag.pubads());
+	
+				//Adslot oop declaration
+				gptadslots[0] = googletag.defineOutOfPageSlot('/4817/healthyfoodguide.co.uk', 'div-gpt-ad-oop').addService(googletag.pubads());
+	
+				googletag.pubads().enableSingleRequest();
+				googletag.pubads().enableAsyncRendering();
+				googletag.enableServices();
+			});
+		</script>
+	<!-- End: GPT -->
 		
 </head>
 
@@ -83,13 +119,13 @@
 	      </div>
 	
 	
-	      <div class="megamenu-list">
-	        <ol class="megamenu">
-	          <li class="site-section">
+	<!--       <div class="megamenu-list">
+	        <ul class="megamenu">
+	          <li class="menu-item">
 	            <a href="#" class="top-level-item"><span>Recipes</span></a>
 	            <span class="mega-item"></span>
 	
-	            <div class="mega-drop">
+	            <div class="mega-drop sub-menu">
 							  <div class="inner cf">
 						        <ul class="menu-items">
 						          <li><a href="">Baking &amp; Cookery</a></li>
@@ -102,11 +138,11 @@
 							</div>
 	          </li>
 	
-	          <li class="site-section">
+	          <li class="menu-item">
 	            <a href="#" class="top-level-item"><span>Improve your health</span></a>
 	            <span class="mega-item"></span>
 	
-	            <div class="mega-drop">
+	            <div class="mega-drop sub-menu">
 							  <div class="inner cf">
 					        <ul class="menu-items">
 					          <li><a href="">Sewing</a></li>
@@ -118,11 +154,11 @@
 							</div>
 	          </li>
 	
-	          <li class="site-section">
+	          <li class="menu-item">
 	            <a href="#" class="top-level-item"><span>Nutrition</span></a>
 	            <span class="mega-item"></span>
 	
-	            <div class="mega-drop">
+	            <div class="mega-drop sub-menu">
 							  <div class="inner cf">
 					        <ul class="menu-items">
 					          <li><a href="">Eggs For Adults</a></li>
@@ -136,16 +172,76 @@
 							</div>
 	          </li>
 	
-	          <li class="site-section">
+	          <li class="menu-item">
 	            <a href="#" class="top-level-item"><span>Weight Loss</span></a>
 	            <span class="mega-item"></span>
 	          </li>
-	          <li class="site-section mobile">
+	          <li class="menu-item mobile">
 	            <a href="#"><span>Sign in</span></a>
 	            <span class="mega-item log-in tooltipstered"></span>
 	          </li>
 	        </ol>
-	      </div>
+	      </div> -->
+	      <div class="megamenu-list">
+	      	<ul id="menu-primary" class="megamenu">
+	      		<li id="menu-item-1679" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-550 current_page_item menu-item-1679">
+	      			<a href="http://134.213.146.151/healthyfoodguide/">Home</a>
+	      		</li>
+						<li id="menu-item-1665" class="menu-item menu-item-type-taxonomy menu-item-object-recipe-cat menu-item-1665">
+							<a href="http://134.213.146.151/healthyfoodguide/?recipe-cat=american">American</a>
+						</li>
+						<li id="menu-item-1666" class="menu-item menu-item-type-taxonomy menu-item-object-recipe-cat menu-item-has-children menu-item-1666">
+							<a href="http://134.213.146.151/healthyfoodguide/?recipe-cat=asian">Asian</a>
+							
+							<ul class="sub-menu">
+								<li id="menu-item-1667" class="menu-item menu-item-type-taxonomy menu-item-object-recipe-cat menu-item-has-children menu-item-1667">
+									<a href="http://134.213.146.151/healthyfoodguide/?recipe-cat=british">British</a>
+									
+									<ul class="sub-menu">
+										<li id="menu-item-1668" class="menu-item menu-item-type-taxonomy menu-item-object-recipe-cat menu-item-1668">
+											<a href="http://134.213.146.151/healthyfoodguide/?recipe-cat=caribbean">Caribbean</a>
+										</li>
+										<li id="menu-item-1669" class="menu-item menu-item-type-taxonomy menu-item-object-recipe-cat menu-item-1669">
+											<a href="http://134.213.146.151/healthyfoodguide/?recipe-cat=burger">Burger</a>
+										</li>
+									</ul>
+								</li>
+	
+								<li id="menu-item-1670" class="menu-item menu-item-type-taxonomy menu-item-object-recipe-cat menu-item-1670">
+									<a href="http://134.213.146.151/healthyfoodguide/?recipe-cat=casserole">Casserole</a>
+								</li>
+								<li id="menu-item-1671" class="menu-item menu-item-type-taxonomy menu-item-object-recipe-cat menu-item-1671">
+									<a href="http://134.213.146.151/healthyfoodguide/?recipe-cat=cookie">Cookie</a>
+								</li>
+							</ul>
+						</li>
+						<li id="menu-item-1672" class="menu-item menu-item-type-taxonomy menu-item-object-recipe-cat menu-item-has-children menu-item-1672">
+							<a href="http://134.213.146.151/healthyfoodguide/?recipe-cat=couscous">Couscous</a>
+							<ul class="sub-menu">
+								<li id="menu-item-1673" class="menu-item menu-item-type-taxonomy menu-item-object-recipe-cat menu-item-1673">
+									<a href="http://134.213.146.151/healthyfoodguide/?recipe-cat=christmas">Christmas</a>
+								</li>
+								<li id="menu-item-1674" class="menu-item menu-item-type-taxonomy menu-item-object-recipe-cat menu-item-1674">
+									<a href="http://134.213.146.151/healthyfoodguide/?recipe-cat=dinner">Dinner</a>
+								</li>
+							</ul>
+						</li>
+						<li id="menu-item-1675" class="menu-item menu-item-type-taxonomy menu-item-object-recipe-cat menu-item-has-children menu-item-1675">
+							<a href="http://134.213.146.151/healthyfoodguide/?recipe-cat=easter">Easter</a>
+							<ul class="sub-menu">
+								<li id="menu-item-1676" class="menu-item menu-item-type-taxonomy menu-item-object-recipe-cat menu-item-1676">
+									<a href="http://134.213.146.151/healthyfoodguide/?recipe-cat=halloween">Halloween</a>
+								</li>
+							</ul>
+						</li>
+						<li id="menu-item-1677" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1677">
+							<a href="http://134.213.146.151/healthyfoodguide/?page_id=1329">Diet Planner</a>
+						</li>
+						<li id="menu-item-1678" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1678">
+							<a href="http://134.213.146.151/healthyfoodguide/?page_id=1327">Q&amp;A</a>
+						</li>
+					</ul>
+				</div>
 	    </nav>
 	    	<!-- END Navigation -->
 	    	<a href="#" class="sign-up">Subscribe</a>
@@ -282,6 +378,15 @@
 		<script type="text/javascript" src="assets/js/lib.js"></script>
 		<script type="text/javascript" src="assets/js/framework.js"></script>
 		<script type="text/javascript" src="assets/js/components.js"></script>
+		
+		<!-- Beginning Async AdSlot oop for Ad unit healthyfoodguide.co.uk  ### size:  -->
+		<!-- Adslot's refresh function: googletag.pubads().refresh([gptadslots[0]]) -->
+			<div id='div-gpt-ad-oop'>
+				<script type='text/javascript'>
+					googletag.cmd.push(function() { googletag.display('div-gpt-ad-oop'); });
+				</script>
+			</div>
+		<!-- End AdSlot oop -->
 
 	</body>
 </html>
