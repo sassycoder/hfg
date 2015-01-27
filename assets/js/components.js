@@ -329,7 +329,7 @@ $(function () {
 	'use strict';
 
 	var tabNav = $('.tabs .nav .tab-item'),
-			articles = $('.tabs .sections .article'),
+			articles = $('.tabs .nav .article'),
 			desktopOnly = $('.tabs').hasClass('desktopOnly'),
 			singleOnly = $('.tabs').hasClass('single-only'),
 
@@ -342,10 +342,17 @@ $(function () {
 					if ($(this).hasClass('active')) {
 						$(this).animate({opacity: '0'}, {duration: 250, complete: function () {
 							$(this).removeClass('active');
-							$(articles).eq(index).addClass('active').animate({opacity: '1'}, {duration: 250});
+							$(articles).eq(index).addClass('active').animate({opacity: '1'}, {duration: 250, complete: function () {
+								window.setArticleHeight();
+							}});
 						}});
 					}
 				});
+			};
+
+			window.setArticleHeight = function () {
+				var articleH = $('.tab-item.active + .article').innerHeight();
+				$('.component.tabs').css('height', (articleH + 40) + 'px');
 			};
 
 		//make first tab item active
@@ -358,24 +365,23 @@ $(function () {
 
 		//make all articles invisible apart from the first one
 		$(articles).each(function (i) {
-			$(this).clone().insertAfter(tabNav.eq(i));
+			var $this = $(this);
 
 			if (i === 0) {
-				$(this).addClass('active');
+				$this.addClass('active');
 			}
 
 			if (i > 0) {
-				$(this).css('opacity', '0');
+				$this.css('opacity', '0');
 			}
 		});
 
 		$(window).on('resize', function () {
 			if ($(this).innerWidth() > 767) {
-				var getActive = $('.sections .article.active').index();
-
-				$(tabNav).removeClass('active').eq(getActive).addClass('active');
-				$('.tab-item + .article').hide();
-				
+				//var getActive = $('.nav .article.active').index();
+				//$(tabNav).removeClass('active').eq(getActive).addClass('active');
+				$('.tab-item.active + .article').css('opacity', '1');
+				window.setArticleHeight();
 			}
 
 		});
@@ -390,8 +396,10 @@ $(function () {
 
 	    if (windowWidth < 768 && desktopOnly) {
         if ($this.hasClass('active')) {
+					$('.article').removeClass('active');
 					$(this).next('.article').slideUp('fast', function () {
-						$this.toggleClass('active').blur();
+						$(this).toggleClass('active'); //article
+						$this.toggleClass('active').blur(); //tab
 					});
 				} else {
 					if (singleOnly) {
@@ -399,7 +407,9 @@ $(function () {
 						.toggleClass('active')
 						.blur()
 						.next('.article')
-						.slideUp('fast');
+						.slideUp('fast', function () {
+							$(this).toggleClass('active');
+						});
 					}
 					$this.next('.article').slideDown('fast', function () {
 						$this.toggleClass('active');
@@ -441,4 +451,9 @@ $(function () {
 			runTabs(index);
 			$(tabNav).eq(index).addClass('active');	//add active class to clicked tab anchor
 		});
+});
+
+$(window).load(function() {
+	'use strict';
+  window.setArticleHeight();
 });
