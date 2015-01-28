@@ -2,7 +2,7 @@ $(function () {
 	'use strict';
 
 	var tabNav = $('.tabs .nav .tab-item'),
-			articles = $('.tabs .nav .article'),
+			articles = $('.tabs .article'),
 			desktopOnly = $('.tabs').hasClass('desktopOnly'),
 			singleOnly = $('.tabs').hasClass('single-only'),
 
@@ -24,8 +24,10 @@ $(function () {
 			};
 
 			window.setArticleHeight = function () {
-				var articleH = $('.tab-item.active + .article').innerHeight();
-				$('.component.tabs').css('height', (articleH + 40) + 'px');
+				if (desktopOnly) {
+					var articleH = $('.article.active').innerHeight();
+					$('.component.tabs').css('height', (articleH + 40) + 'px');
+				}
 			};
 
 		//make first tab item active
@@ -53,7 +55,13 @@ $(function () {
 			if ($(this).innerWidth() > 767) {
 				//var getActive = $('.nav .article.active').index();
 				//$(tabNav).removeClass('active').eq(getActive).addClass('active');
-				$('.tab-item.active + .article').css('opacity', '1');
+				$('.tab-item + .article').css({
+					display: '',
+					opacity: '0'
+				});
+				$('.tab-item.active + .article').css({
+					opacity: '1'
+				});
 				window.setArticleHeight();
 			}
 
@@ -69,23 +77,24 @@ $(function () {
 
 	    if (windowWidth < 768 && desktopOnly) {
         if ($this.hasClass('active')) {
-					$('.article').removeClass('active');
-					$(this).next('.article').slideUp('fast', function () {
-						$(this).toggleClass('active'); //article
-						$this.toggleClass('active').blur(); //tab
-					});
+					//$('.article.active').removeClass('active');
+					//$this.next('.article').slideUp('fast', function () {
+					//	$(this).removeClass('active'); //article
+					//	$this.removeClass('active').blur(); //tab
+					//});
+
+				return;
 				} else {
 					if (singleOnly) {
 						$('.tab-item.active')
-						.toggleClass('active')
+						.removeClass('active')
 						.blur()
 						.next('.article')
-						.slideUp('fast', function () {
-							$(this).toggleClass('active');
-						});
+						.slideUp('fast')
+						.removeClass('active');
 					}
-					$this.next('.article').slideDown('fast', function () {
-						$this.toggleClass('active');
+					$this.addClass('active').next('.article').slideDown('fast', function () {
+						$(this).addClass('active');
 					});
 				}
       } else {
