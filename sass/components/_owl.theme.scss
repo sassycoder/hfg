@@ -7,7 +7,7 @@
 	&.body {
 		.owl-item {
 			overflow: hidden;
-			-webkit-transform: none;
+			//-webkit-transform: none;
 
 			&.active {
 				overflow: visible;

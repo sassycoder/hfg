@@ -408,4 +408,8 @@ $(window).on('resize', function () {
 
 $(function (){
     setAdWidth();
+    
+    //remove touch delay on touch devices
+    var attachFastClick = Origami.fastclick;
+        attachFastClick(document.body);
 });

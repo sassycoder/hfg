@@ -1,0 +1,164 @@
+.comment-author {
+	text-align: left;
+	img { 
+		display: inline-block; 
+		width: 48px;
+		height: 48px;
+	}
+}
+
+.comments-title {
+	margin-bottom: 0;
+	border-bottom: 0;
+}
+
+.comment-list {
+	.children {
+		margin-left: 13%;
+	}
+}
+
+.comment-body {
+	@extend .cf;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	border-top: 1px dotted #000;
+
+	footer {
+		width: 10%;
+		padding: 0;
+		margin: 0;
+		float: left;
+		position: static;
+		background-color: transparent;
+	}
+
+	.comment-metadata { 
+		padding-bottom: 15px;
+
+			.fn, a {
+				font-family: 'MuseoSans900';
+				font-size: 13px;
+				font-size: 1.3rem;
+				line-height: 16px;
+				line-height: 1.6rem;
+				color: #8cb624;
+			}
+
+			a {
+				color: #000; 
+				font-family: 'MuseoSans300';
+
+				&.comment-edit-link {
+					font-family: 'MuseoSans900';
+					color: #8cb624;
+				}
+			}
+			.says { display: none; }
+
+		p {
+			font-size: 13px;
+			font-size: 1.3rem;
+			line-height: 16px;
+			line-height: 1.6rem;
+		}
+	}
+
+	.comment-content {
+		position: relative;
+		margin-left: 11%;
+		border-left: 5px solid #becf00;
+		padding-left: 10px;
+
+		&:before, &:after {
+			right: 100%;
+			top: 30px;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+		}
+
+		&:after {
+			border-color: rgba(255,255,255,0);
+			border-right-color: #ffffff;
+			border-width: 7px;
+			margin-top: -15px;
+		}
+		&:before {
+			border-color: rgba(190,207,0,0);
+			border-right-color: #becf00;
+			border-width: 14px;
+			margin-top: -23px;
+		}
+	}
+
+	.reply { 
+		padding-top: 15px; 
+	}
+}
+
+.comment-respond {
+
+	.logged-in-as {
+		a {
+			font-family: 'MuseoSans900';
+			color: #8cb624;
+		}
+	}
+	textarea {
+		width: 100%;
+	}
+
+	#submit {
+		@extend .bttn;
+	}
+}
+
+@media all and (max-width: 767px) {
+	.comments-title {
+		font-size: 18px;
+		font-size: 1.8rem;
+		border: 0;
+		padding: 15px 0;
+		margin: 0;
+		text-align: center;
+		color: #8cb624;
+		cursor: pointer;
+		border: 1px solid #becf00;
+		border-top:0;
+
+		&.active {
+			background-color: #becf00;
+			color: #fff;
+		}
+	}
+
+	.comment-author img {
+		width: 33px;
+		height: 33px;
+	}
+
+	.comment-body {
+		footer {
+			width: 40px;
+		}
+
+		.comment-metadata {
+			padding-bottom: 25px;
+		}
+
+		.comment-content {
+			border: 0;
+			margin-left: 0;
+			padding-left: 0;
+			&:after, &:before {
+				display: none;
+			}
+		}
+	}
+
+
+}

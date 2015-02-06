@@ -10,6 +10,7 @@
     line-height: 40px;
     line-height: 4rem;
     color: #fff;
+    max-width: 276px;
 	}
 
 	.cta {
@@ -36,7 +37,7 @@
 	}
 
 	&.v2 {
-		background-color: #ff9000;
+		background-color: #4460e8;
 	}
 
 	&.hero {
@@ -76,9 +77,11 @@
 			background-color: #becf00;
 			max-width: 355px;
 			text-align: left;
+			min-width: 355px;
 
 			p {
-				display: inline-block;
+				//display: inline-block;
+				float: left;
 				margin-top: 12px;
 				margin-bottom: 8px;
 				font-family: 'MuseoSlab300';
@@ -89,6 +92,13 @@
 		    max-width: 240px;
 		    margin-right: 32px;
 		    padding-bottom: 0;
+			}
+
+			.cta {
+				a {
+					position: static;
+					float: right;
+				}
 			}
 		}
 	}
@@ -184,8 +194,16 @@
 		}
 
 		&.v2 {
-			.header, .bttn {
-				background-color: #fd9025;
+			.header {
+				background-color: #4460e8;
+			}
+
+			.bttn {
+				background-color: #4460e8;
+
+				&:hover, &:focus, &:active {
+					background-color: #fff;
+				}
 			}
 		}
 	}
@@ -293,6 +311,7 @@
 				line-height: 25px;
 				line-height: 2.5rem;
 				text-align: center;
+				max-width: 100%;
 			}
 
 			.cta {

@@ -177,6 +177,10 @@
 				}
 			}
 
+			textarea {
+				width: 300px;
+			}
+
 			.selector, .selector span {
 				width: 300px;
 			}
@@ -267,6 +271,10 @@
 					&[type='text'], &[type='email'], &[type='password'] {
 						width: 85%;
 					}
+				}
+
+				textarea {
+					width: 85%;
 				}
 
 				.selector, .selector span {

@@ -81,6 +81,20 @@ input {
     }
 }
 
+textarea {
+    display: inline-block;
+    border: 1px solid #becf00;
+    color: #000;
+    padding: 10px 8px;
+    border-radius: 5px;
+    width: auto;
+    font-family: 'MuseoSans300';
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 16px;
+    line-height: 1.6rem;
+}
+
 div.selector {
     display: inline-block;
     border: 1px solid #becf00;
