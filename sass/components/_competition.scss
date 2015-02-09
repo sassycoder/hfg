@@ -1,0 +1,34 @@
+.competition {
+	label {
+		display: block;
+		font-family: 'MuseoSans900';
+		font-size: 14px;
+		font-size: 1.4rem;
+		line-height: 16px;
+		line-height: 1.6rem;
+	}
+
+	.infographic {
+		width: auto;
+		height: auto;
+		margin-left: 5px;
+		font-size: 23px;
+		font-size: 2.3rem;
+		color: #becf00;
+		vertical-align: bottom;
+	}
+
+	.question {
+		font-family: 'MuseoSans300';
+	}
+
+	input {
+    &[type="text"], &[type="email"], &[type="password"] {
+    	width: 90%;
+    }
+  }
+
+  select, div.selector, div.selector span {
+  	width: 90%;
+  }
+}

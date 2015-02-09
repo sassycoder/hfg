@@ -78,6 +78,9 @@
 			border: 1px solid #becf00;
 			border-top-width: 2px;
 			padding: 35px 15px 15px 25px;
+			position: absolute;
+			top: 40px;
+			width: 100%;
 
 			p {
 				font-size: 14px;
@@ -261,6 +264,13 @@
 		}
 
 		.article {
+
+			&.diet {
+				padding: 45px 10px 15px;
+				border-bottom: 0;
+				position: static;
+			}
+			
 			&.profile {
 				padding: 45px 10px 15px;
 				border-bottom: 0;

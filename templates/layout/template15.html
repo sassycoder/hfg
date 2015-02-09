@@ -31,52 +31,37 @@
 					</div><!-- .row -->
 
 			    <div class="row">
-							<!--(bake /templates/components/_diet-header.html)-->
+							<!--(bake /templates/components/_competition-header.html)-->
 					</div><!-- .row -->
 
-					<div class="row tp-margin">
+					<div class="row tp-margin ml-margin mp-margin">
 						<div class="pane base8 tp12 ml12">
+							<!--(bake /templates/components/_competition-body.html)-->
+						</div>
+						<div class="pane base4 tp12 ml12 tp-mgZero aside">
+							<!--(bake /templates/components/_mpu.html)-->
+							<h3>Similar Articles</h3>
+							<!--(bake /templates/components/_article-list-item.html)-->
+							<a href="#" class="bttn secondary">More Articles</a>
+							<!--(bake /templates/components/_mpu.html)-->
+							<h3 class="no-border">Popular Articles</h3>
+							<div class="component tabs">
+								<div class="nav cf">
+									<a class="tab-item active" href="#">Most popular</a>
+									<a class="tab-item" href="#">Most Discussed</a>
+								</div>
 
-							<div class="row">
-								<div class="component tabs single-only desktopOnly">
-									<div class="nav cf">
-										<a class="tab-item" href="#">Monday</a>
-										<div class="article diet cf">
-											<!--(bake /templates/components/_diet-item.html)-->
-										</div>
-										<a class="tab-item" href="#">Tuesday</a>
-										<div class="article diet cf">
-											<!--(bake /templates/components/_diet-item.html)-->
-										</div>
-										<a class="tab-item" href="#">Wednesday</a>
-										<div class="article diet cf">
-											<!--(bake /templates/components/_diet-item.html)-->
-										</div>
-										<a class="tab-item" href="#">Thursday</a>
-										<div class="article diet cf">
-											<!--(bake /templates/components/_diet-item.html)-->
-										</div>
-										<a class="tab-item" href="#">Friday</a>
-										<div class="article diet cf">
-											<!--(bake /templates/components/_diet-item.html)-->
-										</div>
-										<a class="tab-item" href="#">Saturday</a>
-										<div class="article diet cf">
-											<!--(bake /templates/components/_diet-item.html)-->
-										</div>
-										<a class="tab-item" href="#">Sunday</a>
-										<div class="article diet cf">
-											<!--(bake /templates/components/_diet-item.html)-->
-										</div>
+								<div class="sections">
+									<div class="article active">
+										<!--(bake /templates/components/_article-list-item.html)-->
+									</div>
+									<div class="article">
+										<!--(bake /templates/components/_article-list-item.html)-->
+										<!--(bake /templates/components/_article-list-item.html)-->
 									</div>
 								</div>
 							</div>
-						</div>
-
-						<div class="pane base4 tp12 ml12 tp-mgZero aside">
-							<!--(bake /templates/components/_mpu.html)-->
-							<!--(bake /templates/components/_mpu.html)-->
-							<!--(bake /templates/components/_mpu.html)-->
+							<a href="#" class="bttn secondary">More Articles</a>
 						</div>
 							
 					</div><!-- .row -->
@@ -143,6 +128,9 @@
 			</div>
 		</div>
 
+		<!-- infographic popup  -->
+		<div id="infographic-dialog" class="dialog"></div>
+
 	</div><!-- .wrapper -->
 	<div class="ad-right takeover"></div>
 
@@ -167,17 +155,17 @@
 				$(this).tooltipster('hide');
 			});
 
-			//For save recipe button
-      $('.save-recipe').tooltipster({
-          trigger: 'click',
-          contentAsHTML: true,
-          interactive: true,
-          position: 'bottom-left',
-          offsetX: 20,
-          functionInit: function() {
-	        	return $('#save-recipe-dialog').html();
-			    }
-      });
+			$('.help').tooltipster({
+				theme: 'tooltipster-profile',
+				trigger: 'hover',
+				contentAsHTML: true,
+				interactive: true,
+				maxWidth: 180,
+				position: 'right',
+				functionInit: function (origin, content) {
+					return content + $('#infographic-dialog').html();
+				}
+			});
 
     	// For login
       $('.log-in').tooltipster({
