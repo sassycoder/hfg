@@ -14,16 +14,26 @@ $(function () {
     //   }
     // });
 
+$('.megamenu-container .sub-menu').addClass('animated');
+
   $document.on('click', '.menu-item > a, .mega-item', function (ev) {
 
-    var isDesktopEv = $(ev.currentTarget).parent().hasClass('menu-item');
+    // var isDesktopEv = $(ev.currentTarget).parent().hasClass('menu-item');
+    var $this = $(this);
 
-    if ($(window).innerWidth() < 1023 && isDesktopEv && isResponsive) {
-      return true;
+    if ($(window).innerWidth() < 1024) {
+      if ($this.parent().hasClass('back')) { return; }
+
+      var hasChildren = $this.siblings('.sub-menu');
+      if (hasChildren) {
+        hasChildren.addClass('active');
+        hasChildren.children('.back').length ? {} : hasChildren.prepend('<li class="menu-item back"><a href="#" class="js-back">back</a></li>');
+        ev.preventDefault();
+      }
     } else {
 
-      var $this = $(this).hasClass('mega-item') ? $(this).prev('.top-level-item') : $(this)
-        , needsToOpen = ! $this.hasClass('active')
+      $this = $(this).hasClass('mega-item') ? $(this).prev('.top-level-item') : $(this);
+      var needsToOpen = ! $this.hasClass('active')
         , $menu = $this.closest('.megamenu-list')
         , closeFn = function (ev) {
             if ($(ev.target).closest('.megamenu-list').length === 0) {
@@ -59,6 +69,12 @@ $(function () {
     }
   });
 
+  $document.on('click', '.js-back', function (ev) {
+    var toHide = $(this).parent().parent('.sub-menu');
+    toHide.removeClass('active');
+    ev.preventDefault();
+  });
+
   $document.on('click', '.sub-menu .close', function (ev) {
     var $tab = $(this).closest('.site-section');
 
@@ -72,10 +88,12 @@ $(function () {
       , needsToOpen = ! $this.hasClass('open')
       , $controls = $this.closest('.nav')
       , dropdownSelector = '.search-box, .megamenu-list'
+      , subMenus = '.megamenu-list .sub-menu'
       , closeMobNav = function (ev) {
           if ($(ev.target).closest('.megamenu-list').length === 0) {
             $controls.find('.nav-btn').removeClass('open');
             $controls.find(dropdownSelector).hide();
+            $controls.find(subMenus).removeClass('fadeInLeft fadeOutLeft');
           } else {
             $document.one('click', closeMobNav);
           }
