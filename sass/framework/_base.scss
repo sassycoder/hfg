@@ -361,6 +361,13 @@ a.skip:active,a.skip:focus {
   font-size: 0;
 }
 
+.mts-icon-star {
+  &:before {
+    color: #fd9025;
+  }
+}
+
+
 .quote-text {
   font-family: 'MuseoSlab900';
   font-size: 35px;

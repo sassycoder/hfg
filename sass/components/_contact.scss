@@ -1,0 +1,48 @@
+.component.contact {
+	border: 1px solid #becf00;
+	border-top-width: 2px;
+	background-color: #f9faee;
+	padding: 45px 35px 15px;
+	width: 100%;
+
+	h2 {
+		padding-bottom: 35px;
+	}
+
+	label {
+		display: block;
+		font-family: 'MuseoSans900';
+		font-size: 14px;
+		font-size: 1.4rem;
+		line-height: 16px;
+		line-height: 1.6rem;
+	}
+
+	.infographic {
+		width: auto;
+		height: auto;
+		margin-left: 5px;
+		font-size: 23px;
+		font-size: 2.3rem;
+		color: #becf00;
+		vertical-align: bottom;
+	}
+
+	input {
+		&[type='text'], &[type='email'], &[type='password'] {
+			width: 300px;
+		}
+	}
+
+	textarea {
+		width: 300px;
+	}
+
+	.selector, .selector span {
+		width: 300px;
+	}
+
+	select {
+		width: 300px;
+	}
+}

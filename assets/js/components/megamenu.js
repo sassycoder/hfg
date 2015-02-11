@@ -26,7 +26,7 @@ $('.megamenu-container .sub-menu').addClass('animated');
 
       var hasChildren = $this.siblings('.sub-menu');
       if (hasChildren) {
-        hasChildren.addClass('active');
+        hasChildren.removeClass('fadeOutLeft').addClass('fadeInLeft');
         hasChildren.children('.back').length ? {} : hasChildren.prepend('<li class="menu-item back"><a href="#" class="js-back">back</a></li>');
         ev.preventDefault();
       }
@@ -37,7 +37,7 @@ $('.megamenu-container .sub-menu').addClass('animated');
         , $menu = $this.closest('.megamenu-list')
         , closeFn = function (ev) {
             if ($(ev.target).closest('.megamenu-list').length === 0) {
-              $menu.find('.menu-item > a').removeClass('active').parents('.megamenu').removeClass('open');
+              $menu.find('.menu-item > a').removeClass('active');
               $menu.find('.sub-menu').hide();
               //console.log(ev);
             }
@@ -71,7 +71,10 @@ $('.megamenu-container .sub-menu').addClass('animated');
 
   $document.on('click', '.js-back', function (ev) {
     var toHide = $(this).parent().parent('.sub-menu');
-    toHide.removeClass('active');
+    toHide.removeClass('fadeInLeft').addClass('fadeOutLeft');
+    toHide.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+      toHide.removeClass('fadeOutLeft');
+    });
     ev.preventDefault();
   });
 
@@ -90,7 +93,7 @@ $('.megamenu-container .sub-menu').addClass('animated');
       , dropdownSelector = '.search-box, .megamenu-list'
       , subMenus = '.megamenu-list .sub-menu'
       , closeMobNav = function (ev) {
-          if ($(ev.target).closest('.megamenu-list').length === 0) {
+          if ($(ev.target).closest('.megamenu-list').length === 0 && $(ev.target).parent().hasClass('nav-btn') === false) {
             $controls.find('.nav-btn').removeClass('open');
             $controls.find(dropdownSelector).hide();
             $controls.find(subMenus).removeClass('fadeInLeft fadeOutLeft');
@@ -108,7 +111,7 @@ $('.megamenu-container .sub-menu').addClass('animated');
         .next(dropdownSelector)
         .show();
 
-        $document.one('click', closeMobNav);
+      $document.one('click', closeMobNav);
     } else {
       $document.off('click', closeMobNav);
     }
@@ -120,13 +123,13 @@ $('.megamenu-container .sub-menu').addClass('animated');
     if (isResponsive) {
 
       var $menu = $('.megamenu-list');
-      $menu.parent().find('.nav-btn').removeClass('open');
 
       if ($(this).innerWidth() > 1023) {
         $menu.show();
       }
       else {
         $menu.hide();
+        $menu.parent().find('.nav-btn').removeClass('open');
       }
 
     }

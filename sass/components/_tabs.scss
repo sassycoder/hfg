@@ -60,8 +60,9 @@
 			}
 		}
 	}
-	
-	.article {
+}
+
+.article {
 		position: relative;
 		display: none;
 
@@ -225,7 +226,6 @@
 
 		}
 	}
-}
 
 @media all and (max-width: 767px) {
 	.component.tabs {
@@ -262,8 +262,8 @@
 				}
 			}
 		}
-
-		.article {
+	}
+	.article {
 
 			&.diet {
 				padding: 45px 10px 15px;
@@ -310,5 +310,4 @@
 				}
 			}
 		}
-	}
 }
