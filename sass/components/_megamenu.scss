@@ -31,6 +31,10 @@
       }
     }
 
+    &.back {
+      display: none!important;
+    }
+
     > .sub-menu { //first level
       display: none;
       position: absolute;

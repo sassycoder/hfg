@@ -39,7 +39,6 @@ $('.megamenu-container .sub-menu').addClass('animated');
             if ($(ev.target).closest('.megamenu-list').length === 0) {
               $menu.find('.menu-item > a').removeClass('active');
               $menu.find('.sub-menu').hide();
-              //console.log(ev);
             }
           };
 
@@ -50,7 +49,7 @@ $('.megamenu-container .sub-menu').addClass('animated');
         $this
           .addClass('active')
           .closest('li')
-          .children('.sub-menu')
+          .find('.sub-menu')
           .show()
           .parents('.megamenu')
           .addClass('open');
@@ -126,10 +125,13 @@ $('.megamenu-container .sub-menu').addClass('animated');
 
       if ($(this).innerWidth() > 1023) {
         $menu.show();
+        $menu.find('.sub-menu').removeClass('fadeInLeft fadeOutLeft').hide();
+        $menu.find('.menu-item > a').removeClass('active');
       }
       else {
         $menu.hide();
         $menu.parent().find('.nav-btn').removeClass('open');
+
       }
 
     }
