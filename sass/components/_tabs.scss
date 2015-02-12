@@ -1,68 +1,6 @@
 .component.tabs {
 
-	.nav {
-
-		width: 100%;
-		border-bottom: 1px solid #becf00;
-		position: relative;
-
-		.tab-item {
-			float: left;
-			padding: 13px 10px 9px;
-			background-color: #fff;
-			color: #becf00;
-			border: 1px solid #becf00;
-			border-left: 0;
-			border-bottom: 0;
-			font-family: 'MuseoSansCond700';
-			font-size: 13px;
-			font-size: 1.3rem;
-			line-height: 16px;
-			line-height: 1.6rem;
-			letter-spacing: 1px;
-			letter-spacing: .1rem;
-			text-transform: uppercase;
-
-			&:hover, &:focus, &:active {
-				background-color: #ff9000;
-				color: #fff;
-			}
-
-			&.active {
-				background-color: #becf00;
-				color: #fff;
-				cursor: default;
-			}
-
-			&:first-child {
-				border-radius: 5px 0 0 0;
-				border-left: 1px solid;
-			}
-			&:last-child {
-				border-radius: 0 5px 0 0;
-			}
-
-			.number {
-				font-family: 'MuseoSans300';
-				font-size: 13px;
-				font-size: 1.3rem;
-				line-height: 15px;
-				line-height: 1.5rem;
-				color: #333;
-			}
-
-			+ .article {
-				display: none;
-
-				&.active {
-					display: block;
-				}
-			}
-		}
-	}
-}
-
-.article {
+	.article {
 		position: relative;
 		display: none;
 
@@ -227,43 +165,73 @@
 		}
 	}
 
-@media all and (max-width: 767px) {
-	.component.tabs {
-		height: auto!important;
+	.nav {
 
-		&.desktopOnly {
+		width: 100%;
+		border-bottom: 1px solid #becf00;
+		position: relative;
 
-			.sections {
-				display: none;
+		.tab-item {
+			float: left;
+			padding: 13px 10px 9px;
+			background-color: #fff;
+			color: #becf00;
+			border: 1px solid #becf00;
+			border-left: 0;
+			border-bottom: 0;
+			font-family: 'MuseoSansCond700';
+			font-size: 13px;
+			font-size: 1.3rem;
+			line-height: 16px;
+			line-height: 1.6rem;
+			letter-spacing: 1px;
+			letter-spacing: .1rem;
+			text-transform: uppercase;
+
+			&:hover, &:focus, &:active {
+				background-color: #ff9000;
+				color: #fff;
 			}
 
-			.nav {
-				position: static;
-				.tab-item {
+			&.active {
+				background-color: #becf00;
+				color: #fff;
+				cursor: default;
+			}
 
-					&:first-child {
-						border-left: 1px solid #becf00;
-						border-radius: 0;
-					}
+			&:first-child {
+				border-radius: 5px 0 0 0;
+				border-left: 1px solid;
+			}
+			&:last-child {
+				border-radius: 0 5px 0 0;
+			}
 
+			.number {
+				font-family: 'MuseoSans300';
+				font-size: 13px;
+				font-size: 1.3rem;
+				line-height: 15px;
+				line-height: 1.5rem;
+				color: #333;
+			}
+
+			+ .article {
+				display: none;
+
+				&.active {
 					display: block;
-					float: none;
-					border-radius: 0;
-					border-left: 1px solid;
-
-					&.active {
-						cursor: pointer;
-
-						+ .article {
-							//display: block!important;
-							opacity: 1!important;
-						}
-					}
 				}
 			}
 		}
 	}
-	.article {
+}
+
+@media all and (max-width: 767px) {
+	.component.tabs {
+		height: auto!important;
+
+		.article {
 
 			&.diet {
 				padding: 45px 10px 15px;
@@ -310,4 +278,37 @@
 				}
 			}
 		}
+
+		&.desktopOnly {
+
+			.sections {
+				display: none;
+			}
+
+			.nav {
+				position: static;
+				.tab-item {
+
+					&:first-child {
+						border-left: 1px solid #becf00;
+						border-radius: 0;
+					}
+
+					display: block;
+					float: none;
+					border-radius: 0;
+					border-left: 1px solid;
+
+					&.active {
+						cursor: pointer;
+
+						+ .article {
+							//display: block!important;
+							opacity: 1!important;
+						}
+					}
+				}
+			}
+		}
+	}
 }

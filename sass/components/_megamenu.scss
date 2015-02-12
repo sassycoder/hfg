@@ -309,6 +309,7 @@
       }
 
       &.back {
+        display: block!important;
         a.js-back {
           font-family: 'MuseoSans900';
           padding-left: 10px;
