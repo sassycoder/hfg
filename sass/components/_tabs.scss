@@ -72,11 +72,16 @@
 				left: auto;
 				right: -20px;
 				top: -40px;
-				min-height: 74px;
+				min-height: 94px;
+				min-width: 95px;
 				transform: translate(0) rotate(15deg);
 
+				&:after {
+					width: 68px;
+				}
+
 				.cal-label {
-					padding: 24px 5px 23px;
+					padding: 30px 5px 23px;
 				}
 			}
 		}

@@ -352,21 +352,25 @@ $(function () {
 	'use strict';
 
 	var tabNav = $('.tabs .nav .tab-item'),
-			articles = $('.tabs .article'),
-			desktopOnly = $('.tabs').hasClass('desktopOnly'),
-			singleOnly = $('.tabs').hasClass('single-only'),
+			desktopOnlyTabs = $('.component.tabs.desktopOnly'),
+			//articles = $('.tabs .article'),
+			//desktopOnly = $('.tabs').hasClass('desktopOnly'),
+			//singleOnly = $('.tabs').hasClass('single-only'),
 
-			runTabs = function (index) {
-				$(tabNav).each(function () {
+			runTabs = function (index, context) {
+				var tabItems = $(context).parent().children('.tab-item'),
+						articleItems = $(context).parent().parent().find('.article');
+
+				$(tabItems).each(function () {
 					$(this).removeClass('active'); // remove active class from tab anchors
 				});
 
-				$(articles).each(function () { // animate out old article , animate in clicked article
+				$(articleItems).each(function () { // animate out old article , animate in clicked article
 					if ($(this).hasClass('active')) {
 						$(this).animate({opacity: '0'}, {duration: 250, complete: function () {
 							$(this).removeClass('active');
-							$(articles).eq(index).addClass('active').animate({opacity: '1'}, {duration: 250, complete: function () {
-								window.setArticleHeight();
+							$(articleItems).eq(index).addClass('active').animate({opacity: '1'}, {duration: 250, complete: function () {
+								window.setArticleHeight(tabItems, articleItems);
 							}});
 						}});
 					}
@@ -374,31 +378,37 @@ $(function () {
 			};
 
 			window.setArticleHeight = function () {
-				if (desktopOnly) {
-					var articleH = $('.article.active').innerHeight();
-					$('.component.tabs').css('height', (articleH + 40) + 'px');
-				}
+				$(desktopOnlyTabs).each(function () {
+					var $this = $(this),
+							articleH = $this.find('.article.active').innerHeight();
+
+					$this.css('height', (articleH + 40) + 'px');
+				});
 			};
 
-		//make first tab item active
-		$(tabNav).each(function (i) {
-			if (i === 0) {
-				$(this).addClass('active');
-				return;
-			}
-		});
-
-		//make all articles invisible apart from the first one
-		$(articles).each(function (i) {
+		$('.component.tabs').each(function () {
 			var $this = $(this);
 
-			if (i === 0) {
-				$this.addClass('active');
-			}
+			//make first tab item active
+			$this.find('.nav .tab-item').each(function (i) {
+				if (i === 0) {
+					$(this).addClass('active');
+					return;
+				}
+			});
 
-			if (i > 0) {
-				$this.css('opacity', '0');
-			}
+			//make all articles invisible apart from the first one
+			$this.find('.article').each(function (i) {
+				var $this = $(this);
+
+				if (i === 0) {
+					$this.addClass('active');
+				}
+
+				if (i > 0) {
+					$this.css('opacity', '0');
+				}
+			});
 		});
 
 		$(window).on('resize', function () {
@@ -423,7 +433,9 @@ $(function () {
 
 	    var windowWidth = $(window).innerWidth(),
 					$this = $(this),
-					index = $(tabNav).index(this); //get index of clicked tab
+					singleOnly = $this.parent().parent().hasClass('single-only'),
+					desktopOnly = $this.parent().parent().hasClass('desktop-only'),
+					index = $this.parent().children('.tab-item').index(this); //get index of clicked tab
 
 	    if (windowWidth < 768 && desktopOnly) {
         if ($this.hasClass('active')) {
@@ -452,7 +464,7 @@ $(function () {
 		    if ($(this).hasClass('active')) {
 					return;
 		    } else {
-					runTabs(index);
+					runTabs(index, this);
 					$(this).addClass('active');	//add active class to clicked tab anchor
 				}
 			}
