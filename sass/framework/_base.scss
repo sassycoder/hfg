@@ -517,8 +517,8 @@ a.skip:active,a.skip:focus {
   }
 
   .infographic {
-    width: 40px;
-    height: 40px;
+    width: 39px;
+    height: 39px;
     display: inline-block;
     cursor: pointer;
     
@@ -539,6 +539,39 @@ a.skip:active,a.skip:focus {
     }
     &.high-protein {
       @include icons-sprite(icon-high-protein);
+    }
+    &.low-sats {
+      @include icons-sprite(icon-low-sats);
+    }
+    &.high-calc {
+      @include icons-sprite(icon-high-calcium);
+    }
+    &.high-iron {
+      @include icons-sprite(icon-high-iron);
+    }
+    &.veg {
+      @include icons-sprite(icon-veg);
+    }
+    &.gluten-free {
+      @include icons-sprite(icon-gluten-free);
+    }
+    &.dairy-free {
+      @include icons-sprite(icon-dairy-free);
+    }
+    &.oneaday {
+      @include icons-sprite(icon-1aday);
+    }
+    &.twoaday {
+      @include icons-sprite(icon-2aday);
+    }
+    &.threeaday {
+      @include icons-sprite(icon-3aday);
+    }
+    &.fouraday {
+      @include icons-sprite(icon-4aday);
+    }
+    &.fiveaday {
+      @include icons-sprite(icon-5aday);
     }
   }
 
