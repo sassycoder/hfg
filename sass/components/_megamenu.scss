@@ -294,7 +294,7 @@
       }
 
       &.menu-item-has-children {
-        a {
+        > a {
           &:after {
             content: 'E';
             float: right;
@@ -317,6 +317,7 @@
           &:after { 
             content: 'D';
             float: left;
+            font-family: 'ElegantIcons';
             line-height: 12px;
             line-height: 1.2rem;
           }

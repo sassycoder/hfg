@@ -16,7 +16,7 @@ $(function () {
 
 $('.megamenu-container .sub-menu').addClass('animated');
 
-  $document.on('click', '.menu-item > a, .mega-item', function (ev) {
+  $document.on('click', '.menu-item > a', function (ev) {
 
     // var isDesktopEv = $(ev.currentTarget).parent().hasClass('menu-item');
     var $this = $(this);
@@ -25,48 +25,50 @@ $('.megamenu-container .sub-menu').addClass('animated');
       if ($this.parent().hasClass('back')) { return; }
 
       var hasChildren = $this.siblings('.sub-menu');
-      if (hasChildren) {
+      if (hasChildren.length > 0) {
         hasChildren.removeClass('fadeOutLeft').addClass('fadeInLeft');
         hasChildren.children('.back').length ? {} : hasChildren.prepend('<li class="menu-item back"><a href="#" class="js-back">back</a></li>');
         ev.preventDefault();
       }
     } else {
 
-      $this = $(this).hasClass('mega-item') ? $(this).prev('.top-level-item') : $(this);
-      var needsToOpen = ! $this.hasClass('active')
-        , $menu = $this.closest('.megamenu-list')
-        , closeFn = function (ev) {
-            if ($(ev.target).closest('.megamenu-list').length === 0) {
-              $menu.find('.menu-item > a').removeClass('active');
-              $menu.find('.sub-menu').hide();
-            }
-          };
+      if ($(this).parent().parent('.megamenu').length > 0) {
 
-      $menu.find('.menu-item > a').removeClass('active').parents('.megamenu').removeClass('open');
-      $menu.find('.megamenu > .menu-item > .sub-menu').hide();
+        var needsToOpen = ! $this.hasClass('active')
+          , $menu = $this.closest('.megamenu-list')
+          , closeFn = function (ev) {
+              if ($(ev.target).closest('.megamenu-list').length === 0) {
+                $menu.find('.menu-item > a').removeClass('active');
+                $menu.find('.sub-menu').hide();
+              }
+            };
 
-      if (needsToOpen) {
-        $this
-          .addClass('active')
-          .closest('li')
-          .find('.sub-menu')
-          .show()
-          .parents('.megamenu')
-          .addClass('open');
+        $menu.find('.menu-item > a').removeClass('active').parents('.megamenu').removeClass('open');
+        $menu.find('.megamenu > .menu-item > .sub-menu').hide();
 
-        if (isTouch) {
-          $document.scrollTop( $this.offset().top );
+        if (needsToOpen) {
+          $this
+            .addClass('active')
+            .closest('li')
+            .find('.sub-menu')
+            .show()
+            .parents('.megamenu')
+            .addClass('open');
+
+          if (isTouch) {
+            $document.scrollTop( $this.offset().top );
+          }
+
+          $document.one('click', closeFn);
         }
-
-        $document.one('click', closeFn);
+        else {
+          $document.off('click', closeFn);
+        }
+        ev.preventDefault();
       }
-      else {
-        $document.off('click', closeFn);
-      }
 
-      ev.preventDefault();
-    }
-  });
+    } //else
+  }); //click ev
 
   $document.on('click', '.js-back', function (ev) {
     var toHide = $(this).parent().parent('.sub-menu');
