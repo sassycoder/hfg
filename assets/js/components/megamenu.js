@@ -32,39 +32,40 @@ $('.megamenu-container .sub-menu').addClass('animated');
       }
     } else {
 
-      if ($(this).parent().parent('.megamenu').length > 0) {
+      if ($this.parent().parent('.megamenu').length > 0) {
+        if ($this.siblings('.sub-menu').length > 0) {
+          var needsToOpen = ! $this.hasClass('active')
+            , $menu = $this.closest('.megamenu-list')
+            , closeFn = function (ev) {
+                if ($(ev.target).closest('.megamenu-list').length === 0) {
+                  $menu.find('.menu-item > a').removeClass('active');
+                  $menu.find('.sub-menu').hide();
+                }
+              };
 
-        var needsToOpen = ! $this.hasClass('active')
-          , $menu = $this.closest('.megamenu-list')
-          , closeFn = function (ev) {
-              if ($(ev.target).closest('.megamenu-list').length === 0) {
-                $menu.find('.menu-item > a').removeClass('active');
-                $menu.find('.sub-menu').hide();
-              }
-            };
+          $menu.find('.menu-item > a').removeClass('active').parents('.megamenu').removeClass('open');
+          $menu.find('.megamenu > .menu-item > .sub-menu').hide();
 
-        $menu.find('.menu-item > a').removeClass('active').parents('.megamenu').removeClass('open');
-        $menu.find('.megamenu > .menu-item > .sub-menu').hide();
+          if (needsToOpen) {
+            $this
+              .addClass('active')
+              .closest('li')
+              .find('.sub-menu')
+              .show()
+              .parents('.megamenu')
+              .addClass('open');
 
-        if (needsToOpen) {
-          $this
-            .addClass('active')
-            .closest('li')
-            .find('.sub-menu')
-            .show()
-            .parents('.megamenu')
-            .addClass('open');
+            if (isTouch) {
+              $document.scrollTop( $this.offset().top );
+            }
 
-          if (isTouch) {
-            $document.scrollTop( $this.offset().top );
+            $document.one('click', closeFn);
           }
-
-          $document.one('click', closeFn);
+          else {
+            $document.off('click', closeFn);
+          }
+          ev.preventDefault();
         }
-        else {
-          $document.off('click', closeFn);
-        }
-        ev.preventDefault();
       }
 
     } //else
