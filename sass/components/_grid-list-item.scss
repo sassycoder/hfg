@@ -125,6 +125,12 @@
 			.tags {
 				float: right;
 			}
+
+			a[rel='tag'] {
+				font-size: 10px;
+        font-size: 1rem;
+        color: #8cb624;
+			}
 		}
 	}
 
