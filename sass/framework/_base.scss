@@ -790,10 +790,10 @@ footer {
 
   .mags {
     position: absolute;
-    width: 257px;
-    height: 225px;
-    right: 260px;
-    top: -70px;
+    width: 195px;
+    height: 162px;
+    right: 280px;
+    top: 6px;
     @include icons-sprite(footer-mags);
   }
 
@@ -926,6 +926,7 @@ input[type='text'].search-box {
   .logo {
     width: 452px;
     height: 95px;
+    margin-top: 40px;
     background: url(/assets/img/structure/logo.png) no-repeat left top;
 
     a {
@@ -938,10 +939,20 @@ input[type='text'].search-box {
   .subscribe {
     position: absolute;
     width: 163px;
-    height: 127px;
-    right: 350px;
-    bottom: 45px;
+    height: 136px;
+    right: 335px;
+    bottom: 64px;
     @include icons-sprite(header-subscribe);
+  }
+
+  .sub-cta {
+    position: absolute;
+    width: 88px;
+    height: 85px;
+    text-indent: -9999px;
+    right: -10px;
+    bottom: -67px;
+    @include icons-sprite(subscribe-cta);
   }
 
   .sign-up {
@@ -1329,7 +1340,7 @@ input[type='text'].search-box {
         }
 
         .mags {
-          top: -240px;
+          top: -165px;
           right: 0;
           left: 0;
           margin: 0 auto;
