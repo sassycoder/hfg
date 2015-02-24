@@ -167,6 +167,48 @@
 				}
 			}
 
+			.user-avatar {
+				float: left;
+				img { width: 48px; height: 48px; }
+			}
+				.post-title { 
+					font-family: 'MuseoSans900';
+					padding-left: 78px;
+					font-size: 13px;
+					font-size: 1.3rem;
+					line-height: 16px;
+					line-height: 1.6rem;
+				}
+
+				.comment-author {
+					padding-left: 31px;
+					display: inline-block;
+					font-family: 'MuseoSans900';
+					font-size: 13px;
+					font-size: 1.3rem;
+					line-height: 16px;
+					line-height: 1.6rem;
+					color: #8cb624;
+					margin-right: 3px;
+				}
+
+				.comment-date { 
+					display: inline-block;	
+					font-size: 13px;
+					font-size: 1.3rem;
+					line-height: 16px;
+					line-height: 1.6rem;
+				}
+				.comment-content { 
+					padding-left: 78px; 
+					font-size: 13px;
+					font-size: 1.3rem;
+					line-height: 16px;
+					line-height: 1.6rem;
+					margin-bottom: 30px;
+
+			}
+
 		}
 	}
 
