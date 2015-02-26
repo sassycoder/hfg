@@ -27,39 +27,43 @@
 		<![endif]-->
 	
 	<!-- Start: GPT Async -->
-		<script type='text/javascript'>
-			var gptadslots=[];
-			var googletag = googletag || {};
-			googletag.cmd = googletag.cmd || [];
-			(function(){ var gads = document.createElement('script');
-				gads.async = true; gads.type = 'text/javascript';
-				var useSSL = 'https:' == document.location.protocol;
-				gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
-				var node = document.getElementsByTagName('script')[0];
-				node.parentNode.insertBefore(gads, node);
-			})();
-		</script>
+	<script type='text/javascript'>
+		var gptadslots=[];
+		var googletag = googletag || {};
+		googletag.cmd = googletag.cmd || [];
+		(function(){ var gads = document.createElement('script');
+			gads.async = true; gads.type = 'text/javascript';
+			var useSSL = 'https:' == document.location.protocol;
+			gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+			var node = document.getElementsByTagName('script')[0];
+			node.parentNode.insertBefore(gads, node);
+		})();
+	</script>
 	
-		<script type="text/javascript">
-			googletag.cmd.push(function() {
+	<script type="text/javascript">
+		googletag.cmd.push(function() {
 	
-				//Adslot 1 declaration
-				gptadslots[1]= googletag.defineSlot('/4817/healthyfoodguide.co.uk', [[970,250],[940,250],[728,90]],'div-gpt-ad-leaderboard_top').setTargeting('pos',['top']).addService(googletag.pubads());
+			//Adslot 1 declaration
+			gptadslots[1]= googletag.defineSlot('/4817/healthyfoodguide.co.uk', [[970,250],[940,250],[728,90]],'div-gpt-ad-leaderboard_top').setTargeting('pos',['top']).addService(googletag.pubads());
 	
-				//Adslot 2 declaration
-				gptadslots[2]= googletag.defineSlot('/4817/healthyfoodguide.co.uk', [[300,600],[300,250]],'div-gpt-ad-mpu_top').setTargeting('pos',['top']).addService(googletag.pubads());
+			//Adslot 2 declaration
+			gptadslots[2]= googletag.defineSlot('/4817/healthyfoodguide.co.uk', [[300,600],[300,250]],'div-gpt-ad-mpu_top').setTargeting('pos',['top']).addService(googletag.pubads());
 	
-				//Adslot 3 declaration
-				gptadslots[3]= googletag.defineSlot('/4817/healthyfoodguide.co.uk', [[300,250],[300,251]],'div-gpt-ad-mpu_bottom').setTargeting('pos',['bottom']).addService(googletag.pubads());
+			//Adslot 3 declaration
+			gptadslots[3]= googletag.defineSlot('/4817/healthyfoodguide.co.uk', [[300,251],[300,250]],'div-gpt-ad-middle').setTargeting('pos',['middle']).addService(googletag.pubads());
 	
-				//Adslot oop declaration
-				gptadslots[0] = googletag.defineOutOfPageSlot('/4817/healthyfoodguide.co.uk', 'div-gpt-ad-oop').addService(googletag.pubads());
+			//Adslot 4 declaration
+			gptadslots[4]= googletag.defineSlot('/4817/healthyfoodguide.co.uk', [[300,252],[300,250]],'div-gpt-ad-mpu_bottom').setTargeting('pos',['bottom']).addService(googletag.pubads());
+			
 	
-				googletag.pubads().enableSingleRequest();
-				googletag.pubads().enableAsyncRendering();
-				googletag.enableServices();
-			});
-		</script>
+			//Adslot oop declaration
+			gptadslots[0] = googletag.defineOutOfPageSlot('/4817/healthyfoodguide.co.uk', 'div-gpt-ad-oop').addService(googletag.pubads());
+	
+			googletag.pubads().enableSingleRequest();
+			googletag.pubads().enableAsyncRendering();
+			googletag.enableServices();
+		});
+	</script>
 	<!-- End: GPT -->
 		
 </head>
@@ -551,11 +555,11 @@
 	
 	<!-- Beginning Async AdSlot oop for Ad unit healthyfoodguide.co.uk  ### size:  -->
 	<!-- Adslot's refresh function: googletag.pubads().refresh([gptadslots[0]]) -->
-		<div id='div-gpt-ad-oop'>
-			<script type='text/javascript'>
-				googletag.cmd.push(function() { googletag.display('div-gpt-ad-oop'); });
-			</script>
-		</div>
+	<div id='div-gpt-ad-oop'>
+		<script type='text/javascript'>
+			googletag.cmd.push(function() { googletag.display('div-gpt-ad-oop'); });
+		</script>
+	</div>
 	<!-- End AdSlot oop -->
 
 	<script type="text/javascript">

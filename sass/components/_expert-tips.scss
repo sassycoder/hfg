@@ -21,6 +21,13 @@
 	}
 }
 
+@-moz-document url-prefix() { 
+	.component.expert-tips .expert-quote {
+		display: block;
+		width: 100%;
+	}
+}
+
 @media all and (max-width: 480px) {
 	.component.expert-tips {
 		.quote-wrapper, p {
