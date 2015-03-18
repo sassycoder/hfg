@@ -293,19 +293,19 @@ textarea.error {
     margin-left: 110px
 }
 
-@media all and (max-width: 1430px) {
+@media screen and (max-width: 1430px) {
     .fields-floated textarea.error+.error-text {
         margin-left:0
     }
 }
 
-@media all and (max-width: 1023px) {
+@media screen and (max-width: 1023px) {
     .fields-floated textarea.error+.error-text {
         margin-left:110px
     }
 }
 
-@media all and (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .fields-floated textarea.error+.error-text {
         margin-left:0
     }

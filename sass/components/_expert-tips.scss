@@ -12,6 +12,20 @@
 
 	.expert-quote {
 		@extend .quote-text;
+		font-size: 25px;
+	  font-size: 2.5rem;
+	  line-height: 27px;
+	  line-height: 2.75rem;
+
+	  &:before {
+	  	font-size: 90px;
+	  	line-height: 65px;
+	  }
+
+	  &:after {
+	  	font-size: 90px;
+	  	bottom: -10px;
+	  }
 	}
 
 	img {
@@ -28,7 +42,7 @@
 	}
 }
 
-@media all and (max-width: 480px) {
+@media screen and (max-width: 480px) {
 	.component.expert-tips {
 		.quote-wrapper, p {
 			width: 50%;

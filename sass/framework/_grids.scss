@@ -6,7 +6,7 @@
     background: url("/assets/img/grids/grid-972-gutterless.png") 50% 0 repeat-y
 }
 
-// @media all and (max-width: 1900px) {
+// @media screen and (max-width: 1900px) {
 //     .framework {
 //         background:url("/assets/img/grids/grid-1396.png") 50% 0 repeat-y
 //     }
@@ -16,7 +16,7 @@
 //     }
 // }
 
-// @media all and (max-width: 1430px) {
+// @media screen and (max-width: 1430px) {
 //     .framework {
 //         background:url("/assets/img/grids/grid-976.png") 50% 0 repeat-y
 //     }
@@ -26,7 +26,7 @@
 //     }
 // }
 
-@media all and (max-width: 1023px) {
+@media screen and (max-width: 1023px) {
     .framework .wrapper {
         background:url("/assets/img/grids/grid-712.png") 50% 0 repeat-y
     }
@@ -36,7 +36,7 @@
     }
 }
 
-@media all and (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .framework .wrapper {
         background:url("/assets/img/grids/grid-300-12.png") 50% 0 repeat-y;
         background-size: 100%
@@ -48,7 +48,7 @@
     }
 }
 
-@media all and (max-width: 480px) {
+@media screen and (max-width: 480px) {
     .framework .wrapper {
         background:url("/assets/img/grids/grid-300-12.png") 0 0 repeat-y;
         width: 100%;

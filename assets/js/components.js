@@ -323,7 +323,7 @@ $(function () {
     } else {
       $(targetEl).slideDown(function () {
         $this.toggleClass('active');
-      $document.one('click', closeEl);
+        $document.one('click', closeEl);
       });
       
     }
@@ -335,9 +335,9 @@ $(function () {
   $(window).on('resize', function () {
 
       if ($(this).innerWidth() > 1023) {
-        $('header .search').show();
+        //$('header .search').slideDown();
       } else {
-        $('header .search').hide();
+        //$('header .search').slideUp();
       }
 
       if ($(this).innerWidth() > 767) {

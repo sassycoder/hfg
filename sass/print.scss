@@ -1,1 +1,25 @@
 // Print styles here
+
+* {-webkit-print-color-adjust:exact;}
+
+header, .ad-top, .rating-field, .aside, footer {
+	display: none!important;
+}
+
+.wrap.action {
+	border: 0;
+	.buttons, .social {
+		visibility: hidden;
+	}
+}
+
+.wrap.details .pane.base8 {
+	float: right;
+}
+
+@-moz-document url-prefix() { 
+  .infographic:before, .nutrographic:before {
+		display: inline-block;
+	}
+}
+

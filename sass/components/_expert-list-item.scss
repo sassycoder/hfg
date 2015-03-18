@@ -21,7 +21,7 @@
 	&:before { border: 0; }
 }
 
-@media all and (max-width: 767px) {
+@media screen and (max-width: 767px) {
 	.component.expert {
 		img {
 			float: left;

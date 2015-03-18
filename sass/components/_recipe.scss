@@ -317,7 +317,7 @@
 
 .column:first-child { margin-left: 0; }
 
-@media all and (max-width: 1023px) {
+@media screen and (max-width: 1023px) {
 	.component.recipe-header {
 		.img {
 			width: 279px;
@@ -336,7 +336,7 @@
 
 }
 
-@media all and (max-width: 767px) {
+@media screen and (max-width: 767px) {
 	.component.recipe-header {
 		.img {
 			width: 100%;
@@ -513,7 +513,7 @@
 	}
 }
 
-@media all and (max-width: 480px) {
+@media screen and (max-width: 480px) {
 	.component.recipe-body {
 		&.article-body {
 			img {

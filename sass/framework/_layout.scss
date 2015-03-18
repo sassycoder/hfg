@@ -196,7 +196,7 @@
 //     margin: 0;
 //   }
 // }
-// @media all and(max-width: 1900px) {
+// @media screen and(max-width: 1900px) {
 //   .wrapper {
 //     width: 1396px;
 //     margin: auto;
@@ -545,7 +545,7 @@
     margin: auto;
   }
 
-@media all and(max-width: 1023px) {
+@media screen and(max-width: 1023px) {
   .wrapper {
     width: 768px;
     margin: auto;
@@ -777,7 +777,7 @@
     margin: auto;
   }
 }
-@media all and(max-width: 767px) {
+@media screen and(max-width: 767px) {
   .wrapper {
     width: 100%;
     margin: 0;
@@ -1548,7 +1548,7 @@
   //   }
   // }
 }
-@media all and (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .wrapper {
     width: 100%;
     margin: 0;

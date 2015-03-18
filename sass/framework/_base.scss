@@ -71,6 +71,7 @@ span.hiddentext,h1.hiddentext {
     position: fixed;
     top: 0;
     z-index: 2;
+    display: none;
 }
 
 body {
@@ -521,57 +522,137 @@ a.skip:active,a.skip:focus {
     height: 39px;
     display: inline-block;
     cursor: pointer;
+
+    &:before {      
+      display: none;
+      width: 39px;
+      height: 39px;
+      font-family: 'MuseoSans900';
+      color: #000;
+      font-size: 11px;
+      line-height: 11px;
+      text-align: center;
+      text-transform: uppercase;
+    }
     
     &.low-cal {
       @include icons-sprite(icon-low-cal);
+
+      &:before {
+        content: 'low cal';        
+      }     
     }
     &.low-fat {
       @include icons-sprite(icon-low-fat);
+      
+      &:before {
+        content: 'low fat';        
+      } 
     }
     &.low-sugar {
       @include icons-sprite(icon-low-sugar);
+
+      &:before {
+        content: 'low sugar';        
+      } 
     }
     &.low-salt {
       @include icons-sprite(icon-low-salt);
+
+      &:before {
+        content: 'low salt';        
+      } 
     }
     &.high-fibre {
       @include icons-sprite(icon-high-fibre);
+
+      &:before {
+        content: 'high fibre';        
+      } 
     }
     &.high-protein {
       @include icons-sprite(icon-high-protein);
+
+      &:before {
+        content: 'high protein';        
+      } 
     }
     &.low-sats {
       @include icons-sprite(icon-low-sats);
+
+      &:before {
+        content: 'low sats';        
+      } 
     }
     &.high-calc {
       @include icons-sprite(icon-high-calcium);
+
+      &:before {
+        content: 'high calcium';        
+      } 
     }
     &.high-iron {
       @include icons-sprite(icon-high-iron);
+
+      &:before {
+        content: 'high iron';        
+      } 
     }
     &.veg {
       @include icons-sprite(icon-veg);
+
+      &:before {
+        content: 'veg';        
+      } 
     }
     &.gluten-free {
       @include icons-sprite(icon-gluten-free);
+
+      &:before {
+        content: 'gluten free';        
+      } 
     }
     &.dairy-free {
       @include icons-sprite(icon-dairy-free);
+
+      &:before {
+        content: 'dairy free';        
+      } 
     }
     &.oneaday {
       @include icons-sprite(icon-1aday);
+
+      &:before {
+        content: '1 a day';        
+      } 
     }
     &.twoaday {
       @include icons-sprite(icon-2aday);
+
+      &:before {
+        content: '2 a day';        
+      } 
     }
     &.threeaday {
       @include icons-sprite(icon-3aday);
+
+      &:before {
+        content: '3 a day';        
+      } 
     }
     &.fouraday {
       @include icons-sprite(icon-4aday);
+
+      &:before {
+        content: '4 a day';        
+      } 
     }
     &.fiveaday {
       @include icons-sprite(icon-5aday);
+
+      &:before {
+        content: '5 a day';        
+      } 
     }
   }
 
@@ -588,35 +669,77 @@ a.skip:active,a.skip:focus {
     line-height: 17px;
     line-height: 1.7rem;
 
+    &:before {      
+      display: none;
+      width: 55px;
+      height: 15px;
+      font-family: 'MuseoSans900';
+      color: #000;
+      font-size: 11px;
+      line-height: 11px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
     &.cal {
       @include icons-sprite(icon-nut-cal);
+      &:before {
+        content: 'cals';        
+      } 
     }
     &.calc {
       @include icons-sprite(icon-nut-calc);
+      &:before {
+        content: 'calcium';        
+      } 
     }
     &.carb {
       @include icons-sprite(icon-nut-carb);
+      &:before {
+        content: 'carbs';        
+      } 
     }
     &.fat {
       @include icons-sprite(icon-nut-fat);
+      &:before {
+        content: 'fat';        
+      } 
     }
     &.fibre {
       @include icons-sprite(icon-nut-fibre);
+      &:before {
+        content: 'fibre';        
+      } 
     }
     &.iron {
       @include icons-sprite(icon-nut-iron);
+      &:before {
+        content: 'iron';        
+      } 
     }
     &.protein {
       @include icons-sprite(icon-nut-protein);
+      &:before {
+        content: 'protein';        
+      } 
     }
     &.salt {
       @include icons-sprite(icon-nut-salt);
+      &:before {
+        content: 'salt';        
+      } 
     }
     &.sat {
       @include icons-sprite(icon-nut-sat);
+      &:before {
+        content: 'sat';        
+      } 
     }
     &.sugar {
       @include icons-sprite(icon-nut-sugar);
+      &:before {
+        content: 'sugar';        
+      } 
     }
   }
 
@@ -819,6 +942,17 @@ footer {
       font-size: 9px;
       font-size: .9rem;
       margin-top: 5px;
+
+      a {
+        font-family: 'MuseoSans300';
+        color: #000;
+        font-size: 9px;
+        font-size: .9rem;
+
+        &:hover, &:focus, &:active {
+          color: #fff;
+        }
+      }
     }
   }
 }
@@ -1081,6 +1215,7 @@ input[type='text'].search-box {
         margin-right: 15px;
         color: #000;
         white-space: nowrap;
+        display: inline;
 
         &:before {
           color: #becf00;
@@ -1197,14 +1332,28 @@ input[type='text'].search-box {
     clear: both
 }
 
-@media all and (max-width: 1024px) {
+.review-total-star-comments {
+  display: block;
+  text-align: center;
+}
+
+.ratings {
+  display: block;
+  text-align: center;
+}
+
+.review-result-wrapper i {
+  display: inline-block
+}
+
+@media screen and (max-width: 1024px) {
     .takeover-active {
         .takeover { display: none; }
         .wrapper { margin-top: 0; }
     } 
 }
 
-@media all and (max-width: 1023px) {
+@media screen and (max-width: 1023px) {
 
   body {
     background: #fff!important;
@@ -1253,6 +1402,7 @@ input[type='text'].search-box {
       padding: 8px;
       width: 100%;
       text-align: left;
+      z-index: 99;
       display: none;
 
       .global-search {
@@ -1262,7 +1412,7 @@ input[type='text'].search-box {
       .icon_search {
         position: absolute;
         right: 5px;
-        background-color: #fff;
+        background-color: transparent;
       }
     }
 
@@ -1299,7 +1449,7 @@ input[type='text'].search-box {
 }
 
 
-@media all and (max-width: 767px) {
+@media screen and (max-width: 767px) {
 
     .tablet {
       display: none!important;
@@ -1352,7 +1502,7 @@ input[type='text'].search-box {
     }
 }
 
-@media all and (max-width: 480px) {
+@media screen and (max-width: 480px) {
 
   .section-intro {
     font-size: 18px;
