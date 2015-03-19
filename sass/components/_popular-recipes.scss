@@ -53,6 +53,15 @@
 			}
 		}
 
+		.review-total-star-comments {
+		  display: block;
+		  text-align: center;
+
+		  .review-result-wrapper i {
+			  display: inline-block
+			}
+		}
+
 		.number {
 			color: #8cb624;
 		}
