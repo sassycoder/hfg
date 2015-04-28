@@ -55,8 +55,8 @@
 		}
 
 		.review-total-star-comments {
-		  display: block;
-		  text-align: center;
+		  display: table;
+		  margin: 0 auto;
 
 		  .review-result-wrapper i {
 			  display: inline-block
