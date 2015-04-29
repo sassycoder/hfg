@@ -37,6 +37,37 @@
 					<div class="row tp-margin ml-margin mp-margin">
 						<div class="pane base8 tp12 ml12">
 							<!--(bake /templates/components/_article-body.html)-->
+
+							<div class="component popular-recipes related-articles">
+								<h3>Related Articles</h3>
+								<div id="related-articles" class="component owl-carousel body cf">
+									
+									<div class="item cf">
+										<!--(bake /templates/components/_popular-recipe-list-item.html)-->
+									</div>
+
+									<div class="item cf">
+										<!--(bake /templates/components/_popular-recipe-list-item.html)-->
+									</div>
+
+									<div class="item cf">
+										<!--(bake /templates/components/_popular-recipe-list-item.html)-->
+									</div>
+
+									<div class="item cf">
+										<!--(bake /templates/components/_popular-recipe-list-item.html)-->
+									</div>
+
+									<div class="item cf">
+										<!--(bake /templates/components/_popular-recipe-list-item.html)-->
+									</div>
+
+									<div class="item cf">
+										<!--(bake /templates/components/_popular-recipe-list-item.html)-->
+									</div>
+								</div>
+							</div>
+
 						</div>
 						<div class="pane base4 tp12 ml12 tp-mgZero aside">
 							<!--(bake /templates/components/_mpu.html)-->
@@ -151,6 +182,30 @@
 			$this.on('blur', '.infographic', function () {
 				$(this).tooltipster('hide');
 			});
+
+			$('#related-articles').owlCarousel({
+		  	pagination: true,
+		  	navigation: true,
+		  	scrollPerPage: true,
+		  	rewindNav: false,
+		  	addClassActive: true,
+		  	items: 3,
+		  	itemsDesktop: false,
+		  	itemsDesktopSmall: false,
+		  	itemsTablet: false,
+		  	itemsTabletSmall: [767,3],
+		  	itemsMobile: [480,2],
+		  	navigationText: ["4","5"],
+		  	afterMove: function (o) {
+		  		var getItems = $(o).find('.owl-item'),
+		  				getActive = $(o).find('.active'),
+		  				activeLength = getActive.length;
+
+		  		$(getItems).removeClass('first last');
+		  		$(getActive).eq(0).addClass('first');
+		  		$(getActive).eq((activeLength - 2)).addClass('last');
+		  	}
+		  });
 
 			//For save recipe button
       $('.save-recipe').tooltipster({

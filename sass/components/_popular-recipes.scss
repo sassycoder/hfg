@@ -1,4 +1,7 @@
 .component {
+	&.related-articles {
+		margin: 40px 0;
+	}
 	&.popular-recipes {
 		position: relative;
 		padding: 20px;

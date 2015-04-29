@@ -361,6 +361,71 @@
 									</div>
 								<p class="credit">Recipe by <strong>Sarah Swain</strong>. Photography by <strong>Devin Hart</strong></p>
 							</div>
+								<div class="component popular-recipes related-articles">
+									<h3>Related Articles</h3>
+									<div id="related-articles" class="component owl-carousel body cf">
+										
+										<div class="item cf">
+											<div class="component popular-recipe-item cf">
+												<a href="#">
+													<img src="assets/img/components/recipe_list_item/recipe-carousel.jpg" alt="">
+													<p><strong>Chicken and plum sauce stir-fry</strong></p>
+													<p><span class="ratings" data-rating="3" data-icon=""></span> (54)</p>
+												</a>
+											</div>
+										</div>
+
+										<div class="item cf">
+											<div class="component popular-recipe-item cf">
+												<a href="#">
+													<img src="assets/img/components/recipe_list_item/recipe-carousel.jpg" alt="">
+													<p><strong>Chicken and plum sauce stir-fry</strong></p>
+													<p><span class="ratings" data-rating="3" data-icon=""></span> (54)</p>
+												</a>
+											</div>
+										</div>
+
+										<div class="item cf">
+											<div class="component popular-recipe-item cf">
+												<a href="#">
+													<img src="assets/img/components/recipe_list_item/recipe-carousel.jpg" alt="">
+													<p><strong>Chicken and plum sauce stir-fry</strong></p>
+													<p><span class="ratings" data-rating="3" data-icon=""></span> (54)</p>
+												</a>
+											</div>
+										</div>
+
+										<div class="item cf">
+											<div class="component popular-recipe-item cf">
+												<a href="#">
+													<img src="assets/img/components/recipe_list_item/recipe-carousel.jpg" alt="">
+													<p><strong>Chicken and plum sauce stir-fry</strong></p>
+													<p><span class="ratings" data-rating="3" data-icon=""></span> (54)</p>
+												</a>
+											</div>
+										</div>
+
+										<div class="item cf">
+											<div class="component popular-recipe-item cf">
+												<a href="#">
+													<img src="assets/img/components/recipe_list_item/recipe-carousel.jpg" alt="">
+													<p><strong>Chicken and plum sauce stir-fry</strong></p>
+													<p><span class="ratings" data-rating="3" data-icon=""></span> (54)</p>
+												</a>
+											</div>
+										</div>
+
+										<div class="item cf">
+											<div class="component popular-recipe-item cf">
+												<a href="#">
+													<img src="assets/img/components/recipe_list_item/recipe-carousel.jpg" alt="">
+													<p><strong>Chicken and plum sauce stir-fry</strong></p>
+													<p><span class="ratings" data-rating="3" data-icon=""></span> (54)</p>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
 							<div class="rating-field">
 							<h3 class="comments-title panel-header">
 									Comments (9)</h2>					
@@ -989,6 +1054,30 @@
 					return content + $('#infographic-dialog').html();
 				}
 			});
+
+			$('#related-articles').owlCarousel({
+		  	pagination: true,
+		  	navigation: true,
+		  	scrollPerPage: true,
+		  	rewindNav: false,
+		  	addClassActive: true,
+		  	items: 3,
+		  	itemsDesktop: false,
+		  	itemsDesktopSmall: false,
+		  	itemsTablet: false,
+		  	itemsTabletSmall: [767,3],
+		  	itemsMobile: [480,2],
+		  	navigationText: ["4","5"],
+		  	afterMove: function (o) {
+		  		var getItems = $(o).find('.owl-item'),
+		  				getActive = $(o).find('.active'),
+		  				activeLength = getActive.length;
+
+		  		$(getItems).removeClass('first last');
+		  		$(getActive).eq(0).addClass('first');
+		  		$(getActive).eq((activeLength - 2)).addClass('last');
+		  	}
+		  });
 
 			//For save recipe button
       $('.save-recipe').tooltipster({
