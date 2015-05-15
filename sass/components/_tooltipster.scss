@@ -287,3 +287,16 @@
 	-ms-transform: scale(1.1, 1.1);
 	transform: scale(1.1, 1.1);
 }
+
+@media screen and (max-width: 767px) {
+.login-mobile {
+	min-width: 100%!important;
+	left: 0!important;
+	top: 58px!important;
+
+	.tooltipster-arrow {
+		display: none!important;
+	}
+}
+
+}
