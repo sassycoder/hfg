@@ -1131,9 +1131,11 @@
 		    		var pLink = $(tooltip).find('.forgotten-password');
 
 		    		$(tooltip).addClass("login-mobile");
-		    		$(pLink).click(function () {
+		    		$(pLink).click(function (ev) {
 		    			var pwordDialog = $('#forgotten-password-dialog').html();
 		    			$('.log-in, .login-mob').tooltipster('content', pwordDialog);
+
+		    			ev.preventDefault();
 		    		});
 			    },
 			    functionAfter: function() {
