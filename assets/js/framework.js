@@ -271,7 +271,7 @@ $.enable.IE7HoverFocus(true);
 
 $(function () {
     $('html').addClass('images-off');
-    $('<img src="./assets/img/structure/pixel.png' + '#' + Math.random() + '"/>').load(function() {
+    $('<img src="/wp-content/themes/healthyfoodguide/assets/img/structure/pixel.png' + '#' + Math.random() + '"/>').load(function() {
         $('html').removeClass('images-off');
     });
 });

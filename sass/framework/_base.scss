@@ -8,7 +8,13 @@ html {
     //overflow-y: scroll;
     font-size: 62.5%;
     //background: rgba(170, 204, 24, 0.3);
-    
+
+    &:not(.touchenabled) {   
+      a:hover img {
+        opacity: 0.5;
+        filter: alpha(opacity=50)
+      }
+    }
 }
 
 html, body {
@@ -102,11 +108,6 @@ a:focus,a:active {
 
 a img {
     border: 0
-}
-
-a:hover img {
-    opacity: 0.5;
-    filter: alpha(opacity=50)
 }
 
 img {
@@ -1348,8 +1349,6 @@ input[type='text'].search-box {
   body {
     background: #fff!important;
   }
-
-
 
   .mobile {
     display: block!important;
