@@ -13,9 +13,18 @@
 <div><a href="#skipnav" class="skip">Skip to main content</a></div>
 
 <div class="ad-top takeover">
-	<img src="/hfg/assets/img/structure/bg-leaderboard.png" alt="Advert">
+	<!-- Beginning Async AdSlot 1 for Ad unit healthyfoodguide.co.uk  ### size: [[970,250],[940,250],[728,90]] -->
+		<!-- Adslot's refresh function: googletag.pubads().refresh([gptadslots[1]]) -->
+		<div id='div-gpt-ad-leaderboard_top'>
+			<script type='text/javascript'>
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-leaderboard_top'); });
+			</script>
+		</div>
+	<!-- End AdSlot 1 -->
 </div>
-<div class="ad-left takeover"></div>
+<div class="ad-left takeover">
+
+</div>
 
 	<div id="wrapper" class="wrapper">
 
@@ -30,69 +39,29 @@
 						</div>
 					</div><!-- .row -->
 
-			    <div class="row">
-							<!--(bake /templates/components/_article-header.html)-->
-					</div><!-- .row -->
-
-					<div class="row tp-margin ml-margin mp-margin">
+					<div class="row tp-margin">
 						<div class="pane base8 tp12 ml12">
-							<!--(bake /templates/components/_article-body.html)-->
-
-							<div class="component popular-recipes related-articles">
-								<h3>Related Articles</h3>
-								<div id="related-articles" class="component owl-carousel body cf">
-									
-									<div class="item cf">
-										<!--(bake /templates/components/_popular-recipe-list-item.html)-->
-									</div>
-
-									<div class="item cf">
-										<!--(bake /templates/components/_popular-recipe-list-item.html)-->
-									</div>
-
-									<div class="item cf">
-										<!--(bake /templates/components/_popular-recipe-list-item.html)-->
-									</div>
-
-									<div class="item cf">
-										<!--(bake /templates/components/_popular-recipe-list-item.html)-->
-									</div>
-
-									<div class="item cf">
-										<!--(bake /templates/components/_popular-recipe-list-item.html)-->
-									</div>
-
-									<div class="item cf">
-										<!--(bake /templates/components/_popular-recipe-list-item.html)-->
-									</div>
+							<div class="row">
+								<div class="pane base4 tp6 ml6">
+									<!--(bake /templates/components/_infobox-homepage-full.html)-->
+								</div>
+								<div class="pane base4 tp6 ml6">
+									<!--(bake /templates/components/_infobox-homepage-full.html)-->
 								</div>
 							</div>
-
+							<div class="row">
+								<div class="pane base4 tp6 ml6">
+									<!--(bake /templates/components/_infobox-homepage-full.html)-->
+								</div>
+								<div class="pane base4 tp6 ml6">
+									<!--(bake /templates/components/_infobox-homepage-full.html)-->
+								</div>
+							</div>
 						</div>
+
 						<div class="pane base4 tp12 ml12 tp-mgZero aside">
 							<!--(bake /templates/components/_mpu.html)-->
-							<h3>Similar Articles</h3>
-							<!--(bake /templates/components/_article-list-item.html)-->
-							<a href="#" class="bttn secondary">More Articles</a>
-							<!--(bake /templates/components/_mpu.html)-->
-							<h3 class="no-border">Popular Articles</h3>
-							<div class="component tabs">
-								<div class="nav cf">
-									<a class="tab-item active" href="#">Most popular</a>
-									<a class="tab-item" href="#">Most Discussed</a>
-								</div>
 
-								<div class="sections">
-									<div class="article active">
-										<!--(bake /templates/components/_article-list-item.html)-->
-									</div>
-									<div class="article">
-										<!--(bake /templates/components/_article-list-item.html)-->
-										<!--(bake /templates/components/_article-list-item.html)-->
-									</div>
-								</div>
-							</div>
-							<a href="#" class="bttn secondary">More Articles</a>
 						</div>
 							
 					</div><!-- .row -->
@@ -119,7 +88,7 @@
 					</div>
 
 					<div class="row">
-						<div class="error-message"><strong>ERROR</strong>: Invalid username. <a href="http://134.213.146.151/healthyfoodguide/wp-login.php?action=lostpassword" title="Password Lost and Found">Lost your password?</a>
+						<div class="error-message"><strong>ERROR</strong>: Invalid username. <a href="http://134.213.146.151/healthyfoodguide/wp-login.php?action=lostpassword" title="Password Lost and Found">Lost your password</a>?
 						</div>
 					</div>
 
@@ -182,6 +151,15 @@
 			</div>
 		</div>
 
+		<!-- infographic popup  -->
+		<div id="infographic-dialog" class="dialog">
+			<div class="infographic-dialog">
+				<div class="row">
+					<a href="#" class="bttn primary">View your recipes</a>
+				</div>
+			</div>
+		</div>
+
 	</div><!-- .wrapper -->
 	<div class="ad-right takeover"></div>
 
@@ -206,29 +184,16 @@
 				$(this).tooltipster('hide');
 			});
 
-			$('#related-articles').owlCarousel({
-		  	pagination: true,
-		  	navigation: true,
-		  	scrollPerPage: true,
-		  	rewindNav: false,
-		  	addClassActive: true,
-		  	items: 3,
-		  	itemsDesktop: false,
-		  	itemsDesktopSmall: false,
-		  	itemsTablet: false,
-		  	itemsTabletSmall: [767,3],
-		  	itemsMobile: [480,2],
-		  	navigationText: ["4","5"],
-		  	afterMove: function (o) {
-		  		var getItems = $(o).find('.owl-item'),
-		  				getActive = $(o).find('.active'),
-		  				activeLength = getActive.length;
-
-		  		$(getItems).removeClass('first last');
-		  		$(getActive).eq(0).addClass('first');
-		  		$(getActive).eq((activeLength - 2)).addClass('last');
-		  	}
-		  });
+			$('.infographic').tooltipster({
+				trigger: 'hover',
+				contentAsHTML: true,
+				interactive: true,
+				maxWidth: 180,
+				position: 'bottom-left',
+				functionInit: function (origin, content) {
+					return content + $('#infographic-dialog').html();
+				}
+			});
 
 			//For save recipe button
       $('.save-recipe').tooltipster({
@@ -242,7 +207,7 @@
 			    }
       });
 
-    	// For login
+			// For login
       $('.log-in, .login-mob').tooltipster({
           trigger: 'click',
           contentAsHTML: true,

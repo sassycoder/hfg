@@ -374,6 +374,11 @@ $(function () {
 							$(this).removeClass('active');
 							$(articleItems).eq(index).addClass('active').animate({opacity: '1'}, {duration: 250, complete: function () {
 								window.setArticleHeight(tabItems, articleItems);
+								if ($(window).innerWidth() < 767) {
+									$('html, body').animate({
+							        scrollTop: ($(this).offset().top) - 39
+							    }, 400);
+								}
 							}});
 						}});
 					}

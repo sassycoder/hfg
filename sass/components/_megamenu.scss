@@ -293,20 +293,20 @@
         text-align: left;
       }
 
-      &.menu-item-has-children {
-        > a {
-          &:after {
-            content: 'E';
-            float: right;
-            font-family: 'ElegantIcons';
-            font-size: 22px;
-            font-size: 2.2rem;
-            line-height: 16px;
-            line-height: 1.6rem;
-            color: #8cb624;
-          }
-        }
-      }
+      // &.menu-item-has-children {
+      //   > a {
+      //     &:after {
+      //       content: 'E';
+      //       float: right;
+      //       font-family: 'ElegantIcons';
+      //       font-size: 22px;
+      //       font-size: 2.2rem;
+      //       line-height: 16px;
+      //       line-height: 1.6rem;
+      //       color: #8cb624;
+      //     }
+      //   }
+      // }
 
       &.back {
         display: block!important;

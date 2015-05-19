@@ -151,7 +151,30 @@
 					</div>
 
 					<div class="row">
+						<div class="error-message"><strong>ERROR</strong>: Invalid username. <a href="http://134.213.146.151/healthyfoodguide/wp-login.php?action=lostpassword" title="Password Lost and Found">Lost your password?</a>
+						</div>
+					</div>
+
+					<div class="row">
 						<input type="submit" class="bttn primary" value="Sign in">
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<!-- Forgotten password popup  -->
+		<div id="forgotten-password-dialog" class="dialog">
+			<div class="forgotten-password-dialog">
+				<form>
+					<div class="row">
+						<p>Please enter your username or email address. You will receive a link to create a new password via email.</p>
+					</div>
+					<div class="row">
+						<label for="username">Username or Email: <span class="small">(required)</span></label>
+						<input class="" id="username" name="username" placeholder="" type="text" value="">
+					</div>
+					<div class="row">
+						<input type="submit" class="bttn primary" value="Get New Password">
 					</div>
 				</form>
 			</div>
@@ -224,15 +247,33 @@
 			});
 
     	// For login
-      $('.log-in').tooltipster({
+      $('.log-in, .login-mob').tooltipster({
           trigger: 'click',
           contentAsHTML: true,
           interactive: true,
           minWidth: 290,
+          maxWidth: 240,
           position: 'bottom-right',
           offsetX: -20,
           functionInit: function() {
 	        	return $('#login-dialog').html();
+			    },
+			    functionReady: function(origin, tooltip) {
+		    		var pLink = $(tooltip).find('.forgotten-password');
+
+		    		$(tooltip).addClass("login-mobile");
+		    		$(pLink).click(function (ev) {
+		    			var pwordDialog = $('#forgotten-password-dialog').html();
+		    			$('.log-in, .login-mob').tooltipster('content', pwordDialog);
+
+		    			ev.preventDefault();
+		    		});
+			    },
+			    functionAfter: function() {
+			    	var loginDialog = $('#login-dialog').html();
+
+			    	$('body').css("overflow-y", "visible");
+			    	$('.log-in, .login-mob').tooltipster('content', loginDialog);
 			    }
       });
 
