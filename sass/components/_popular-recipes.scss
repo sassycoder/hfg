@@ -46,7 +46,7 @@
 
 		p {
 			text-align: center;
-			padding: 10px 15px 0;
+			padding: 10px 5px 0;
 
 			strong {
 				font-family: 'MuseoSlab900';
@@ -145,4 +145,8 @@
 			p { padding: 10px 0 0; }
 		}
 	}
+}
+
+.cuisine-search .component.popular-recipe-item p {
+	min-height: 56px; //two lines
 }
