@@ -51,6 +51,11 @@
 			a {
 				display: block;
 			}
+			.hero-image {
+				@-moz-document url-prefix() {
+				  width: 100%;
+				}
+			}
 		}
 		.thumbnail {
 			position: absolute;
