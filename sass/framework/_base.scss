@@ -193,7 +193,7 @@ p {
     font-size: 12px;
     font-size: 1.2rem;
     padding: 0 0 8px 0;
-    padding: 0 0 0.8rem 0
+    padding: 0 0 0.8rem 0;
 }
 
 ul {
@@ -901,6 +901,9 @@ footer {
 
   p {
     color: #fff;
+    &.credits {
+      a { margin: 0; }
+    }
   }
 
   .bttn {
@@ -1074,7 +1077,7 @@ input[type='text'].search-box {
     width: 452px;
     height: 95px;
     margin-top: 40px;
-    background: url(/assets/img/structure/logo.png) no-repeat left top;
+    background: url(/assets/img/structure/newlogo.png) no-repeat left top;
 
     a {
       display: block;
@@ -1094,12 +1097,12 @@ input[type='text'].search-box {
 
   .sub-cta {
     position: absolute;
-    width: 88px;
-    height: 85px;
+    height: 87px;
+    width: 91px;
+    right: 67px;
+    bottom: -6px;
     text-indent: -9999px;
-    right: 70px;
-    bottom: -7px;
-    @include icons-sprite(subscribe-cta);
+    @include icons-sprite(sub);
   }
 
   .sign-up {

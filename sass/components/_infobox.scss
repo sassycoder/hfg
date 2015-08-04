@@ -33,7 +33,7 @@
 	}
 
 	&.v1 {
-		background-color: #becf00;
+		background-color: #a2cc3a;
 	}
 
 	&.v2 {
@@ -83,7 +83,7 @@
 			left: 20px;
 			bottom: 20px;
 			padding: 10px;
-			background-color: #becf00;
+			background-color: #a2cc3a;
 			max-width: 355px;
 			text-align: left;
 			min-width: 355px;
@@ -261,7 +261,11 @@
 			bottom: 10px;
 			right: 10px;
 			border-color: #8cb624;
-			color: #becf00;
+			color: #a2cc3a;
+
+			&:hover, &:focus, &:active {
+					color: #becf00;
+				}
 		}
 
 		.component.recipe-list-item {
