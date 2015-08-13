@@ -99,7 +99,7 @@ a {
 
 a:hover,a:focus,a:active {
     text-decoration: none;
-    color: #becf00;
+    color: #a2cc3a;
 }
 
 a:focus,a:active {
@@ -140,7 +140,7 @@ h1 {
 
     strong {
       font-family: 'MuseoSlab900';
-      color: #becf00;
+      color: #a2cc3a;
     }
 
     &.section {
@@ -149,7 +149,7 @@ h1 {
       font-size: 3.5rem;
       line-height: 37px;
       line-height: 3.7rem;
-      color: #becf00;
+      color: #a2cc3a;
       padding-top: 0;
       padding-bottom: 40px;
     }
@@ -246,7 +246,7 @@ ul li,ol li {
   }
 
   &.green {
-    background-color: #becf00;
+    background-color: #a2cc3a;
   }
   &.orange {
     background-color: #f2aa18;
@@ -284,7 +284,7 @@ ul li,ol li {
   letter-spacing: 1px;
   letter-spacing: .1rem;
   border: none;
-  background-color: #becf00;
+  background-color: #a2cc3a;
   color: #fff;
   display: block;
   cursor: pointer;
@@ -302,26 +302,26 @@ ul li,ol li {
   &.secondary {
     background-color: transparent;
     color: #8cb624;
-    border: 1px solid #becf00;
+    border: 1px solid #a2cc3a;
 
     &:hover, &:focus, &:active {
-      background-color: #becf00;
+      background-color: #a2cc3a;
       color: #fff;
     }
   }
 
   &.toggle {
     display: inline-block;
-    border: 1px solid #becf00;
+    border: 1px solid #a2cc3a;
     border-left: 0;
     border-radius: 0;
     background-color: #fff;
-    color: #becf00;
+    color: #a2cc3a;
     min-width: 77px;
 
     &:first-child {
       border-radius: 5px 0 0 5px;
-      border-left: 1px solid #becf00;
+      border-left: 1px solid #a2cc3a;
     }
 
     &:last-child {
@@ -329,7 +329,7 @@ ul li,ol li {
     }
 
     &:hover, &:focus, &:active, &.active {
-      background-color: #becf00;
+      background-color: #a2cc3a;
       color: #fff;
     }
   }
@@ -376,7 +376,7 @@ a.skip:active,a.skip:focus {
   font-size: 3.5rem;
   line-height: 37px;
   line-height: 3.75rem;
-  color: #becf00;
+  color: #a2cc3a;
   display: inline;
   padding-left: 22px;
   padding-right: 30px;
@@ -468,7 +468,7 @@ a.skip:active,a.skip:focus {
     width: 90px;
     min-height: 85px;
     text-align: center;
-    background: #becf00;
+    background: #a2cc3a;
     border-radius: 70px;
     font-size: 15px;
     font-size: 1.5rem;
@@ -769,7 +769,7 @@ a.skip:active,a.skip:focus {
   }
 
   .tooltipster-default, .tooltipster-profile {
-    border: 1px solid #becf00;
+    border: 1px solid #a2cc3a;
     border-top-width: 5px;
     background: #fff;
     padding: 15px;
@@ -883,7 +883,7 @@ footer {
   width: 100%;
   padding: 20px 0 0 0;
   margin: 0 auto;
-  background-color: #bece2a;
+  background-color: #a2cc3a;
   box-sizing: border-box;
   position: relative;
   z-index: 2;
@@ -1046,7 +1046,7 @@ input[type='text'].search-box {
 .icon_search {
   position: absolute;
   right: 0;
-  border: 1px solid #becf00;
+  border: 1px solid #a2cc3a;
   border-bottom: 0;
   border-left: none;
   color: #8cb624;
@@ -1118,7 +1118,7 @@ input[type='text'].search-box {
     text-transform: uppercase;
 
     &:hover, &:focus, &:active {
-      color: #becf00;
+      color: #a2cc3a;
     }
   }
 
@@ -1139,7 +1139,7 @@ input[type='text'].search-box {
       a { 
           display: inline-block;
           text-transform: uppercase;
-          border-left: 1px solid #becf00;
+          border-left: 1px solid #a2cc3a;
           padding: 0 0 0 8px;
           margin: 0 0 0 3px;
           color: #333;
@@ -1153,7 +1153,7 @@ input[type='text'].search-box {
           text-transform: uppercase;
 
           &:hover, &:active, &:focus {
-            color: #becf00;
+            color: #a2cc3a;
           }
 
           &:first-child {
@@ -1178,7 +1178,7 @@ input[type='text'].search-box {
       img {
         display: inline-block;
         margin: 0 0 0 10px;
-        border: 1px solid #becf00;
+        border: 1px solid #a2cc3a;
         vertical-align: middle;
       }
   }
@@ -1202,7 +1202,7 @@ input[type='text'].search-box {
     &.details {
       position: relative;
       background: url(/assets/img/structure/bg-recipe-panel.jpg) repeat left top transparent;
-      border: 1px solid #becf00;
+      border: 1px solid #a2cc3a;
       border-top-width: 5px;
       border-left: none;
       min-height: 220px;
@@ -1223,7 +1223,7 @@ input[type='text'].search-box {
 
       a {
         &:hover, &:focus, &:active {
-          color: #becf00;
+          color: #a2cc3a;
         }
       }
 
@@ -1234,7 +1234,7 @@ input[type='text'].search-box {
         display: inline;
 
         &:before {
-          color: #becf00;
+          color: #a2cc3a;
           margin-right: 5px;
           font-size: 16px;
           font-size: 1.6rem;
@@ -1380,7 +1380,7 @@ input[type='text'].search-box {
   }
 
   .wrapper > header {
-    background-color: #bed000;
+    background-color: #a2cc3a;
     min-height: 0;
     height: 63px;
     padding: 0;

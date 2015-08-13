@@ -63,7 +63,7 @@
 	ol li {
   	list-style-type: decimal;
   	list-style-position: inside;
-  	color: #becf00;
+  	color: #a2cc3a;
   	font-family: 'MuseoSlab900';
 
   	span { 
@@ -83,7 +83,7 @@
 		width: 100%;
 		margin-top: 40px;
 		text-align: right;
-		border-bottom: 1px solid #becf00;
+		border-bottom: 1px solid #a2cc3a;
 		font-size: 10px;
 		font-size: 1rem;
 		line-height: 12px;
@@ -205,7 +205,7 @@
 			  font-size: 3.5rem;
 			  line-height: 37px;
 			  line-height: 3.75rem;
-			  color: #becf00;
+			  color: #a2cc3a;
 			  display: inline;
 			  padding-left: 22px;
 			  padding-right: 30px;
@@ -410,7 +410,7 @@
 			text-align: center;
 			color: #8cb624;
 			cursor: pointer;
-			border: 1px solid #becf00;
+			border: 1px solid #a2cc3a;
 			border-top:0;
 
 			&.first {
@@ -418,7 +418,7 @@
 			}
 
 			&.active {
-				background-color: #becf00;
+				background-color: #a2cc3a;
 				color: #fff;
 			}
 		}
@@ -490,7 +490,7 @@
 				color: #8cb624;
 
 				&.active {
-					background-color: #becf00;
+					background-color: #a2cc3a;
 					color: #fff;
 				}
 			}
@@ -508,7 +508,7 @@
 	.panel {
 		display: none;
 		padding: 20px;
-		border: 1px solid #becf00;
+		border: 1px solid #a2cc3a;
 		background-color: #f8f9eb;
 	}
 }

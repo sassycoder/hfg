@@ -10,11 +10,11 @@
 
 		&.grid {
 			padding-top: 20px;
-			border-top: 2px solid #becf00;
+			border-top: 2px solid #a2cc3a;
 		}
 
 		&.diet {
-			border: 1px solid #becf00;
+			border: 1px solid #a2cc3a;
 			border-top-width: 2px;
 			padding: 35px 15px 15px 25px;
 			position: absolute;
@@ -88,7 +88,7 @@
 		}
 
 		&.profile {
-			border: 1px solid #becf00;
+			border: 1px solid #a2cc3a;
 			border-top-width: 2px;
 			background-color: #f9faee;
 			padding: 45px 35px 15px;
@@ -115,7 +115,7 @@
 				margin-left: 5px;
 				font-size: 23px;
 				font-size: 2.3rem;
-				color: #becf00;
+				color: #a2cc3a;
 				vertical-align: bottom;
 			}
 
@@ -147,7 +147,7 @@
 					display: inline-block;
 					max-width: 82px;
 					border-radius: 5px;
-					border: 1px solid #becf00;
+					border: 1px solid #a2cc3a;
 				}
 
 				.upload {
@@ -216,15 +216,15 @@
 	.nav {
 
 		width: 100%;
-		border-bottom: 1px solid #becf00;
+		border-bottom: 1px solid #a2cc3a;
 		position: relative;
 
 		.tab-item {
 			float: left;
 			padding: 13px 10px 9px;
 			background-color: #fff;
-			color: #becf00;
-			border: 1px solid #becf00;
+			color: #a2cc3a;
+			border: 1px solid #a2cc3a;
 			border-left: 0;
 			border-bottom: 0;
 			font-family: 'MuseoSansCond700';
@@ -242,7 +242,7 @@
 			}
 
 			&.active {
-				background-color: #becf00;
+				background-color: #a2cc3a;
 				color: #fff;
 				cursor: default;
 			}
@@ -338,7 +338,7 @@
 				.tab-item {
 
 					&:first-child {
-						border-left: 1px solid #becf00;
+						border-left: 1px solid #a2cc3a;
 						border-radius: 0;
 					}
 

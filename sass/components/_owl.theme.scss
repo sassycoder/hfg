@@ -110,9 +110,9 @@
 /* Use it for non-touch hover action */
 .owl-theme .owl-controls.clickable .owl-buttons div {
 	&:hover, &:active, &:focus {
-		border-color: #becf00;
+		border-color: #a2cc3a;
 		background: #fff;
-		color: #becf00;
+		color: #a2cc3a;
 		text-decoration: none;
 
 		&.owl-prev {
@@ -129,11 +129,11 @@
 
 	&:hover, &:active, &:focus {
 		&.owl-prev {
-			border-left-color: #becf00;
+			border-left-color: #a2cc3a;
 		}
 
 		&.owl-next {
-			border-right-color: #becf00;
+			border-right-color: #a2cc3a;
 		}
 
 	}

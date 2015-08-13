@@ -28,7 +28,7 @@
 
 		&:hover, &:focus, &:active {
 			background-color: white;
-			color: #becf00;
+			color: #a2cc3a;
 		}
 	}
 
@@ -115,7 +115,7 @@
 					&:hover, &:focus {
 						> span {
 							background-color: #fff;
-							color: #becf00;
+							color: #a2cc3a;
 						}
 					}
 				}
@@ -164,7 +164,7 @@
 			&:hover, &:focus {
 				> span {
 					background-color: #fff;
-					color: #becf00;
+					color: #a2cc3a;
 				}
 			}
 		}
@@ -184,7 +184,7 @@
 		}
 
 		.header {
-			background-color: #bece2a;
+			background-color: #a2cc3a;
 			padding: 10px;
 
 			h2 {
@@ -228,7 +228,7 @@
 			}
 
 			.bttn {
-				background-color: #becf00;
+				background-color: #a2cc3a;
 			}
 		}
 
@@ -248,8 +248,8 @@
 	}
 
 	&.list {
-		border: 2px dotted #becf00;
-		border-top: 2px solid #becf00;
+		border: 2px dotted #a2cc3a;
+		border-top: 2px solid #a2cc3a;
 		padding: 10px 10px 65px;
 
 		h3 {
@@ -264,7 +264,7 @@
 			color: #a2cc3a;
 
 			&:hover, &:focus, &:active {
-					color: #becf00;
+					color: #a2cc3a;
 				}
 		}
 

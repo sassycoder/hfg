@@ -1,7 +1,7 @@
 .component {
 
 	&.filters {
-		border: 1px solid #becf00;
+		border: 1px solid #a2cc3a;
 		border-radius: 5px;
 		margin-bottom: 9px;
 		padding: 5px 5px 15px 5px;
@@ -47,7 +47,7 @@
 	&.facets {
 		.item {
 			position: relative;
-			border: 1px solid #becf00;
+			border: 1px solid #a2cc3a;
 			border-radius: 5px;
 			padding: 10px 24px 6px 6px;
 			display: block;
@@ -73,7 +73,7 @@
 			}
 
 			&:hover, &:active, &:focus, &.active {
-				background-color: #becf00;
+				background-color: #a2cc3a;
 				color: #fff;
 			}
 		}

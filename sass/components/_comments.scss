@@ -67,7 +67,7 @@
 	.comment-content {
 		position: relative;
 		margin-left: 11%;
-		border-left: 5px solid #becf00;
+		border-left: 5px solid #a2cc3a;
 		padding-left: 10px;
 
 		&:before, &:after {
@@ -89,7 +89,7 @@
 		}
 		&:before {
 			border-color: rgba(190,207,0,0);
-			border-right-color: #becf00;
+			border-right-color: #a2cc3a;
 			border-width: 14px;
 			margin-top: -23px;
 		}
@@ -127,11 +127,11 @@
 		text-align: center;
 		color: #8cb624;
 		cursor: pointer;
-		border: 1px solid #becf00;
+		border: 1px solid #a2cc3a;
 		border-top:0;
 
 		&.active {
-			background-color: #becf00;
+			background-color: #a2cc3a;
 			color: #fff;
 		}
 	}
