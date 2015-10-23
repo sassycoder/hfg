@@ -270,20 +270,25 @@
       });
 
 			$('#popular-recipes').owlCarousel({
-		  	pagination: true,
-		  	navigation: true,
-		  	scrollPerPage: true,
-		  	rewindNav: false,
-		  	addClassActive: true,
-		  	items: 3,
-		  	itemsDesktop: false,
-		  	itemsDesktopSmall: false,
-		  	itemsTablet: false,
-		  	itemsTabletSmall: [767,3],
-		  	itemsMobile: [480,2],
-		  	navigationText: ["4","5"],
-		  	afterMove: function (o) {
-		  		var getItems = $(o).find('.owl-item'),
+				nav: true,
+				margin: 6,
+				responsive: {
+			    0: {
+		        items: 1,
+		        slideBy: 1
+			    },
+			    480: {
+			    	items: 2,
+		        slideBy: 2
+			    },
+			    768: {
+			    	items: 3,
+		        slideBy: 3
+			    }
+				},
+		  	onTranslated: function (e) {
+		  		var o = e.target,
+		  				getItems = $(o).find('.owl-item'),
 		  				getActive = $(o).find('.active'),
 		  				activeLength = getActive.length;
 

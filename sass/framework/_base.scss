@@ -457,6 +457,10 @@ a.skip:active,a.skip:focus {
     background-color: #da4937;
   }
 
+  .social_instagram {
+    background-color: #996633;
+  }
+
   .icon_mail {
     background-color: #f2aa18;
   }
@@ -1195,6 +1199,7 @@ input[type='text'].search-box {
     margin-top: 15px;
     border-top: 3px solid #000;
     border-bottom: 1px dotted #000;
+    position: relative;
   }
 }
 
@@ -1212,6 +1217,10 @@ input[type='text'].search-box {
         font-size: 4.6rem;
         line-height: 46px;
         line-height: 4.6rem;
+        padding-bottom: 5px;
+      }
+      .sf {
+        margin-bottom: 10px;
       }
     }
 
@@ -1257,7 +1266,7 @@ input[type='text'].search-box {
 
       .infographic {
         margin-right: 10px;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
       }
     }
 
@@ -1354,7 +1363,14 @@ input[type='text'].search-box {
 
 @media screen and (max-width: 1024px) {
     .takeover-active {
-        .takeover { display: none; }
+        .takeover {
+          display: none; 
+
+          &.ad-top { 
+            display: block;
+            iframe { width: 100%; }
+          }
+        }
         .wrapper { margin-top: 0; }
     } 
 }
@@ -1427,6 +1443,7 @@ input[type='text'].search-box {
     .nav {
       margin: 0;
       border: none;
+      position: static;
     }
   }
 

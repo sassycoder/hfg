@@ -11,26 +11,52 @@
 
 			&.active {
 				overflow: visible;
-				
-				&:first-child, &.first {
-					padding-left: 0;
-					margin-right: 0;
-				}
 
-				&.last {
-					margin-right: 0;
-				}
+				// &:first-child{
+				// 	padding-left: 0;
+				// }
+				
+				// &.first {
+				// 	padding-left: 0;
+				// 	margin-right: 0!important;
+				// }
+
+				// &.last {
+				// 	margin-right: 0!important;
+				// }
 
 				&:last-child, &.last {
 				 .component.expert {
 						&:before { border: 0; }
 					}
 				}
-
 				padding-left: 5px;
 				margin-right: 5px;
 			}
+			img {
+				-webkit-transform-style: preserve-3d;
+			}
 		}
+		.owl-nav div{
+			top: -35px;
+			border-radius: 4px;
+			padding: 2px 3px;
+			width: 32px;
+
+			&.owl-next {
+				right: 0;
+				&:hover, &:active, &:focus {
+					border-right-color: #a2cc3a;
+				}
+			}
+			&.owl-prev {
+				right: 35px;
+				left: auto;
+				&:hover, &:active, &:focus {
+					border-left-color: #a2cc3a;
+				}
+			}
+		}		
 	}
 
 	&#qa {
@@ -53,7 +79,7 @@
 		}
 
 	&.blog {
-		.owl-wrapper-outer {
+		.owl-stage-outer {
 			padding-top: 10px;
 		}
 	}
@@ -72,10 +98,11 @@
 
 /* Styling Next and Prev buttons */
 
-.owl-theme .owl-controls .owl-buttons div{
+.owl-nav div{
 	position: absolute;
 	top:50%;
-	color: #FFF;
+	width: 41px;
+	color: #a2cc3a;
 	display: inline-block;
 	zoom: 1;
 	*display: inline;/*IE7 life-saver */
@@ -85,7 +112,41 @@
 	font-size: 2.4rem;
 	background: #a2cc3a;
 	border: 1px solid #fff;
+	overflow: hidden;
 	z-index: 10;
+
+	&:hover, &:active, &:focus {
+		border-color: #a2cc3a;
+		background: #fff;
+		color: #fff;
+		text-decoration: none;
+
+		&.owl-prev {
+			border-left-color: #fff;
+			&:before {
+				color: #a2cc3a;
+			}
+		}
+
+		&.owl-next {
+			border-right-color: #fff;
+			&:before {
+				color: #a2cc3a;
+			}
+		}
+	}
+
+	&.owl-prev:before {
+		content: '4';
+		font-family: 'ElegantIcons';
+		color: #fff;
+	}
+
+	&.owl-next:before {
+		content: '5';
+		font-family: 'ElegantIcons';
+		color: #fff;
+	}
 }
 
 .owl-theme.body .owl-controls .owl-buttons div{

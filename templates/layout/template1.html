@@ -180,7 +180,7 @@
 		<div id="infographic-dialog" class="dialog">
 			<div class="infographic-dialog">
 				<div class="row">
-					<a href="#" class="bttn primary">View your recipes</a>
+					<a href="#" class="bttn primary">More on nutrition</a>
 				</div>
 			</div>
 		</div>
@@ -213,7 +213,7 @@
 				trigger: 'hover',
 				contentAsHTML: true,
 				interactive: true,
-				maxWidth: 180,
+				maxWidth: 200,
 				position: 'bottom-left',
 				functionInit: function (origin, content) {
 					return content + $('#infographic-dialog').html();
@@ -221,20 +221,25 @@
 			});
 
 			$('#related-articles').owlCarousel({
-		  	pagination: true,
-		  	navigation: true,
-		  	scrollPerPage: true,
-		  	rewindNav: false,
-		  	addClassActive: true,
-		  	items: 3,
-		  	itemsDesktop: false,
-		  	itemsDesktopSmall: false,
-		  	itemsTablet: false,
-		  	itemsTabletSmall: [767,3],
-		  	itemsMobile: [480,2],
-		  	navigationText: ["4","5"],
-		  	afterMove: function (o) {
-		  		var getItems = $(o).find('.owl-item'),
+				nav: true,
+				margin: 6,
+				responsive: {
+			    0: {
+		        items: 1,
+		        slideBy: 1
+			    },
+			    480: {
+			    	items: 2,
+		        slideBy: 2
+			    },
+			    768: {
+			    	items: 3,
+		        slideBy: 3
+			    }
+				},
+		  	onTranslated: function (e) {
+		  		var o = e.target,
+		  				getItems = $(o).find('.owl-item'),
 		  				getActive = $(o).find('.active'),
 		  				activeLength = getActive.length;
 
@@ -244,17 +249,29 @@
 		  	}
 		  });
 
-			//For save recipe button
-      $('.save-recipe').tooltipster({
-          trigger: 'click',
-          contentAsHTML: true,
-          interactive: true,
-          position: 'bottom-left',
-          offsetX: 20,
-          functionInit: function() {
-	        	return $('#save-recipe-dialog').html();
-			    }
-      });
+			// For save recipe button
+			$('.save-recipe').tooltipster({
+				trigger: 'click',
+				contentAsHTML: true,
+				interactive: true,
+				position: 'bottom-left',
+				offsetX: 20,
+				functionInit: function(origin, content) {
+					if( origin.hasClass('login-now') )
+						jQuery('#save-recipe-dialog').html('Please login to save this recipe.');
+
+					return $('#save-recipe-dialog').html();
+				},
+				functionBefore: function(origin, continueTooltip) {
+					if( !origin.hasClass('login-now') ){
+						var id = origin.attr('data-id');
+						jQuery.post( hfg_ajax.ajaxurl, {pid: id, action: 'save_recipe'}, function(data){
+							continueTooltip();
+						});
+					}
+					continueTooltip();
+				}
+			});
 
     	// For login
       $('.log-in, .login-mob').tooltipster({

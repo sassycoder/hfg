@@ -93,6 +93,7 @@
 						<a href="#" class="social-icon social_facebook"></a>
 						<a href="#" class="social-icon social_twitter"></a>
 						<a href="#" class="social-icon social_pinterest"></a>
+						<a href="#" class="social-icon social_instagram"></a>
 						<a href="#" class="social-icon social_youtube"></a>
 						<a href="https://plus.google.com/109090891459085127103" rel="publisher" class="social-icon social_googleplus"></a>
 						<a href="#" class="social-icon social_rss"></a>
@@ -238,6 +239,7 @@
 							<li id="menu-item-2284" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2284"><a href="blog/">Blog</a></li>
 							<li id="menu-item-7521" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7521"><a href="competitions/">Competitions</a></li>
 							</ul>
+							<a href="#" class="login-mob">Sign in</a>
 					</div>
 		    </nav>
 		    	<!-- END Navigation -->
@@ -285,7 +287,7 @@
 							<div class="row">
 								<div class="component tabs single-only desktopOnly">
 									<div class="nav cf">
-										<a class="tab-item" href="#">profile</a>
+										<a class="tab-item" href="#" id="profile">profile</a>
 											<div class="article profile cf">
 												<h2>Your details</h2>
 
@@ -340,7 +342,7 @@
 													</div>
 												</form>
 											</div>
-										<a class="tab-item" href="#">recipes</a>
+										<a class="tab-item" href="#" id="recipes">recipes</a>
 											<div class="article profile">
 												<h2>Your recipes</h2>
 
@@ -429,7 +431,7 @@
 													</div>
 												</div>
 											</div>
-										<a class="tab-item" href="#">articles</a>
+										<a class="tab-item" href="#" id="articles">articles</a>
 											<div class="article profile">
 												<h2>Your articles</h2>
 
@@ -486,7 +488,7 @@
 													</div>
 												</div>
 											</div>
-										<a class="tab-item" href="#">diet planners</a>
+										<a class="tab-item" href="#" id="diet">diet planners</a>
 											<div class="article profile">
 												<h2>Your diets</h2>
 												<div class="component grid-list-item cf">
@@ -542,11 +544,11 @@
 													</div>
 												</div>
 											</div>
-										<a class="tab-item" href="#">comments</a>
+										<a class="tab-item" href="#" id="comments">comments</a>
 											<div class="article profile">
 							<h2>Your comments</h2>
 							<div class="user-avatar"><img src="http://134.213.146.151/healthyfoodguide/wp-content/uploads/2015/01/av-tracy-kelly.png" width="92" height="96" alt="Healthy Food" class="avatar avatar-96 wp-user-avatar wp-user-avatar-96 alignnone photo"></div><div class="post-title">Salmon &amp; potatoes with gremolata crumbs</div><div class="comment-author">Healthy Food</div><div class="comment-date">February 24, 2015</div><div class="comment-content">good one :)</div><div class="user-avatar"><img src="http://134.213.146.151/healthyfoodguide/wp-content/uploads/2015/01/av-tracy-kelly.png" width="92" height="96" alt="Healthy Food" class="avatar avatar-96 wp-user-avatar wp-user-avatar-96 alignnone photo"></div><div class="post-title">Chorizo &amp; lentil soup</div><div class="comment-author">Healthy Food</div><div class="comment-date">February 24, 2015</div><div class="comment-content">Nice one to try</div>						</div>
-										<a class="tab-item" href="#">newsletters</a>
+										<a class="tab-item" href="#" id="newsletters">newsletters</a>
 											<div class="article profile">
 												<h2>Your newsletters</h2>
 											</div>
@@ -677,6 +679,7 @@
 							<a href="#" class="social-icon social_facebook"></a>
 							<a href="#" class="social-icon social_twitter"></a>
 							<a href="#" class="social-icon social_pinterest"></a>
+							<a href="#" class="social-icon social_instagram"></a>
 							<a href="#" class="social-icon social_youtube"></a>
 							<a href="https://plus.google.com/109090891459085127103" rel="publisher" class="social-icon social_googleplus"></a>
 							<a href="#" class="social-icon social_rss"></a>
@@ -698,7 +701,7 @@
 					
 					<p>Save 50% when you subscribe to the monthly magazine for the special price of &pound;9.60 for 6 issues, or get it on your iPad or iPhone for just &pound;12.99.</p>
 	
-					<a href="#" class="bttn secondary">Subscribe Now</a>
+					<a href="#" class="bttn">Subscribe Now</a>
 				</div>
 			</div>
 			<div class="row margin footer-links">
@@ -715,8 +718,19 @@
 		</div>
 	</footer><!-- footer -->
 	
+	<div class="modal fade" id="newsModal">
+	  <div class="modal-dialog">
+		  <div class="modal-content">
+		  	<button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		    	<h2>Sign up to our newsletter!</h2>
+		    	<p>Subscribe to our newsletter to receive the latest news and expert advice on recipes, diets and heath issues.</p>
+					<a href="http://www.healthyfood.co.uk/newsletter-signup" class="bttn">Subscribe now</a>
+		  </div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	
 	<script type="text/javascript" src="assets/js/lib.min.js"></script>
-	<script type="text/javascript" src="assets/js/framework.min.js"></script>
+	<script type="text/javascript" src="assets/js/framework.js"></script>
 	<script type="text/javascript" src="assets/js/components.js"></script>
 	
 	<!-- Beginning Async AdSlot oop for Ad unit healthyfoodguide.co.uk  ### size:  -->

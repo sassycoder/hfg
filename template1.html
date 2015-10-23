@@ -102,6 +102,7 @@
 						<a href="#" class="social-icon social_facebook"></a>
 						<a href="#" class="social-icon social_twitter"></a>
 						<a href="#" class="social-icon social_pinterest"></a>
+						<a href="#" class="social-icon social_instagram"></a>
 						<a href="#" class="social-icon social_youtube"></a>
 						<a href="https://plus.google.com/109090891459085127103" rel="publisher" class="social-icon social_googleplus"></a>
 						<a href="#" class="social-icon social_rss"></a>
@@ -247,6 +248,7 @@
 							<li id="menu-item-2284" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2284"><a href="blog/">Blog</a></li>
 							<li id="menu-item-7521" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7521"><a href="competitions/">Competitions</a></li>
 							</ul>
+							<a href="#" class="login-mob">Sign in</a>
 					</div>
 		    </nav>
 		    	<!-- END Navigation -->
@@ -301,6 +303,7 @@
 									</div>
 									<div class="pane base8 tp8 ml12 ml-mgZero">
 										<h1>Chorizo &amp; Lentil Soup</h1>
+										<p class="sf">Eating a balanced, healthy diet plays an important role in reducing your risk.</p>
 										<div class="wrap info">
 											<span class="ratings" data-rating="4.5" data-icon="">(22 ratings)</span>
 											<a href="#" class="comments" data-icon="">2 comments</a>
@@ -1029,7 +1032,7 @@
 		<div id="infographic-dialog" class="dialog">
 			<div class="infographic-dialog">
 				<div class="row">
-					<a href="#" class="bttn primary">View your recipes</a>
+					<a href="#" class="bttn primary">More on nutrition</a>
 				</div>
 			</div>
 		</div>
@@ -1046,6 +1049,7 @@
 							<a href="#" class="social-icon social_facebook"></a>
 							<a href="#" class="social-icon social_twitter"></a>
 							<a href="#" class="social-icon social_pinterest"></a>
+							<a href="#" class="social-icon social_instagram"></a>
 							<a href="#" class="social-icon social_youtube"></a>
 							<a href="https://plus.google.com/109090891459085127103" rel="publisher" class="social-icon social_googleplus"></a>
 							<a href="#" class="social-icon social_rss"></a>
@@ -1067,7 +1071,7 @@
 					
 					<p>Save 50% when you subscribe to the monthly magazine for the special price of &pound;9.60 for 6 issues, or get it on your iPad or iPhone for just &pound;12.99.</p>
 	
-					<a href="#" class="bttn secondary">Subscribe Now</a>
+					<a href="#" class="bttn">Subscribe Now</a>
 				</div>
 			</div>
 			<div class="row margin footer-links">
@@ -1084,8 +1088,19 @@
 		</div>
 	</footer><!-- footer -->
 	
+	<div class="modal fade" id="newsModal">
+	  <div class="modal-dialog">
+		  <div class="modal-content">
+		  	<button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		    	<h2>Sign up to our newsletter!</h2>
+		    	<p>Subscribe to our newsletter to receive the latest news and expert advice on recipes, diets and heath issues.</p>
+					<a href="http://www.healthyfood.co.uk/newsletter-signup" class="bttn">Subscribe now</a>
+		  </div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	
 	<script type="text/javascript" src="assets/js/lib.min.js"></script>
-	<script type="text/javascript" src="assets/js/framework.min.js"></script>
+	<script type="text/javascript" src="assets/js/framework.js"></script>
 	<script type="text/javascript" src="assets/js/components.js"></script>
 	
 	<!-- Beginning Async AdSlot oop for Ad unit healthyfoodguide.co.uk  ### size:  -->
@@ -1120,7 +1135,7 @@
 				trigger: 'hover',
 				contentAsHTML: true,
 				interactive: true,
-				maxWidth: 180,
+				maxWidth: 200,
 				position: 'bottom-left',
 				functionInit: function (origin, content) {
 					return content + $('#infographic-dialog').html();
@@ -1128,20 +1143,25 @@
 			});
 
 			$('#related-articles').owlCarousel({
-		  	pagination: true,
-		  	navigation: true,
-		  	scrollPerPage: true,
-		  	rewindNav: false,
-		  	addClassActive: true,
-		  	items: 3,
-		  	itemsDesktop: false,
-		  	itemsDesktopSmall: false,
-		  	itemsTablet: false,
-		  	itemsTabletSmall: [767,3],
-		  	itemsMobile: [480,2],
-		  	navigationText: ["4","5"],
-		  	afterMove: function (o) {
-		  		var getItems = $(o).find('.owl-item'),
+				nav: true,
+				margin: 6,
+				responsive: {
+			    0: {
+		        items: 1,
+		        slideBy: 1
+			    },
+			    480: {
+			    	items: 2,
+		        slideBy: 2
+			    },
+			    768: {
+			    	items: 3,
+		        slideBy: 3
+			    }
+				},
+		  	onTranslated: function (e) {
+		  		var o = e.target,
+		  				getItems = $(o).find('.owl-item'),
 		  				getActive = $(o).find('.active'),
 		  				activeLength = getActive.length;
 
@@ -1151,17 +1171,29 @@
 		  	}
 		  });
 
-			//For save recipe button
-      $('.save-recipe').tooltipster({
-          trigger: 'click',
-          contentAsHTML: true,
-          interactive: true,
-          position: 'bottom-left',
-          offsetX: 20,
-          functionInit: function() {
-	        	return $('#save-recipe-dialog').html();
-			    }
-      });
+			// For save recipe button
+			$('.save-recipe').tooltipster({
+				trigger: 'click',
+				contentAsHTML: true,
+				interactive: true,
+				position: 'bottom-left',
+				offsetX: 20,
+				functionInit: function(origin, content) {
+					if( origin.hasClass('login-now') )
+						jQuery('#save-recipe-dialog').html('Please login to save this recipe.');
+
+					return $('#save-recipe-dialog').html();
+				},
+				functionBefore: function(origin, continueTooltip) {
+					if( !origin.hasClass('login-now') ){
+						var id = origin.attr('data-id');
+						jQuery.post( hfg_ajax.ajaxurl, {pid: id, action: 'save_recipe'}, function(data){
+							continueTooltip();
+						});
+					}
+					continueTooltip();
+				}
+			});
 
     	// For login
       $('.log-in, .login-mob').tooltipster({

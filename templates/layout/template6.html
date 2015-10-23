@@ -34,41 +34,7 @@
 						<div class="pane base8 tp12 ml12">
 							<div class="row margin">
 								<h1 class="section">Cuisine</h1>
-							</div>
-							<div class="row">
-								<div class="pane base8 tp12 ml12">
-									<div class="component popular-recipes cuisine">
-										<h3>Popular Cuisine</h3>
-										<div id="popular-recipes" class="component owl-carousel body cf">
-											
-											<div class="item cf">
-												<!--(bake /templates/components/_cuisine-list-item.html)-->
-											</div>
-
-											<div class="item cf">
-												<!--(bake /templates/components/_cuisine-list-item.html)-->
-											</div>
-
-											<div class="item cf">
-												<!--(bake /templates/components/_cuisine-list-item.html)-->
-											</div>
-
-											<div class="item cf">
-												<!--(bake /templates/components/_cuisine-list-item.html)-->
-											</div>
-
-											<div class="item cf">
-												<!--(bake /templates/components/_cuisine-list-item.html)-->
-											</div>
-
-											<div class="item cf">
-												<!--(bake /templates/components/_cuisine-list-item.html)-->
-											</div>
-
-										</div>
-									</div>
-								</div>
-							</div>
+							</div>							
 
 							<div class="row tp-margin ml-margin mp-margin">
 								<div class="search-wrapper">
@@ -117,8 +83,43 @@
 							</div>
 							<div class="row tp-margin ml-margin mp-margin">
 								<a href="#" class="bttn">SHOW MORE (viewing 15 of 122)</a>
+								<br><br><br><br>
 							</div>
 							
+							<div class="row">
+								<div class="pane base8 tp12 ml12">
+									<div class="component popular-recipes cuisine">
+										<h3>Popular Cuisine</h3>
+										<div id="popular-recipes" class="component owl-carousel body cf">
+											
+											<div class="item cf">
+												<!--(bake /templates/components/_cuisine-list-item.html)-->
+											</div>
+
+											<div class="item cf">
+												<!--(bake /templates/components/_cuisine-list-item.html)-->
+											</div>
+
+											<div class="item cf">
+												<!--(bake /templates/components/_cuisine-list-item.html)-->
+											</div>
+
+											<div class="item cf">
+												<!--(bake /templates/components/_cuisine-list-item.html)-->
+											</div>
+
+											<div class="item cf">
+												<!--(bake /templates/components/_cuisine-list-item.html)-->
+											</div>
+
+											<div class="item cf">
+												<!--(bake /templates/components/_cuisine-list-item.html)-->
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
 
 							</div>
 						<div class="pane base4 tp12 ml12 tp-mgZero aside">
@@ -289,61 +290,35 @@
 			    }
       });
 
-		  $('#home-hero-carousel').owlCarousel({
-		  	singleItem: true,
-		  	pagination: true,
-		  	navigation: true,
-		  	scrollPerPage: true,
-		  	rewindNav: false,
-		  	navigationText: ["4","5"]
+      $('#popular-recipes').owlCarousel({
+				nav: true,
+				margin: 6,
+				responsive: {
+			    0: {
+		        items: 1,
+		        slideBy: 1
+			    },
+			    480: {
+			    	items: 2,
+		        slideBy: 2
+			    },
+			    768: {
+			    	items: 3,
+		        slideBy: 3
+			    }
+				},
+		  	onTranslated: function (e) {
+		  		var o = e.target,
+		  				getItems = $(o).find('.owl-item'),
+		  				getActive = $(o).find('.active'),
+		  				activeLength = getActive.length;
+
+		  		$(getItems).removeClass('first last');
+		  		$(getActive).eq(0).addClass('first');
+		  		$(getActive).eq((activeLength - 2)).addClass('last');
+		  	}
 		  });
 	  });
-
-			$('#popular-recipes').owlCarousel({
-		  	pagination: true,
-		  	navigation: true,
-		  	scrollPerPage: true,
-		  	rewindNav: false,
-		  	addClassActive: true,
-		  	items: 3,
-		  	itemsDesktop: false,
-		  	itemsDesktopSmall: false,
-		  	itemsTablet: false,
-		  	itemsTabletSmall: [767,3],
-		  	itemsMobile: [480,2],
-		  	navigationText: ["4","5"],
-		  	afterMove: function (o) {
-		  		var getItems = $(o).find('.owl-item'),
-		  				getActive = $(o).find('.active'),
-		  				activeLength = getActive.length;
-
-		  		$(getItems).removeClass('first last');
-		  		$(getActive).eq(0).addClass('first');
-		  		$(getActive).eq((activeLength - 2)).addClass('last');
-		  	}
-		  });
-
-		  $('#diet-carousel').owlCarousel({
-		  	pagination: true,
-		  	navigation: true,
-		  	scrollPerPage: true,
-		  	rewindNav: false,
-		  	addClassActive: true,
-		  	items: 4,
-		  	itemsDesktopSmall: false,
-		  	itemsTabletSmall: [767,2],
-		  	itemsMobile: [480,1],
-		  	navigationText: ["4","5"],
-		  	afterMove: function (o) {
-		  		var getItems = $(o).find('.owl-item'),
-		  				getActive = $(o).find('.active'),
-		  				activeLength = getActive.length;
-
-		  		$(getItems).removeClass('first last');
-		  		$(getActive).eq(0).addClass('first');
-		  		$(getActive).eq((activeLength - 2)).addClass('last');
-		  	}
-		  });
 
 	</script>
 	

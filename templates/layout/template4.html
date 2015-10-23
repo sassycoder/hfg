@@ -309,35 +309,37 @@
 			    }
       });
 
-		  $('#home-hero-carousel').owlCarousel({
-		  	singleItem: true,
-		  	pagination: true,
-		  	navigation: true,
-		  	scrollPerPage: true,
-		  	rewindNav: true,
-		  	navigationText: ["4","5"],
-		  	autoPlay: 5000,
-		  	stopOnHover: true,
-		  	rewindSpeed: 800,
-		  	slideSpeed: 800
-		  });
-	  });
+		  $('#home-hero-carousel').owlCarousel({ 
+		  	items: 1,
+		  	loop: true,
+		  	nav: true,
+		  	rewind: false,
+		  	autoplay: false,
+		  	autoplayHoverPause: true,
+		  	autoplaySpeed: 800,
+		  	smartSpeed: 800
+		  });	  
 
-			$('#popular-recipes').owlCarousel({
-		  	pagination: true,
-		  	navigation: true,
-		  	scrollPerPage: true,
-		  	rewindNav: false,
-		  	addClassActive: true,
-		  	items: 3,
-		  	itemsDesktop: false,
-		  	itemsDesktopSmall: false,
-		  	itemsTablet: false,
-		  	itemsTabletSmall: [767,3],
-		  	itemsMobile: [480,2],
-		  	navigationText: ["4","5"],
-		  	afterMove: function (o) {
-		  		var getItems = $(o).find('.owl-item'),
+		  $('#popular-recipes').owlCarousel({
+				nav: true,
+				margin: 6,
+				responsive: {
+			    0: {
+		        items: 1,
+		        slideBy: 1
+			    },
+			    480: {
+			    	items: 2,
+		        slideBy: 2
+			    },
+			    768: {
+			    	items: 3,
+		        slideBy: 3
+			    }
+				},
+		  	onTranslated: function (e) {
+		  		var o = e.target,
+		  				getItems = $(o).find('.owl-item'),
 		  				getActive = $(o).find('.active'),
 		  				activeLength = getActive.length;
 
@@ -348,18 +350,25 @@
 		  });
 
 		  $('#diet-carousel').owlCarousel({
-		  	pagination: true,
-		  	navigation: true,
-		  	scrollPerPage: true,
-		  	rewindNav: false,
-		  	addClassActive: true,
-		  	items: 4,
-		  	itemsDesktopSmall: false,
-		  	itemsTabletSmall: [767,2],
-		  	itemsMobile: [480,1],
-		  	navigationText: ["4","5"],
-		  	afterMove: function (o) {
-		  		var getItems = $(o).find('.owl-item'),
+				nav: true,
+				margin: 6,
+				responsive: {
+			    0: {
+		        items: 1,
+		        slideBy: 1
+			    },
+			    640: {
+			    	items: 2,
+		        slideBy: 2
+			    },
+			    768: {
+			    	items: 4,
+		        slideBy: 4
+			    }
+				},
+		  	onTranslated: function (e) {
+		  		var o = e.target,
+		  				getItems = $(o).find('.owl-item'),
 		  				getActive = $(o).find('.active'),
 		  				activeLength = getActive.length;
 
@@ -368,6 +377,7 @@
 		  		$(getActive).eq((activeLength - 2)).addClass('last');
 		  	}
 		  });
+	  });
 
 	</script>
 	

@@ -21,7 +21,7 @@
     font-size: 1.8rem;
     line-height: 18px;
     line-height: 1.8rem;
-    position: relative;
+    // position: relative;
 
     &:first-child {
       a {
@@ -40,7 +40,8 @@
       position: absolute;
       top: 44px;
       left: 0;
-      width: 300px;
+      width: 100%;
+      min-height: 250px;
       background: #fff;
       z-index: 99;
       border: 1px solid #a2cc3a;
@@ -74,6 +75,7 @@
         box-shadow: none;
         border: 0;
         width: auto;
+        min-height: 0;
 
         li {
           display: block;
@@ -125,6 +127,12 @@
         border-radius: 5px 5px 0 0;
         border-top: 3px solid #a2cc3a;
         margin-top: -3px;
+
+        + .sub-menu {
+          display: block!important;
+
+          .sub-menu {display: block!important;}
+        }
       }  
 
       span {
@@ -153,6 +161,10 @@
     position: absolute;
     top: 8px;
     left: 10px;
+}
+
+.megamenu-container .mega-btn.open + .megamenu-list {
+  display: block;
 }
 
 .megamenu-container .mega-btn a,
@@ -227,11 +239,26 @@
     }
 }
 
+.megamenu-container .megamenu-list > a {
+  padding: 14px;
+  color: #000;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 16px;
+  line-height: 1.6rem;
+  margin: 0 10px;
+  border-bottom: 1px dotted #000;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.login-mob { display: none; }
+
 @media only screen and (max-width: 1023px) {
   .megamenu-container {
       min-width:0;
 
-      .mobile {
+      .mobile, .login-mob {
         display: block;
       }
 

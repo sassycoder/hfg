@@ -271,16 +271,14 @@
 			    }
       });
 
-			$('#qa').owlCarousel({
-		  	pagination: true,
-		  	navigation: true,
-		  	scrollPerPage: true,
-		  	rewindNav: false,
-		  	addClassActive: true,
-		  	singleItem: true,
-		  	navigationText: ["4","5"],
-		  	afterMove: function (o) {
-		  		var getItems = $(o).find('.owl-item'),
+		  $('#qa').owlCarousel({
+		  	items: 1,
+		  	slideBy: 1,
+				nav: true,
+				margin: 6,
+		  	onTranslated: function (e) {
+		  		var o = e.target,
+		  				getItems = $(o).find('.owl-item'),
 		  				getActive = $(o).find('.active'),
 		  				activeLength = getActive.length;
 

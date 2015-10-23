@@ -50,7 +50,7 @@ module.exports = function (grunt) {
         dest: 'assets/js/framework.js'
       },
       library: {
-        src: ['assets/js/lib/single/jquery-1.8.3.js',
+        src: ['assets/js/lib/single/jquery-2.1.1.js',
               'assets/js/lib/single/jquery.tooltipster.min.js',
               'assets/js/lib/*.js'],
         dest: 'assets/js/lib.js'

@@ -86,11 +86,6 @@
 								</div>
 								<div class="row">
 									<div class="pane base8 tp12 ml12">
-										<!--(bake /templates/components/_expert-tips.html)-->
-									</div>
-								</div>
-								<div class="row">
-									<div class="pane base8 tp12 ml12">
 										advertising
 									</div>
 								</div>
@@ -245,33 +240,48 @@
 			    }
       });
 
-		  $('#home-hero-carousel').owlCarousel({
-		  	singleItem: true,
-		  	pagination: true,
-		  	navigation: true,
-		  	scrollPerPage: true,
-		  	rewindNav: true,
-		  	navigationText: ["4","5"],
-		  	autoPlay: 5000,
-		  	stopOnHover: true,
-		  	rewindSpeed: 800,
-		  	slideSpeed: 800
+		  $('#homepage-hero-carousel').owlCarousel({
+		  	items: 1,
+		  	loop: true,
+		  	nav: true,
+		  	rewind: false,
+		  	autoplay: true,
+		  	autoplayHoverPause: true,
+		  	autoplaySpeed: 800,
+		  	smartSpeed: 800,
+		  	responsive: {
+			    0: {
+		        stagePadding: 0,
+		        loop: false,
+		        rewind: true
+			    },
+			    1024: {
+			    	stagePadding: 80,
+			    }
+				}
 		  });
 	  });
 
 			$('#expert-carousel').owlCarousel({
-		  	pagination: true,
-		  	navigation: true,
-		  	scrollPerPage: true,
-		  	rewindNav: false,
-		  	addClassActive: true,
-		  	items: 4,
-		  	itemsDesktopSmall: false,
-		  	itemsTabletSmall: [767,2],
-		  	itemsMobile: [480,1],
-		  	navigationText: ["4","5"],
-		  	afterMove: function (o) {
-		  		var getItems = $(o).find('.owl-item'),
+				nav: true,
+				margin: 6,
+				responsive: {
+			    0: {
+		        items: 1,
+		        slideBy: 1
+			    },
+			    640: {
+			    	items: 2,
+		        slideBy: 2
+			    },
+			    768: {
+			    	items: 4,
+		        slideBy: 4
+			    }
+				},
+		  	onTranslated: function (e) {
+		  		var o = e.target,
+		  				getItems = $(o).find('.owl-item'),
 		  				getActive = $(o).find('.active'),
 		  				activeLength = getActive.length;
 

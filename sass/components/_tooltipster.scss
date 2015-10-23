@@ -290,9 +290,12 @@
 
 @media screen and (max-width: 768px) {
 .login-mobile {
-	min-width: 100%!important;
-	left: 0!important;
-	top: 58px!important;
+	min-width: 100% !important;
+  left: 0 !important;
+  top: 0 !important;
+  bottom: 0;
+  margin: auto;
+  height: 255px;
 
 	.tooltipster-arrow {
 		display: none!important;

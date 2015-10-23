@@ -93,6 +93,7 @@
 						<a href="#" class="social-icon social_facebook"></a>
 						<a href="#" class="social-icon social_twitter"></a>
 						<a href="#" class="social-icon social_pinterest"></a>
+						<a href="#" class="social-icon social_instagram"></a>
 						<a href="#" class="social-icon social_youtube"></a>
 						<a href="https://plus.google.com/109090891459085127103" rel="publisher" class="social-icon social_googleplus"></a>
 						<a href="#" class="social-icon social_rss"></a>
@@ -238,6 +239,7 @@
 							<li id="menu-item-2284" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2284"><a href="blog/">Blog</a></li>
 							<li id="menu-item-7521" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7521"><a href="competitions/">Competitions</a></li>
 							</ul>
+							<a href="#" class="login-mob">Sign in</a>
 					</div>
 		    </nav>
 		    	<!-- END Navigation -->
@@ -756,6 +758,7 @@
 							<a href="#" class="social-icon social_facebook"></a>
 							<a href="#" class="social-icon social_twitter"></a>
 							<a href="#" class="social-icon social_pinterest"></a>
+							<a href="#" class="social-icon social_instagram"></a>
 							<a href="#" class="social-icon social_youtube"></a>
 							<a href="https://plus.google.com/109090891459085127103" rel="publisher" class="social-icon social_googleplus"></a>
 							<a href="#" class="social-icon social_rss"></a>
@@ -777,7 +780,7 @@
 					
 					<p>Save 50% when you subscribe to the monthly magazine for the special price of &pound;9.60 for 6 issues, or get it on your iPad or iPhone for just &pound;12.99.</p>
 	
-					<a href="#" class="bttn secondary">Subscribe Now</a>
+					<a href="#" class="bttn">Subscribe Now</a>
 				</div>
 			</div>
 			<div class="row margin footer-links">
@@ -794,8 +797,19 @@
 		</div>
 	</footer><!-- footer -->
 	
+	<div class="modal fade" id="newsModal">
+	  <div class="modal-dialog">
+		  <div class="modal-content">
+		  	<button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		    	<h2>Sign up to our newsletter!</h2>
+		    	<p>Subscribe to our newsletter to receive the latest news and expert advice on recipes, diets and heath issues.</p>
+					<a href="http://www.healthyfood.co.uk/newsletter-signup" class="bttn">Subscribe now</a>
+		  </div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	
 	<script type="text/javascript" src="assets/js/lib.min.js"></script>
-	<script type="text/javascript" src="assets/js/framework.min.js"></script>
+	<script type="text/javascript" src="assets/js/framework.js"></script>
 	<script type="text/javascript" src="assets/js/components.js"></script>
 	
 	<!-- Beginning Async AdSlot oop for Ad unit healthyfoodguide.co.uk  ### size:  -->
@@ -881,20 +895,25 @@
       });
 
 			$('#popular-recipes').owlCarousel({
-		  	pagination: true,
-		  	navigation: true,
-		  	scrollPerPage: true,
-		  	rewindNav: false,
-		  	addClassActive: true,
-		  	items: 3,
-		  	itemsDesktop: false,
-		  	itemsDesktopSmall: false,
-		  	itemsTablet: false,
-		  	itemsTabletSmall: [767,3],
-		  	itemsMobile: [480,2],
-		  	navigationText: ["4","5"],
-		  	afterMove: function (o) {
-		  		var getItems = $(o).find('.owl-item'),
+				nav: true,
+				margin: 6,
+				responsive: {
+			    0: {
+		        items: 1,
+		        slideBy: 1
+			    },
+			    480: {
+			    	items: 2,
+		        slideBy: 2
+			    },
+			    768: {
+			    	items: 3,
+		        slideBy: 3
+			    }
+				},
+		  	onTranslated: function (e) {
+		  		var o = e.target,
+		  				getItems = $(o).find('.owl-item'),
 		  				getActive = $(o).find('.active'),
 		  				activeLength = getActive.length;
 

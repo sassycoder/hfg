@@ -3,6 +3,7 @@ $(function () {
 
 	var tabNav = $('.tabs .nav .tab-item'),
 			desktopOnlyTabs = $('.component.tabs.desktopOnly'),
+			hash = window.location.hash.slice(1),
 			//articles = $('.tabs .article'),
 			//desktopOnly = $('.tabs').hasClass('desktopOnly'),
 			//singleOnly = $('.tabs').hasClass('single-only'),
@@ -44,26 +45,42 @@ $(function () {
 		$('.component.tabs').each(function () {
 			var $this = $(this);
 
-			//make first tab item active
-			$this.find('.nav .tab-item').each(function (i) {
-				if (i === 0) {
-					$(this).addClass('active');
-					return;
-				}
-			});
+			if ($this.hasClass('desktopOnly')) { //for profile tabs
 
-			//make all articles invisible apart from the first one
-			$this.find('.article').each(function (i) {
-				var $this = $(this);
+				if (hash.length && $this.find('.nav .tab-item#' + hash).length > 0) {
+					$this.find('.nav .tab-item#' + hash).addClass('active').next().addClass('active');
+				} else {
 
-				if (i === 0) {
-					$this.addClass('active');
-				}
+					//make first tab item active
+					$this.find('.nav .tab-item').each(function (i) {
+						if (i === 0) {
+							$(this).addClass('active').next().addClass('active');
+							return;
+						}
+					});
 
-				if (i > 0) {
-					$this.css('opacity', '0');
+					//make all articles invisible apart from the active one
+					$this.find('.article:not(.active)').each(function () {
+							$(this).css('opacity', '0');
+					});
 				}
-			});
+			} else { //for all other tab instances
+
+				//make first tab item active
+				$this.find('.nav .tab-item').each(function (i) {
+					if (i === 0) {
+						$(this).addClass('active').addClass('active');
+						return;
+					}
+				});
+
+				//make all articles invisible apart from the active one
+				$this.find('.article').each(function (i) {
+					if (i > 0) {
+						$(this).css('opacity', '0');
+					}
+				});
+			}
 		});
 
 		$(window).on('resize', function () {
