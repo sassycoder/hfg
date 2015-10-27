@@ -139,6 +139,7 @@ $(function () {
     // });
 
 $('.megamenu-container .sub-menu').addClass('animated');
+$('.megamenu-list').append('<a href="#" class="login-mob">Sign in</a><form class="logout-mob"><input type="submit" onclick="location.href=\'http://www.healthyfood.co.uk/rhapsody?action=logout&amp;redirect_to=http%3A%2F%2Fwww.healthyfood.co.uk%2F\';return false;" value="Sign out"></form>');
 
   $document.on('mouseover', '.megamenu > .menu-item > a', function () {
     if ($(window).innerWidth() >= 1024) {

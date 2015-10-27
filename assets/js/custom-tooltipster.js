@@ -121,7 +121,7 @@ $(document).ready(function() {
 	});
 
 	// For login
-	$('.log-in').tooltipster({
+	$('.log-in, .login-mob').tooltipster({
 		trigger: 'click',
 		contentAsHTML: true,
 		interactive: true,

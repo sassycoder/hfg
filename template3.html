@@ -43,8 +43,18 @@
 	<script type="text/javascript">
 		googletag.cmd.push(function() {
 	
+			var mapping1 = googletag.sizeMapping().			  
+				  addSize([1024, 768], [[970,250],[940,250]]). // Desktop
+				  addSize([690, 980], [728, 90]).
+				  addSize([0, 0], [320,50]).			  
+				  build();		 
+	
+	
 			//Adslot 1 declaration
-			gptadslots[1]= googletag.defineSlot('/4817/healthyfoodguide.co.uk', [[970,250],[940,250],[728,90]],'div-gpt-ad-leaderboard_top').setTargeting('pos',['top']).addService(googletag.pubads());
+			gptadslots[1]= googletag.defineSlot('/4817/healthyfoodguide.co.uk', [[970,250],[940,250],[728,90],[320,50]],'div-gpt-ad-leaderboard_top').
+				defineSizeMapping(mapping1).
+				setTargeting('pos',['top']).
+				addService(googletag.pubads());
 	
 			//Adslot 2 declaration
 			gptadslots[2]= googletag.defineSlot('/4817/healthyfoodguide.co.uk', [[300,600],[300,250]],'div-gpt-ad-mpu_top').setTargeting('pos',['top']).addService(googletag.pubads());
@@ -54,7 +64,6 @@
 	
 			//Adslot 4 declaration
 			gptadslots[4]= googletag.defineSlot('/4817/healthyfoodguide.co.uk', [[300,252],[300,250]],'div-gpt-ad-mpu_bottom').setTargeting('pos',['bottom']).addService(googletag.pubads());
-			
 	
 			//Adslot oop declaration
 			gptadslots[0] = googletag.defineOutOfPageSlot('/4817/healthyfoodguide.co.uk', 'div-gpt-ad-oop').addService(googletag.pubads());
@@ -68,7 +77,7 @@
 		
 </head>
 
-<body>
+<body class="logged-in">
 <div><a href="#skipnav" class="skip">Skip to main content</a></div>
 
 <div class="ad-top takeover">
@@ -99,7 +108,7 @@
 						<a href="#" class="social-icon social_rss"></a>
 				</div>
 				<div class="login">
-					<a href="#">Become a member</a>
+					<a href="#">Register</a>
 					<a href="#" class="log-in">Sign in</a>
 				</div>
 				<div class="login">
@@ -238,8 +247,7 @@
 							<li id="menu-item-4664" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4664"><a href="qa">Q&amp;A</a></li>
 							<li id="menu-item-2284" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2284"><a href="blog/">Blog</a></li>
 							<li id="menu-item-7521" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7521"><a href="competitions/">Competitions</a></li>
-							</ul>
-							<a href="#" class="login-mob">Sign in</a>
+							</ul>					
 					</div>
 		    </nav>
 		    	<!-- END Navigation -->
