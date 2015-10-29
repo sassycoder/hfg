@@ -59,6 +59,30 @@
 		}		
 	}
 
+	&.master-carousel {
+		.item img { margin: 0 auto; }
+	}
+
+	&.slave-carousel {
+		margin: 20px 0;
+
+		.owl-item {
+			filter: alpha(opacity=50);
+			opacity: 0.5;
+			cursor: pointer;
+
+			&:hover, &:focus, &.current {
+				filter: alpha(opacity=100);
+				opacity: 1;
+			}
+		}
+		.owl-nav div {
+			margin-top: -13px;
+			padding: 0;
+			width: 27px;
+		}
+	}
+
 	&#qa {
 			.owl-item {
 				.popular-qa {

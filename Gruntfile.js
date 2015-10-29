@@ -89,6 +89,7 @@ module.exports = function (grunt) {
             'template15.html': 'templates/layout/template15.html',
             'template16.html': 'templates/layout/template16.html',
             'template17.html': 'templates/layout/template17.html',
+            'template18.html': 'templates/layout/template18.html',
             'breadcrumb.html': 'templates/components/breadcrumb.html',
             'recipe-header.html': 'templates/components/recipe-header.html',
             'recipe-body.html': 'templates/components/recipe-body.html',
