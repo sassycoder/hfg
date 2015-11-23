@@ -61,6 +61,16 @@
 
 	&.master-carousel {
 		.item img { margin: 0 auto; }
+
+		.item a {
+			&:hover, &:active, &:focus {
+				color: inherit;
+				.bttn {
+				  background-color: white;
+    			color: #a2cc3a;
+				}
+			}
+		}
 	}
 
 	&.slave-carousel {
