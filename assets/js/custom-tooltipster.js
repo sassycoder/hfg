@@ -301,54 +301,69 @@ $(document).ready(function() {
   	}
   });
 
-  var $sync1 = $(".master-carousel"),
+	var $sync1 = $(".master-carousel"),
 			$sync2 = $(".slave-carousel"),
 			flag = false,
 			duration = 300,
-			numOfThumbs = 6;
+			numOfThumbs = 6,
+			masterClones,
+			slaveGoTo,
+			slaveIndex,
+			masterGoTo;
 
-	$sync1.owlCarousel({
-		items: 1,
-		margin: 0,
-		nav: true,
-		dots: false
-	})
-	.on('changed.owl.carousel', function (e) {
-		if (!flag) {
-			flag = true;
-			$sync2
-				.trigger('to.owl.carousel', [e.item.index, duration, true])
-					.find('.owl-item').removeClass('current').eq(e.item.index).addClass('current');
-			flag = false;
-		}
-	});
+		$sync1.on('initialized.owl.carousel', function () {
+			masterClones = $(this).find('.cloned').length;
+		});
 
-	$sync2.on('initialized.owl.carousel', function () {
-		$(this).find('.owl-item').eq(0).addClass('current');
-	})
+		$sync1.owlCarousel({
+			items: 1,
+			margin: 0,
+			nav: true,
+			dots: false,
+			loop: true,
+			rewind: false
+		})
+		.on('changed.owl.carousel', function (e) {
+			if (!flag) {
+				flag = true;
+				slaveGoTo = e.item.index - (masterClones/2);
+				$sync2
+					.trigger('to.owl.carousel', [slaveGoTo, duration, true])
+						.find('.owl-item:not(".cloned")').removeClass('current').eq(slaveGoTo).addClass('current');
+				flag = false;
+			}
+		});
 
-	$sync2.owlCarousel({
-		margin: 20,
-		nav: true,
-		dots: true,
-		slideBy: numOfThumbs,
-		loop: false,
-		responsive: {
-	    0: {
-        items: 3,
-        slideBy: 3
-	    },
-	    480: {
-	    	items: 4,
-        slideBy: 4
-	    },
-	    768: {
-	    	items: numOfThumbs,
-        slideBy: numOfThumbs
-	    }
-		}
-	})
-	.on('click', '.owl-item', function () {
-		$sync1.trigger('to.owl.carousel', [$(this).index(), duration, true]);
-	});
+		$sync2.on('initialized.owl.carousel', function () {
+			$(this).find('.owl-item.active').eq(0).addClass('current');
+		});
+
+		$sync2.owlCarousel({
+			margin: 20,
+			nav: true,
+			dots: true,
+			//slideBy: numOfThumbs,
+			loop: false,
+			rewind: false,
+			responsive: {
+		    0: {
+	        items: 3
+	        //slideBy: 3
+		    },
+		    480: {
+		    	items: 4
+	        //slideBy: 4
+		    },
+		    768: {
+		    	items: numOfThumbs
+	        //slideBy: numOfThumbs
+		    }
+			}
+		})
+		.on('click', '.owl-item', function (e) {
+			slaveIndex = $('.slave-carousel .owl-item:not(".cloned")').index($(this));
+			masterGoTo = (masterClones/2) + slaveIndex;
+
+			$sync1.trigger('to.owl.carousel', [slaveIndex, duration, true]);
+		});
 });

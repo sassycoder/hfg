@@ -39,7 +39,7 @@
 							<div class="component owl-carousel master-carousel cf">
 								<div class="item cf">
 									<a href="http://google.com">
-										<img src="http://lorempixel.com/650/650/food/1">
+										<img src="https://placeimg.com/650/650/any/1">
 										<div class="component infobox hero">
 											<div class="overlay">
 												<h1>Diet changes to lower your risk of diabetes</h1>
@@ -53,7 +53,7 @@
 								</div>
 								<div class="item cf">
 									<a href="http://google.com">
-										<img src="http://lorempixel.com/650/650/food/2">
+										<img src="https://placeimg.com/650/650/any/2">
 										<div class="component infobox hero">
 											<div class="overlay">
 												<h1>Diet changes to lower your risk of diabetes</h1>
@@ -67,7 +67,7 @@
 								</div>
 								<div class="item cf">
 									<a href="http://google.com">
-										<img src="http://lorempixel.com/650/650/food/3">
+										<img src="https://placeimg.com/650/650/any/3">
 										<div class="component infobox hero">
 											<div class="overlay">
 												<h1>Diet changes to lower your risk of diabetes</h1>
@@ -81,7 +81,7 @@
 								</div>
 								<div class="item cf">
 									<a href="http://google.com">
-										<img src="http://lorempixel.com/650/650/food/4">
+										<img src="https://placeimg.com/650/650/any/4">
 										<div class="component infobox hero">
 											<div class="overlay">
 												<h1>Diet changes to lower your risk of diabetes</h1>
@@ -95,7 +95,7 @@
 								</div>
 								<div class="item cf">
 									<a href="http://google.com">
-										<img src="http://lorempixel.com/650/650/food/5">
+										<img src="https://placeimg.com/650/650/any/5">
 										<div class="component infobox hero">
 											<div class="overlay">
 												<h1>Diet changes to lower your risk of diabetes</h1>
@@ -109,7 +109,7 @@
 								</div>
 								<div class="item cf">
 									<a href="http://google.com">
-										<img src="http://lorempixel.com/650/650/food/6">
+										<img src="https://placeimg.com/650/650/any/6">
 										<div class="component infobox hero">
 											<div class="overlay">
 												<h1>Diet changes to lower your risk of diabetes</h1>
@@ -123,7 +123,7 @@
 								</div>
 								<div class="item cf">
 									<a href="http://google.com">
-										<img src="http://lorempixel.com/650/650/food/7">
+										<img src="https://placeimg.com/650/650/any/7">
 										<div class="component infobox hero">
 											<div class="overlay">
 												<h1>Diet changes to lower your risk of diabetes</h1>
@@ -137,7 +137,7 @@
 								</div>
 								<div class="item cf">
 									<a href="http://google.com">
-										<img src="http://lorempixel.com/650/650/food/8">
+										<img src="https://placeimg.com/650/650/any/8">
 										<div class="component infobox hero">
 											<div class="overlay">
 												<h1>Diet changes to lower your risk of diabetes</h1>
@@ -153,28 +153,28 @@
 
 							<div class="component owl-carousel slave-carousel cf">
 								<div class="item cf">
-									<img src="http://lorempixel.com/650/650/food/1">
+									<img src="https://placeimg.com/650/650/any/1">
 								</div>
 								<div class="item cf">
-									<img src="http://lorempixel.com/650/650/food/2">
+									<img src="https://placeimg.com/650/650/any/2">
 								</div>
 								<div class="item cf">
-									<img src="http://lorempixel.com/650/650/food/3">
+									<img src="https://placeimg.com/650/650/any/3">
 								</div>
 								<div class="item cf">
-									<img src="http://lorempixel.com/650/650/food/4">
+									<img src="https://placeimg.com/650/650/any/4">
 								</div>
 								<div class="item cf">
-									<img src="http://lorempixel.com/650/650/food/5">
+									<img src="https://placeimg.com/650/650/any/5">
 								</div>
 								<div class="item cf">
-									<img src="http://lorempixel.com/650/650/food/6">
+									<img src="https://placeimg.com/650/650/any/6">
 								</div>
 								<div class="item cf">
-									<img src="http://lorempixel.com/650/650/food/7">
+									<img src="https://placeimg.com/650/650/any/7">
 								</div>
 								<div class="item cf">
-									<img src="http://lorempixel.com/650/650/food/8">
+									<img src="https://placeimg.com/650/650/any/8">
 								</div>
 							</div>
 							<!--(bake /templates/components/_article-body.html)-->
@@ -345,57 +345,72 @@
 
 			$this.on('blur', '.infographic', function () {
 				$(this).tooltipster('hide');
-			});
+			});			
 
 			var $sync1 = $(".master-carousel"),
 					$sync2 = $(".slave-carousel"),
 					flag = false,
 					duration = 300,
-					numOfThumbs = 6;
+					numOfThumbs = 6,
+					masterClones,
+					slaveGoTo,
+					slaveIndex,
+					masterGoTo;
+
+				$sync1.on('initialized.owl.carousel', function () {
+					masterClones = $(this).find('.cloned').length;
+				});
 
 				$sync1.owlCarousel({
 					items: 1,
 					margin: 0,
 					nav: true,
-					dots: false
+					dots: false,
+					loop: true,
+					rewind: false
 				})
 				.on('changed.owl.carousel', function (e) {
 					if (!flag) {
 						flag = true;
+						slaveGoTo = e.item.index - (masterClones/2);
 						$sync2
-							.trigger('to.owl.carousel', [e.item.index, duration, true])
-								.find('.owl-item').removeClass('current').eq(e.item.index).addClass('current');
+							.trigger('to.owl.carousel', [slaveGoTo, duration, true])
+								.find('.owl-item:not(".cloned")').removeClass('current').eq(slaveGoTo).addClass('current');
 						flag = false;
 					}
 				});
 
 				$sync2.on('initialized.owl.carousel', function () {
-					$(this).find('.owl-item').eq(0).addClass('current');
-				})
+					$(this).find('.owl-item.active').eq(0).addClass('current');
+				});
 
 				$sync2.owlCarousel({
 					margin: 20,
 					nav: true,
 					dots: true,
-					slideBy: numOfThumbs,
+					//slideBy: numOfThumbs,
 					loop: false,
+					rewind: false,
 					responsive: {
 				    0: {
-			        items: 3,
-			        slideBy: 3
+			        items: 3
+			        //slideBy: 3
 				    },
 				    480: {
-				    	items: 4,
-			        slideBy: 4
+				    	items: 4
+			        //slideBy: 4
 				    },
 				    768: {
-				    	items: numOfThumbs,
-			        slideBy: numOfThumbs
+				    	items: numOfThumbs
+			        //slideBy: numOfThumbs
 				    }
 					}
 				})
-				.on('click', '.owl-item', function () {
-					$sync1.trigger('to.owl.carousel', [$(this).index(), duration, true]);
+				.on('click', '.owl-item', function (e) {
+					slaveIndex = $('.slave-carousel .owl-item:not(".cloned")').index($(this));
+					masterGoTo = (masterClones/2) + slaveIndex;
+
+					$sync1.trigger('to.owl.carousel', [slaveIndex, duration, true]);
 				});
 
 		  $('#related-articles').owlCarousel({
