@@ -377,11 +377,26 @@ $(function (){
         attachFastClick(document.body);
 });
 
+function cookiesEnabled() {
+    var cookieEnabled = (navigator.cookieEnabled) ? true : false;
+
+    if (typeof navigator.cookieEnabled == "undefined" && !cookieEnabled) { 
+        document.cookie="testcookie";
+        cookieEnabled = (document.cookie.indexOf("testcookie") != -1) ? true : false;
+    }
+    return (cookieEnabled);
+}
+
 $(window).load(function() {
-    if ($('body').hasClass('logged-in')) {
+    if (cookiesEnabled() === false) {
         return;
-    } else if (docCookies.getItem('hfg') === null) {
-        $('#newsModal').modal('show');
-        docCookies.setItem('hfg', 'news', 86400);
+    } else {
+        if ($('body').hasClass('logged-in') === false && docCookies.getItem('hfg') === null) {
+            $('#newsModal').modal('show');
+        }
+        
+        if (docCookies.getItem('hfg') === null) {
+            docCookies.setItem('hfg', 'news', 86400);
+        }
     }
 });
